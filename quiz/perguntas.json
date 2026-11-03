@@ -41,8 +41,8 @@
    "tipo": "texto",
    "max": 200,
    "mostrarAoVivo": true,
-   "enunciado": "Exercício 3: quantas sentenças o seu raspador leu, e quantas o site anunciou?",
-   "dica": "por exemplo: 30 de 398 (3 páginas)"
+   "enunciado": "Exercício 3: quantos textos (avaliações ou sentenças) a sua coleta trouxe, e quantos a fonte tinha?",
+   "dica": "por exemplo: 480 avaliações de 500, ou 30 sentenças de 398"
   },
   {
    "id": "e2-concorda",
@@ -53,14 +53,14 @@
     100
    ],
    "mostrarAoVivo": true,
-   "enunciado": "Exercício 5: na variável mais difícil do seu dicionário, em quantos % das sentenças a IA concordou com você?",
+   "enunciado": "Exercício 5: na variável mais difícil do seu dicionário, em quantos % dos textos a IA concordou com você?",
    "dica": "um número de 0 a 100"
   },
   {
    "id": "a3-tipo",
    "aula": "Quarta 14h · Visualização",
    "tipo": "multipla",
-   "enunciado": "A coluna valor_mencionado tem quatro valores: não menciona, até R$ 500, de R$ 500 a R$ 2.000, acima de R$ 2.000. Que tipo de variável ela é?",
+   "enunciado": "Você corta atraso_chegada_min em quatro faixas: no horário (até 15 min), de 15 min a 1 h, de 1 a 3 h, mais de 3 h. Que tipo de variável é a faixa?",
    "opcoes": [
     "Categórica nominal",
     "Categórica ordinal",
@@ -68,21 +68,30 @@
     "Numérica contínua"
    ],
    "certa": 1,
-   "porque": "São faixas com uma ordem natural, mas sem distância fixa entre elas: categórica ordinal. O valor exato em reais (valor_rs) é que é numérico contínuo."
+   "porque": "São faixas com uma ordem natural, mas sem distância fixa entre elas: categórica ordinal. O atraso em minutos, antes do corte, é numérico contínuo."
   },
   {
    "id": "a3-grafico",
    "aula": "Quarta 14h · Visualização",
    "tipo": "multipla",
-   "enunciado": "Você quer comparar os dias até a resposta entre Azul, LATAM e Gol. Qual gráfico?",
+   "enunciado": "Você quer comparar a nota média dos voos entre LATAM, Gol, Azul e TAP. Qual gráfico?",
    "opcoes": [
-    "Pizza com o total de dias de cada companhia",
+    "Pizza com a soma das notas de cada companhia",
     "Boxplot, uma caixa por companhia",
-    "Dispersão de dias contra nota",
-    "Linha ligando as três companhias"
+    "Dispersão de preço contra nota",
+    "Linha ligando as quatro companhias"
    ],
    "certa": 1,
-   "porque": "Uma numérica contra uma categórica: a distribuição da numérica em cada grupo. Linha sugere uma ordem que as companhias não têm."
+   "porque": "Uma numérica (a nota média do voo) contra uma categórica (a companhia): a distribuição da numérica em cada grupo. Linha sugere uma ordem que as companhias não têm."
+  },
+  {
+   "id": "a3-hipotese",
+   "aula": "Quarta 14h · Visualização",
+   "tipo": "texto",
+   "max": 200,
+   "mostrarAoVivo": true,
+   "enunciado": "Numa frase: a hipótese do seu grupo (de manhã) e a coluna da base de voos que vai testá-la.",
+   "dica": "por exemplo: TAP, o app derruba a nota; falha_checkin_app_pct"
   },
   {
    "id": "e3-r2",
@@ -102,22 +111,8 @@
    "tipo": "texto",
    "max": 120,
    "mostrarAoVivo": true,
-   "enunciado": "Rodada 1: qual foi o fator número 1 do ChatGPT?",
-   "dica": "uma ou duas palavras"
-  },
-  {
-   "id": "a5-teste",
-   "aula": "Quinta 9h · Codex",
-   "tipo": "multipla",
-   "enunciado": "Qual destes é um bom teste para a base de reclamações?",
-   "opcoes": [
-    "O script roda sem dar erro",
-    "Toda nota está entre 1 e 5",
-    "O gráfico final ficou bonito",
-    "O R² do modelo é maior que 0,5"
-   ],
-   "certa": 1,
-   "porque": "Um teste é uma frase que precisa ser verdade e que o computador confere sozinho. Rodar sem erro não prova nada, e R² alto pode ser sinal de vazamento."
+   "enunciado": "Rodada 1: qual foi o fator número 1 do ChatGPT, e a recomendação que ele deu?",
+   "dica": "o fator e a recomendação, em poucas palavras"
   },
   {
    "id": "a5-segredo",
