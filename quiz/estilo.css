@@ -1,0 +1,126 @@
+/* Quiz ao vivo: celular do aluno e telão do professor.
+   Paleta da Educação Executiva Insper: azul 0E171D, cinzas, vermelho em detalhe. */
+
+@font-face { font-family: "GT Ultra Fine"; src: url("../recursos/GTUltraFine-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+
+:root {
+  --marca: #e50505;
+  --azul: #0e171d;
+  --verde: #1d7a5d;
+  --fundo: #ffffff;
+  --superficie: #f3f4f5;
+  --borda: #dcdcdc;
+  --texto: #0e171d;
+  --fraco: #3f3f3f;
+  --raio: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --marca: #ff5a5a; --azul: #e9eef2; --verde: #3acc9f;
+    --fundo: #0e171d; --superficie: #17242c; --borda: #2c3a43;
+    --texto: #ffffff; --fraco: #dcdcdc;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fundo); color: var(--texto);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px; line-height: 1.45;
+}
+.aluno { padding: 0 1rem calc(1.4rem + env(safe-area-inset-bottom)); max-width: 640px; margin: 0 auto; }
+header.topo {
+  display: flex; align-items: baseline; justify-content: space-between; gap: .6rem;
+  padding: .9rem 0 .7rem; border-bottom: 3px solid var(--marca); margin-bottom: 1rem;
+}
+header.topo b { font-family: "GT Ultra Fine", Georgia, serif; font-size: 1.05rem; }
+header.topo span { font-size: .74rem; color: var(--fraco); }
+h1 { font-family: "GT Ultra Fine", Georgia, serif; font-size: 1.32rem; line-height: 1.22; margin: .2rem 0 .8rem; }
+.contexto {
+  background: var(--superficie); border-left: 4px solid var(--borda);
+  border-radius: 0 var(--raio) var(--raio) 0; padding: .6rem .75rem; margin-bottom: .8rem; font-size: .92rem;
+}
+.opcoes { display: grid; gap: .55rem; }
+button.opcao {
+  display: grid; grid-template-columns: 2rem 1fr; gap: .6rem; align-items: start; width: 100%;
+  text-align: left; font: inherit; color: var(--texto); background: var(--fundo);
+  border: 2px solid var(--borda); border-radius: var(--raio); padding: .75rem .8rem; cursor: pointer;
+  min-height: 3.4rem;
+}
+button.opcao:disabled { cursor: default; }
+button.opcao .letra {
+  display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--superficie); font-weight: 700;
+}
+button.opcao.escolhida { border-color: var(--azul); background: var(--superficie); }
+button.opcao.escolhida .letra { background: var(--azul); color: var(--fundo); }
+button.opcao.certa { border-color: var(--verde); }
+button.opcao.certa .letra { background: var(--verde); color: #fff; }
+button.opcao.errada { border-color: var(--marca); }
+.barra { height: 6px; background: var(--superficie); border-radius: 3px; margin-top: .45rem; overflow: hidden; }
+.barra i { display: block; height: 100%; background: var(--fraco); }
+button.opcao.certa .barra i { background: var(--verde); }
+.votos { font-size: .78rem; color: var(--fraco); margin-top: .2rem; }
+.painel {
+  display: grid; gap: .15rem; background: var(--superficie); border-radius: var(--raio);
+  padding: .7rem .85rem; margin-top: 1rem; font-size: .92rem;
+}
+.painel.ok { border-left: 4px solid var(--verde); }
+.painel.aviso { border-left: 4px solid var(--marca); }
+.espera { display: grid; place-items: center; gap: 1rem; text-align: center; padding: 3rem 1rem; color: var(--fraco); }
+.ponto { width: 14px; height: 14px; border-radius: 50%; background: var(--marca); animation: pulsar 1.4s infinite ease-in-out; }
+@keyframes pulsar { 0%, 100% { transform: scale(.7); opacity: .5; } 50% { transform: scale(1.15); opacity: 1; } }
+.campo { width: 100%; font: inherit; padding: .7rem .8rem; border-radius: var(--raio); border: 2px solid var(--borda); background: var(--fundo); color: var(--texto); }
+textarea.campo { min-height: 6rem; resize: vertical; }
+.enviar {
+  margin-top: .6rem; width: 100%; font: inherit; font-weight: 700; padding: .8rem; border: 0;
+  border-radius: var(--raio); background: var(--azul); color: var(--fundo); cursor: pointer;
+}
+.enviar:disabled { opacity: .5; }
+.rodape { margin-top: 2rem; font-size: .72rem; color: var(--fraco); text-align: center; }
+
+/* ------------------------------------------------------------- painel */
+
+.prof { display: grid; grid-template-rows: auto 1fr; min-height: 100vh; }
+.controle {
+  display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+  padding: .45rem .8rem; background: var(--superficie); border-bottom: 1px solid var(--borda); font-size: .85rem;
+}
+.controle select, .controle input, .controle button {
+  font: inherit; padding: .3rem .55rem; border-radius: 6px; border: 1px solid var(--borda);
+  background: var(--fundo); color: var(--texto);
+}
+.controle button { cursor: pointer; }
+.controle button.forte { background: var(--azul); color: var(--fundo); border-color: var(--azul); }
+.controle .estado { margin-left: auto; color: var(--fraco); }
+.controle.escondido { display: none; }
+.telao { display: grid; grid-template-columns: 300px 1fr; gap: 2.5rem; padding: 2rem 3rem; align-items: start; }
+.telao .qr img { width: 100%; background: #fff; padding: 10px; border-radius: 10px; }
+.telao .endereco { font-family: Consolas, monospace; font-size: .95rem; text-align: center; margin-top: .4rem; color: var(--fraco); word-break: break-all; }
+.telao h1 { font-size: 2.3rem; margin-top: 0; }
+.telao .contexto { font-size: 1.15rem; }
+.telao .contagem { font-size: 1.1rem; color: var(--fraco); margin: .4rem 0 1.2rem; }
+.resultado { display: grid; gap: .9rem; font-size: 1.35rem; }
+.resultado .linha { display: grid; grid-template-columns: 2.4rem 1fr 4.5rem; gap: .8rem; align-items: center; }
+.resultado .letra { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--superficie); font-weight: 700; }
+.resultado .trilho { background: var(--superficie); border-radius: 6px; height: 2.4rem; position: relative; overflow: hidden; }
+.resultado .trilho i { position: absolute; inset: 0 auto 0 0; background: var(--fraco); opacity: .35; transition: width .6s ease; }
+.resultado .linha.certa .trilho i { background: var(--verde); opacity: .55; }
+.resultado .linha.certa .letra { background: var(--verde); color: #fff; }
+.resultado .trilho span { position: relative; z-index: 1; padding: 0 .8rem; line-height: 2.4rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.resultado .pct { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.porque { margin-top: 1.4rem; font-size: 1.2rem; border-left: 5px solid var(--verde); padding: .6rem 1rem; background: var(--superficie); border-radius: 0 10px 10px 0; }
+.mural { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .8rem; }
+.mural .cartao { background: var(--superficie); border-radius: 10px; padding: .8rem 1rem; font-size: 1.05rem; animation: entrar .5s ease; }
+.mural .cartao a { color: var(--marca); word-break: break-all; }
+@keyframes entrar { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.pontos { position: relative; height: 210px; border-bottom: 2px solid var(--fraco); margin: 1rem 0 2.2rem; }
+.pontos .p { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: var(--azul); opacity: .75; transform: translateX(-50%); transition: all .5s ease; }
+.pontos .eixo { position: absolute; bottom: -1.8rem; transform: translateX(-50%); font-size: .95rem; color: var(--fraco); }
+.pontos .media { position: absolute; top: 0; bottom: 0; border-left: 3px dashed var(--marca); }
+.pontos .media span { position: absolute; top: -1.6rem; left: .3rem; color: var(--marca); font-weight: 700; white-space: nowrap; }
+@media (max-width: 800px) { .telao { grid-template-columns: 1fr; padding: 1rem; } }
+
+.pontos .media.real { border-left-color: var(--verde); }
+.pontos .media.real span { color: var(--verde); top: auto; bottom: -3.4rem; }
+

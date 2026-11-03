@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel · Quiz Marketing Analítico</title>
+<link rel="stylesheet" href="estilo.css">
+<meta name="robots" content="noindex">
+</head>
+<body class="prof">
+<div class="controle" id="controle">
+  <select id="pergunta" aria-label="pergunta"></select>
+  <button id="abrir" class="forte" title="a pergunta aparece nos celulares">abrir</button>
+  <button id="fechar" title="ninguém mais responde">fechar</button>
+  <button id="revelar" title="resultado e comentário aparecem aqui e nos celulares">revelar</button>
+  <button id="limpar" title="apaga as respostas desta pergunta">limpar</button>
+  <input id="chave" type="password" placeholder="chave do professor" size="16" autocomplete="off">
+  <span class="estado" id="estado">Esc esconde esta barra</span>
+</div>
+<main class="telao" id="telao"></main>
+<script type="module" src="painel.js"></script>
+</body>
+</html>

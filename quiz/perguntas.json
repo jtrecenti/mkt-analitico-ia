@@ -1,0 +1,146 @@
+{
+ "perguntas": [
+  {
+   "id": "a1-delegar",
+   "aula": "Quarta 9h · Habilidades e plugins",
+   "tipo": "multipla",
+   "enunciado": "Qual tarefa da sua semana você mais gostaria de entregar para alguém fazer?",
+   "opcoes": [
+    "Juntar planilhas e relatórios de canais diferentes",
+    "Pesquisar concorrentes, mercado e tendências",
+    "Escrever e revisar textos, posts e apresentações",
+    "Analisar dados de campanhas, vendas ou clientes"
+   ],
+   "certa": null,
+   "porque": "Não há resposta certa: vamos usar isso para escolher os exemplos da manhã."
+  },
+  {
+   "id": "a1-contagem",
+   "aula": "Quarta 9h · Habilidades e plugins",
+   "tipo": "numero",
+   "escala": [
+    0,
+    300
+   ],
+   "mostrarAoVivo": true,
+   "enunciado": "Exercício 1: sem a habilidade, quantas falas (ou menções) sobre preço o ChatGPT contou na sua conversa?",
+   "dica": "o total que ele deu, de 0 a 300"
+  },
+  {
+   "id": "a1-agencias",
+   "aula": "Quarta 9h · Habilidades e plugins",
+   "tipo": "texto",
+   "max": 200,
+   "mostrarAoVivo": true,
+   "enunciado": "Exercício 2: uma agência que deveria ficar fora do programa de incentivo, e por quê.",
+   "dica": "agência e motivo, numa frase"
+  },
+  {
+   "id": "e2-numero",
+   "aula": "Quarta 11h · Estúdio 2",
+   "tipo": "texto",
+   "max": 200,
+   "mostrarAoVivo": true,
+   "enunciado": "Exercício 3: quantas sentenças o seu raspador leu, e quantas o site anunciou?",
+   "dica": "por exemplo: 30 de 398 (3 páginas)"
+  },
+  {
+   "id": "e2-concorda",
+   "aula": "Quarta 11h · Estúdio 2",
+   "tipo": "numero",
+   "escala": [
+    0,
+    100
+   ],
+   "mostrarAoVivo": true,
+   "enunciado": "Exercício 5: na variável mais difícil do seu dicionário, em quantos % das sentenças a IA concordou com você?",
+   "dica": "um número de 0 a 100"
+  },
+  {
+   "id": "a3-tipo",
+   "aula": "Quarta 14h · Visualização",
+   "tipo": "multipla",
+   "enunciado": "A coluna valor_mencionado tem quatro valores: não menciona, até R$ 500, de R$ 500 a R$ 2.000, acima de R$ 2.000. Que tipo de variável ela é?",
+   "opcoes": [
+    "Categórica nominal",
+    "Categórica ordinal",
+    "Numérica discreta",
+    "Numérica contínua"
+   ],
+   "certa": 1,
+   "porque": "São faixas com uma ordem natural, mas sem distância fixa entre elas: categórica ordinal. O valor exato em reais (valor_rs) é que é numérico contínuo."
+  },
+  {
+   "id": "a3-grafico",
+   "aula": "Quarta 14h · Visualização",
+   "tipo": "multipla",
+   "enunciado": "Você quer comparar os dias até a resposta entre Azul, LATAM e Gol. Qual gráfico?",
+   "opcoes": [
+    "Pizza com o total de dias de cada companhia",
+    "Boxplot, uma caixa por companhia",
+    "Dispersão de dias contra nota",
+    "Linha ligando as três companhias"
+   ],
+   "certa": 1,
+   "porque": "Uma numérica contra uma categórica: a distribuição da numérica em cada grupo. Linha sugere uma ordem que as companhias não têm."
+  },
+  {
+   "id": "e3-r2",
+   "aula": "Quarta 16h · Estúdio 3",
+   "tipo": "numero",
+   "escala": [
+    0,
+    100
+   ],
+   "mostrarAoVivo": true,
+   "enunciado": "Rodada 1: que porcentagem da variação da nota o modelo do ChatGPT explicou (o R²)?",
+   "dica": "de 0 a 100; se ele deu mais de um, o que ele destacou"
+  },
+  {
+   "id": "e3-fator",
+   "aula": "Quarta 16h · Estúdio 3",
+   "tipo": "texto",
+   "max": 120,
+   "mostrarAoVivo": true,
+   "enunciado": "Rodada 1: qual foi o fator número 1 do ChatGPT?",
+   "dica": "uma ou duas palavras"
+  },
+  {
+   "id": "a5-teste",
+   "aula": "Quinta 9h · Codex",
+   "tipo": "multipla",
+   "enunciado": "Qual destes é um bom teste para a base de reclamações?",
+   "opcoes": [
+    "O script roda sem dar erro",
+    "Toda nota está entre 1 e 5",
+    "O gráfico final ficou bonito",
+    "O R² do modelo é maior que 0,5"
+   ],
+   "certa": 1,
+   "porque": "Um teste é uma frase que precisa ser verdade e que o computador confere sozinho. Rodar sem erro não prova nada, e R² alto pode ser sinal de vazamento."
+  },
+  {
+   "id": "a5-segredo",
+   "aula": "Quinta 9h · Codex",
+   "tipo": "multipla",
+   "enunciado": "Para \"facilitar\", o agente escreveu a chave da API direto no script, que vai para o GitHub. O que fazer?",
+   "opcoes": [
+    "Deixar: o repositório é privado",
+    "Apagar a chave do script no próximo commit",
+    "Mover a chave para o .env e, se ela já subiu, trocar a chave",
+    "Pedir ao agente para criptografar a chave no código"
+   ],
+   "certa": 2,
+   "porque": "O histórico do Git guarda a chave mesmo depois de apagada. Chave que subiu é chave vazada: troque e passe a ler do .env."
+  },
+  {
+   "id": "e4-link",
+   "aula": "Quinta 11h · Estúdio 4",
+   "tipo": "link",
+   "max": 300,
+   "mostrarAoVivo": true,
+   "enunciado": "Cole o link do seu painel publicado.",
+   "dica": "https://..."
+  }
+ ]
+}
