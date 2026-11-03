@@ -996,6 +996,64 @@ color: #fff; border-radius: 50%; font: 700 1.25em/1.7em Inter, sans-serif; text-
 .mock .anel { position: absolute; inset: -5px; border: 3px solid var(--marca); border-radius: 10px; pointer-events: none; z-index: 2; }
 .mock .anel::after { content: attr(data-n); position: absolute; top: -1.05em; left: -1.05em; width: 1.7em; height: 1.7em; background: var(--marca);
 color: #fff; border-radius: 50%; font: 700 1.2em/1.7em Inter, sans-serif; text-align: center; }</style>
+  <style type="text/css">
+.cena { position: relative; }
+.grafico-svg { width: 100%; height: auto; overflow: visible; font-family: Inter, sans-serif; display: block; }
+.grafico-svg .grade-linha { stroke: var(--regua); stroke-width: 1; }
+.grafico-svg .eixo { stroke: var(--texto-fraco); stroke-width: 1.5; }
+.grafico-svg .rotulo-eixo { fill: var(--texto-fraco); font-size: 15px; }
+.grafico-svg .rotulo-eixo.forte { fill: var(--texto); font-weight: 700; font-size: 16px; }
+.grafico-svg .titulo-eixo { fill: var(--texto); font-size: 16px; }
+.grafico-svg .ponto { fill: var(--azul); opacity: .45; }
+.grafico-svg .ponto.forte { opacity: .9; }
+.grafico-svg .ponto.marca { fill: var(--marca); opacity: .85; }
+.grafico-svg .reta { stroke: var(--marca); stroke-width: 4; fill: none; }
+.grafico-svg .media { stroke: var(--texto-fraco); stroke-width: 2; stroke-dasharray: 7 6; }
+.grafico-svg .guia { stroke: var(--marca); stroke-width: 2; stroke-dasharray: 5 5; fill: none; }
+.grafico-svg .residuo { stroke: var(--laranja); stroke-width: 3; }
+.grafico-svg .barra { fill: var(--texto-fraco); }
+.grafico-svg .barra.marca { fill: var(--marca); }
+.grafico-svg .barra.azul { fill: var(--azul); }
+.grafico-svg .barra.turquesa { fill: var(--turquesa); }
+.grafico-svg .barra.laranja { fill: var(--laranja); }
+.grafico-svg .barra.roxo { fill: var(--roxo); }
+.grafico-svg .caixa { fill: var(--superficie); stroke: var(--superficie-borda); stroke-width: 1.5; }
+.grafico-svg .caixa.marca { stroke: var(--marca); stroke-width: 2.5; }
+.grafico-svg .seta { stroke: var(--texto-fraco); stroke-width: 2; fill: none; }
+.grafico-svg .seta.marca { stroke: var(--marca); }
+.grafico-svg .ponta { fill: var(--texto-fraco); }
+.grafico-svg .ponta.marca { fill: var(--marca); }
+.grafico-svg .txt { fill: var(--texto); font-size: 17px; }
+.grafico-svg .txt.fraco { fill: var(--texto-fraco); }
+.grafico-svg .txt.forte { font-weight: 700; }
+.grafico-svg .txt.marca { fill: var(--marca); font-weight: 700; }
+.grafico-svg .mono { font-family: "JetBrains Mono", Consolas, monospace; }
+.grafico-svg .anot { fill: var(--texto); font-size: 17px; font-weight: 600;
+paint-order: stroke; stroke: var(--fundo); stroke-width: 5px; }
+.grafico-svg .anot.fraco { fill: var(--texto-fraco); font-weight: 400; }
+.grafico-svg .anot.marca { fill: var(--marca); }
+
+.legendas { display: grid; }
+.legendas > * { grid-area: 1 / 1; background: var(--superficie); border-left: 5px solid var(--marca);
+padding: .55em .8em; font-size: .8em; line-height: 1.35; align-self: start; }
+.legendas > * > p { margin: 0; }
+.legendas strong { color: var(--marca); }
+
+.ctrl { background: var(--superficie); border: 1px solid var(--superficie-borda); border-radius: 6px;
+padding: .35em .7em; font-size: .62em; margin-top: .4em; }
+.ctrl label { display: block; color: var(--texto-fraco); }
+.ctrl label b { color: var(--texto); }
+.ctrl input[type=range] { width: 100%; accent-color: var(--marca); }
+.ctrl .botoes { display: flex; gap: .5em; flex-wrap: wrap; margin-top: .3em; }
+.ctrl button { font: inherit; font-size: .95em; padding: .2em .8em; border-radius: 999px; cursor: pointer;
+border: 1px solid var(--superficie-borda); background: var(--fundo); color: var(--texto); }
+.ctrl button.on, .ctrl button:hover { border-color: var(--marca); color: var(--marca); }
+
+.cena .tab-mini { border-collapse: collapse; font-size: .62em; width: 100%; }
+.cena .tab-mini th, .cena .tab-mini td { padding: .25em .5em; border-bottom: 1px solid var(--regua); text-align: left; }
+.reveal .cena .tab-mini th { text-transform: none; letter-spacing: 0; color: var(--texto-fraco); font-weight: 600; }
+.cena .tab-mini td.on { background: var(--grifo); font-weight: 700; }
+</style>
   <style type="text/css">.reveal
 div.sourceCode
 pre
@@ -1623,6 +1681,35 @@ margin-right: 0; }
 </div>
 </section>
 <section class="slide level2">
+<h2>Um painel tem cinco peças, e cada uma tem um trabalho</h2>
+<div class="a6-lado">
+<div class="cena" data-cena="anatomia">
+
+</div>
+<div class="legendas">
+<div>
+<p>Uma página só, que alguém abre no celular entre duas reuniões. Ela é montada peça por peça.</p>
+</div>
+<div>
+<p><strong>1. Título e manchete.</strong> O título diz o assunto; a manchete dá a resposta em uma frase, com o número.</p>
+</div>
+<div>
+<p><strong>2. Filtro.</strong> Um clique troca a companhia. Pouca opção: a pergunta é uma só.</p>
+</div>
+<div>
+<p><strong>3. Números-chave.</strong> De 3 a 5, cada um com uma frase que diz o que ele é.</p>
+</div>
+<div>
+<p><strong>4. Gráfico.</strong> Um por pergunta, com o destaque na cor da marca. Ao trocar a companhia, a mesma linha se move.</p>
+</div>
+<div>
+<p><strong>5. Rodapé.</strong> Fonte, período e o aviso de que só há agregados. Clique nos botões do painel para ver tudo mudar junto.</p>
+</div>
+</div>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
 <h2>Como pedir o painel ao agente</h2>
 <div class="prompt" data-quem="Para o Codex (ou o ChatGPT Work), na pasta da sua base">
 <p>Quero um <strong>painel em uma página</strong> (HTML estático) sobre <strong>[minha base]</strong>, para <strong>[quem vai ler]</strong>, que responda: <strong>[a pergunta principal]</strong>.</p>
@@ -1691,28 +1778,30 @@ margin-right: 0; }
 </section>
 <section class="slide level2">
 <h2>Três arquivos e um endereço</h2>
-<div class="fluxo">
-<div class="etapa roxo" data-p="0">
-<p><strong>dados.json</strong> Os números já agregados, gerados por um script a partir da base. Nada de linha individual.</p>
+<div class="cena" data-cena="publicar">
+
 </div>
-<p><span class="seta" data-p="1">→</span></p>
-<div class="etapa" data-p="1">
-<p><strong>index.html</strong> A estrutura e o estilo: título, manchete, cartões, gráficos, rodapé com a fonte.</p>
+<div class="legendas">
+<div>
+<p>A base tem 8.000 linhas, uma por voo. <strong>Ela não vai para a internet.</strong></p>
 </div>
-<p><span class="seta" data-p="2">→</span></p>
-<div class="etapa laranja" data-p="2">
-<p><strong>GSAP</strong> Uma biblioteca de animação. Faz uma barra crescer, reordenar, mudar de cor, no tempo certo.</p>
+<div>
+<p>Um script resume a base em <code>dados.json</code>: só médias e contagens, por companhia e por mês. Nenhuma linha individual.</p>
 </div>
-<p><span class="seta" data-p="3">→</span></p>
-<div class="etapa verde" data-p="3">
-<p><strong>GitHub Pages</strong> Transforma a pasta num endereço: <code>seu-usuario.github.io/painel</code>.</p>
+<div>
+<p>A pasta do painel tem três arquivos: os números, a página (<code>index.html</code>, com título, manchete, cartões, gráficos e rodapé) e a biblioteca de animação.</p>
+</div>
+<div>
+<p>Um <strong>commit</strong> guarda esta versão da pasta no GitHub. A anterior continua no histórico.</p>
+</div>
+<div>
+<p>O <strong>GitHub Pages</strong> transforma a pasta num endereço, <code>seu-usuario.github.io/painel</code>, que abre em qualquer celular.</p>
+</div>
+<div>
+<p>O agente (Codex ou Work) escreve as peças. Vocês decidem a <strong>pergunta</strong>, os <strong>números</strong> que respondem a ela e <strong>conferem</strong> o resultado.</p>
 </div>
 </div>
-<div class="caixa ideia" data-p="4">
-<p><span class="rotulo">Quem escreve cada peça</span></p>
-<p>O agente (Codex ou Work) escreve as quatro. Vocês decidem a <strong>pergunta</strong>, os <strong>números</strong> que respondem a ela e <strong>conferem</strong> o resultado.</p>
-</div>
-<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
 <section class="slide level2">
 <h2>Uma animação do GSAP é uma frase em português</h2>
@@ -1738,6 +1827,27 @@ margin-right: 0; }
 </div>
 </div>
 </div>
+</section>
+<section class="slide level2">
+<h2>Um clique no filtro: a página lê o número e move a mesma barra</h2>
+<div class="cena" data-cena="clique">
+
+</div>
+<div class="legendas">
+<div>
+<p>O painel abre com a média de janeiro a outubro. Os botões embaixo são o filtro.</p>
+</div>
+<div>
+<p>Em <strong>janeiro</strong>, a página não recalcula nada: lê o número pronto em <code>dados.json</code>. As barras mudam de tamanho, e a LATAM passa à frente da Gol.</p>
+</div>
+<div>
+<p>Em <strong>julho</strong>, a Gol volta à frente da LATAM. O olho acompanha a barra que se moveu, porque ela é a mesma barra.</p>
+</div>
+<div>
+<p>Quem vê o painel parado lê os números; quem vê a transição percebe <strong>o que mudou</strong>. Clique nos outros meses para testar.</p>
+</div>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
 <section class="slide level2">
 <h2>Três jeitos de publicar a página</h2>
@@ -3186,15 +3296,21 @@ window.QuartoSupport = function () {
     if (!anim) for (const c of slide._cenas || []) c.entrou && c.entrou(n);
   }
 
+  let INICIADO = false;
+  function montarCaixa(caixa) {
+    const def = CENAS[caixa.dataset.cena];
+    const slide = caixa.closest("section");
+    if (!def || !slide || caixa._montada) { if (!def) console.warn("[motor] cena sem definição:", caixa.dataset.cena); return; }
+    caixa._montada = true;
+    const inst = Object.create(def);
+    try { inst.montar && inst.montar(caixa, slide); } catch (e) { console.error("[motor]", caixa.dataset.cena, e); }
+    (slide._cenas = slide._cenas || []).push(inst);
+    if (INICIADO) atualizar(slide, false);
+  }
+
   function iniciar() {
-    document.querySelectorAll(".cena[data-cena]").forEach((caixa) => {
-      const def = CENAS[caixa.dataset.cena];
-      const slide = caixa.closest("section");
-      if (!def || !slide) { console.warn("[motor] cena sem definição:", caixa.dataset.cena); return; }
-      const inst = Object.create(def);
-      try { inst.montar && inst.montar(caixa, slide); } catch (e) { console.error("[motor]", caixa.dataset.cena, e); }
-      (slide._cenas = slide._cenas || []).push(inst);
-    });
+    document.querySelectorAll(".cena[data-cena]").forEach(montarCaixa);
+    INICIADO = true;
     for (const s of document.querySelectorAll(".reveal .slides section")) atualizar(s, false);
     const R = window.Reveal;
     R.on("fragmentshown", () => atualizar(R.getCurrentSlide(), true));
@@ -3260,13 +3376,379 @@ window.QuartoSupport = function () {
   }
   function semTeclas(inp) { inp.addEventListener("keydown", (e) => e.stopPropagation()); }
 
+  /* mostra ou esconde (com animação quando anim) */
+  function vis(alvo, on, anim) {
+    if (!alvo) return;
+    gsap.to(alvo, { autoAlpha: on ? 1 : 0, duration: anim ? DUR : 0, overwrite: "auto" });
+  }
+  /* marcas "redondas" de um eixo entre a e b */
+  function marcas(a, b, n = 5) {
+    const bruto = (b - a) / n, pot = 10 ** Math.floor(Math.log10(bruto));
+    const st = [1, 2, 5, 10].map((k) => k * pot).find((v) => v >= bruto * 0.999);
+    const casas = Math.max(0, -Math.floor(Math.log10(st) + 1e-9)), out = [];
+    for (let v = Math.ceil(a / st - 1e-9) * st; v <= b + 1e-9; v += st) out.push(+v.toFixed(10));
+    return { out, casas };
+  }
+  /* eixo x numa altura y (opts.grade: y do topo das linhas de grade) */
+  function eixoX(g, sx, x0, x1, y, n, tit, opts = {}) {
+    const mx = marcas(x0, x1, n);
+    svg("line", { x1: sx(x0), x2: sx(x1), y1: y, y2: y, class: "eixo" }, g);
+    for (const v of mx.out) {
+      if (opts.grade != null) svg("line", { x1: sx(v), x2: sx(v), y1: opts.grade, y2: y, class: "grade-linha" }, g);
+      txt(g, sx(v), y + 22, (opts.fmt || ((u) => num(u, mx.casas)))(v), { "text-anchor": "middle", class: "rotulo-eixo" });
+    }
+    if (tit) txt(g, (sx(x0) + sx(x1)) / 2, y + 46, tit, { "text-anchor": "middle", class: "titulo-eixo" });
+  }
+  /* eixo y numa posição x (opts.grade: x do fim das linhas de grade) */
+  function eixoY(g, sy, y0, y1, x, n, tit, opts = {}) {
+    const my = marcas(y0, y1, n);
+    svg("line", { x1: x, x2: x, y1: sy(y0), y2: sy(y1), class: "eixo" }, g);
+    for (const v of my.out) {
+      if (opts.grade != null) svg("line", { x1: x, x2: opts.grade, y1: sy(v), y2: sy(v), class: "grade-linha" }, g);
+      txt(g, x - 8, sy(v) + 5, (opts.fmt || ((u) => num(u, my.casas)))(v), { "text-anchor": "end", class: "rotulo-eixo" });
+    }
+    if (tit) txt(g, 0, 0, tit, { class: "titulo-eixo", "text-anchor": "middle", transform: `translate(${x - 52} ${(sy(y0) + sy(y1)) / 2}) rotate(-90)` });
+  }
+  /* seta de (x1,y1) a (x2,y2), com ponta */
+  function seta(g, x1, y1, x2, y2, cls = "") {
+    const gg = svg("g", {}, g);
+    svg("line", { x1, y1, x2, y2, class: `seta ${cls}` }, gg);
+    const a = Math.atan2(y2 - y1, x2 - x1), t = 10;
+    const p = [[x2, y2], [x2 - t * Math.cos(a - 0.45), y2 - t * Math.sin(a - 0.45)], [x2 - t * Math.cos(a + 0.45), y2 - t * Math.sin(a + 0.45)]];
+    svg("polygon", { points: p.map((q) => q.join(",")).join(" "), class: `ponta ${cls}` }, gg);
+    return gg;
+  }
+  /* liga um <input type=range> a uma função; devolve {inp, v} */
+  function controle(inp, saida, fmt, f) {
+    if (!inp) return null;
+    semTeclas(inp);
+    const at = () => { if (saida) saida.textContent = fmt(+inp.value); f(+inp.value); };
+    inp.addEventListener("input", at);
+    at();
+    return { inp, at, get v() { return +inp.value; } };
+  }
+
   window.Motor = {
-    cena(id, def) { CENAS[id] = def; },
-    util: { svg, txt, html, escala, gerador, num, ols, semTeclas, DUR },
+    cena(id, def) {
+      CENAS[id] = def;
+      // se o motor já começou (script carregado depois), monta agora
+      if (INICIADO) document.querySelectorAll(`.cena[data-cena="${id}"]`).forEach(montarCaixa);
+    },
+    util: { svg, txt, html, escala, gerador, num, ols, semTeclas, vis, marcas, eixoX, eixoY, seta, controle, DUR },
   };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", quandoPronto);
   else quandoPronto();
+})();
+</script>
+    <script>/* Cenas animadas de 06-estudio-painel.qmd (Motor.cena). Ver recursos/motor.js e recursos/cenas.css.
+   Os números do bloco DADOS vêm de scripts/dados_cenas_aula06.py (não edite à mão): só
+   agregados neutros da base simulada (voos e nota média por companhia e por mês). */
+(function () {
+  "use strict";
+  /* DADOS-INICIO */
+  const DADOS = {"linhas": 8000, "colunas": 27, "meses": ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out"], "empresas": {"LATAM": {"n": 2000, "nota": 6.73, "mensal": [6.53, 6.86, 6.64, 6.78, 6.95, 6.82, 6.41, 6.93, 6.7, 6.7]}, "Gol": {"n": 2000, "nota": 6.78, "mensal": [6.41, 6.84, 6.91, 6.76, 6.92, 6.84, 6.51, 6.89, 6.94, 6.88]}, "Azul": {"n": 2000, "nota": 7.15, "mensal": [6.89, 7.2, 7.01, 7.28, 7.16, 7.12, 7.07, 7.36, 7.35, 7.14]}, "TAP": {"n": 2000, "nota": 5.8, "mensal": [5.7, 5.9, 5.85, 5.81, 5.95, 5.79, 5.56, 5.58, 6.01, 5.91]}}};
+  /* DADOS-FIM */
+
+  const U = Motor.util;
+  const { svg, txt, html, num, seta, semTeclas, DUR } = U;
+  const EMP = ["LATAM", "Gol", "Azul", "TAP"];
+  const MESES_LONGOS = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro"];
+
+  const css = `
+  .a6 .t { fill: var(--texto); font-size: 22px; font-family: Inter, sans-serif; }
+  .a6 .t.p { font-size: 19px; }
+  .a6 .t.f { fill: var(--texto-fraco); }
+  .a6 .t.b { font-weight: 700; }
+  .a6 .t.m { fill: var(--marca); font-weight: 700; }
+  .a6 .t.v { fill: var(--turquesa); font-weight: 700; }
+  .a6 .t.r { fill: var(--roxo); font-weight: 700; }
+  .a6 .mono { font-family: "Cascadia Code", Consolas, monospace; font-size: 18px; }
+  .a6 .cx { fill: var(--superficie); stroke: var(--superficie-borda); stroke-width: 1.5; }
+  .a6 .cx.m { stroke: var(--marca); stroke-width: 3; }
+  .a6 .cx.v { stroke: var(--turquesa); stroke-width: 3; }
+  .a6 .chip { fill: var(--fundo); stroke: var(--superficie-borda); stroke-width: 1.5; }
+  .a6 .chip.r { fill: color-mix(in srgb, var(--roxo) 12%, var(--fundo)); stroke: var(--roxo); stroke-width: 2; }
+  .a6 .chip.m { fill: color-mix(in srgb, var(--marca) 12%, var(--fundo)); stroke: var(--marca); stroke-width: 2; }
+  .a6 .chip.v { fill: color-mix(in srgb, var(--turquesa) 14%, var(--fundo)); stroke: var(--turquesa); stroke-width: 2; }
+  .a6 .linha-base { stroke: var(--texto-fraco); stroke-width: 2; }
+  .a6 .barra { fill: var(--texto-fraco); }
+  .a6 .barra.m { fill: var(--marca); }
+  .a6 .trilha { stroke: var(--texto-fraco); stroke-width: 3; }
+  .a6 .commit { fill: var(--fundo); stroke: var(--texto); stroke-width: 3; }
+  .a6 .commit.v { fill: var(--turquesa); stroke: var(--turquesa); }
+  .a6 .tela { fill: var(--fundo); stroke: var(--texto); stroke-width: 3; }
+  .a6 .no { fill: var(--superficie); stroke: var(--superficie-borda); stroke-width: 1.5; transition: fill .2s, stroke .2s; }
+  .a6 .no.on { fill: color-mix(in srgb, var(--marca) 12%, var(--fundo)); stroke: var(--marca); stroke-width: 3; }
+  .cena-a6 .ctrl { font-size: .56em; }
+  .cena-a6 .ctrl button { padding: .15em .65em; }
+
+  /* o painel de mentira, montado peça por peça */
+  .a6-lado { display: flex; gap: 1.2rem; align-items: flex-start; margin-top: .3rem; }
+  .a6-lado > .cena { flex: 1.45; }
+  .a6-lado > .legendas { flex: 1; margin-top: 0; }
+  .pmock { position: relative; border: 2px solid var(--superficie-borda); border-radius: 12px; background: var(--fundo);
+          padding: .7rem .9rem .6rem; font-size: .64em; line-height: 1.3; min-height: 500px; margin-left: 1.3rem; }
+  .pmock .peca { position: relative; margin-bottom: .55rem; }
+  .pmock .pino { position: absolute; left: -1.75rem; top: .05rem; width: 1.5rem; height: 1.5rem; border-radius: 50%;
+                background: var(--marca); color: #fff; font-weight: 700; font-size: .8em; display: grid; place-items: center; }
+  .pmock h4 { margin: 0; font-family: "GT Ultra Fine", Georgia, serif; font-size: 1.45em; line-height: 1.15; color: var(--texto); }
+  .pmock .manchete { margin: .15rem 0 0; font-weight: 600; color: var(--texto); }
+  .pmock .manchete b { color: var(--marca); }
+  .pmock .chips { display: flex; gap: .4rem; }
+  .pmock .chips button { font: inherit; font-size: .92em; padding: .12em .75em; border-radius: 999px; cursor: pointer;
+                        border: 1.5px solid var(--superficie-borda); background: var(--fundo); color: var(--texto); }
+  .pmock .chips button.on { border-color: var(--marca); color: var(--marca); font-weight: 700; }
+  .pmock .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+  .pmock .kpi { background: var(--superficie); border-radius: 8px; padding: .35rem .55rem; }
+  .pmock .kpi .v { font-size: 1.6em; font-weight: 750; color: var(--texto); }
+  .pmock .kpi .r { color: var(--texto-fraco); font-size: .85em; }
+  .pmock .graf-tit { font-weight: 700; color: var(--texto); }
+  .pmock .rodape { color: var(--texto-fraco); font-size: .8em; border-top: 1px solid var(--regua); padding-top: .3rem; }
+  `;
+  html("style", null, document.head).textContent = css;
+
+  function fs(extra) {
+    extra = Object.assign({}, extra || {});
+    if (extra["font-size"]) { extra.style = `font-size:${extra["font-size"]}px;` + (extra.style || ""); delete extra["font-size"]; }
+    return extra;
+  }
+  function novoSvg(caixa, w, h) {
+    caixa.classList.add("cena-a6");
+    return svg("svg", { viewBox: `0 0 ${w} ${h}`, class: "grafico-svg a6" }, caixa);
+  }
+  function t(g, x, y, s, cls, extra) { return txt(g, x, y, s, Object.assign({ class: "t " + (cls || "") }, fs(extra))); }
+  function linhas(g, x, y, arr, cls, lh = 26, extra) {
+    const n = svg("text", Object.assign({ x, y, class: "t " + (cls || "") }, fs(extra)), g);
+    arr.forEach((s, i) => { const ts = svg("tspan", { x, dy: i ? lh : 0 }, n); ts.textContent = s; });
+    return n;
+  }
+  function ret(g, x, y, w, h, cls, rx = 10) { return svg("rect", { x, y, width: w, height: h, rx, class: cls }, g); }
+  const g0 = (pai, extra) => svg("g", extra || {}, pai);
+  const d = (anim, f = 1.3) => (anim ? DUR * f : 0);
+  function vis(el, on, anim, extra) {
+    gsap.to(el, Object.assign({ autoAlpha: on ? 1 : 0, duration: d(anim, 1), overwrite: "auto" }, extra || {}));
+  }
+  const n2 = (v) => num(v, 2);
+  const media = (v) => v.reduce((a, b) => a + b, 0) / v.length;
+  const reduzir = () => window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ======================================================================
+     A. Da base ao endereço: 8.000 linhas viram agregados, a pasta vira um link.
+     ====================================================================== */
+  Motor.cena("publicar", {
+    montar(caixa) {
+      const s = novoSvg(caixa, 1200, 330);
+      // a base
+      this.base = g0(s);
+      ret(this.base, 0, 40, 140, 250, "cx", 8);
+      t(this.base, 0, 26, "voos_2026.csv", "p b");
+      this.linhas = [];
+      for (let i = 0; i < 24; i++) {
+        this.linhas.push(svg("line", { x1: 14, x2: 126, y1: 56 + i * 9.6, y2: 56 + i * 9.6, class: "linha-base" }, s));
+      }
+      t(this.base, 70, 316, "8.000 linhas", "p f", { "text-anchor": "middle" });
+      this.script = g0(s);
+      seta(this.script, 148, 120, 206, 120);
+      t(this.script, 150, 108, "script", "p f");
+      // a pasta
+      this.pasta = g0(s);
+      ret(this.pasta, 210, 40, 270, 250, "cx", 8);
+      t(this.pasta, 210, 26, "painel/", "mono b", { "font-size": 19 });
+      const arq = [["dados.json", "só agregados"], ["index.html", "a página"], ["gsap.min.js", "a animação"]];
+      this.arq = arq.map(([a, nota], i) => {
+        const g = g0(s);
+        ret(g, 224, 58 + i * 76, 242, 60, "chip", 8);
+        t(g, 238, 84 + i * 76, a, "mono b");
+        t(g, 238, 108 + i * 76, nota, "p f");
+        return g;
+      });
+      // commit
+      this.commit = g0(s);
+      seta(this.commit, 488, 165, 532, 165);
+      t(this.commit, 540, 26, "histórico", "p b");
+      svg("line", { x1: 552, x2: 690, y1: 165, y2: 165, class: "trilha" }, this.commit);
+      [560, 610].forEach((x) => svg("circle", { cx: x, cy: 165, r: 10, class: "commit" }, this.commit));
+      this.novo = svg("circle", { cx: 670, cy: 165, r: 13, class: "commit v" }, this.commit);
+      linhas(this.commit, 670, 206, ["commit:", "publica", "o painel"], "p", 23, { "text-anchor": "middle" });
+      // GitHub Pages
+      this.pages = g0(s);
+      seta(this.pages, 698, 165, 742, 165);
+      ret(this.pages, 748, 110, 170, 110, "cx v", 12);
+      linhas(this.pages, 833, 156, ["GitHub", "Pages"], "b", 28, { "text-anchor": "middle" });
+      seta(this.pages, 922, 165, 966, 165);
+      // o celular
+      this.cel = g0(s);
+      ret(this.cel, 972, 20, 228, 300, "tela", 22);
+      ret(this.cel, 990, 44, 192, 54, "chip", 8);
+      linhas(this.cel, 1000, 66, ["seu-usuario.github.io", "/painel"], "mono", 22, { "font-size": 15 });
+      ret(this.cel, 990, 112, 192, 18, "chip", 4);
+      [0, 1, 2].forEach((i) => ret(this.cel, 990 + i * 66, 140, 60, 50, "chip", 6));
+      [150, 120, 96, 70].forEach((w, i) => ret(this.cel, 990, 206 + i * 24, w, 16, i === 0 ? "barra m" : "barra", 3));
+      // quem escreve
+      this.quem = g0(s);
+      const pilula = (x, y, txt0, cls, tc) => { ret(this.quem, x, y, 104, 30, cls, 15); t(this.quem, x + 52, y + 21, txt0, "p " + tc, { "text-anchor": "middle" }); };
+      pilula(376, 6, "agente", "chip r", "r");
+      pilula(781, 76, "agente", "chip r", "r");
+      pilula(224, 296, "vocês", "chip m", "m");
+      t(this.quem, 336, 318, "pergunta, números, conferência", "p m", { "font-size": 16 });
+    },
+    passo(k, anim) {
+      const lento = anim && !reduzir();
+      // k1: as linhas da base encolhem e entram em dados.json
+      this.linhas.forEach((l, i) => {
+        if (k >= 1) gsap.to(l, { attr: { x1: 240, x2: 240 + (i % 3) * 8, y1: 88, y2: 88 }, opacity: 0, duration: lento ? 0.9 : 0, delay: lento ? i * 0.02 : 0, ease: "power2.in", overwrite: "auto" });
+        else gsap.to(l, { attr: { x1: 14, x2: 126, y1: 56 + i * 9.6, y2: 56 + i * 9.6 }, opacity: 1, duration: d(anim, 1), overwrite: "auto" });
+      });
+      vis(this.script, k >= 1, anim);
+      vis(this.arq[0], k >= 1, anim, { delay: lento ? 0.6 : 0 });
+      vis(this.pasta, k >= 2, anim);
+      vis(this.arq[1], k >= 2, anim, { delay: lento ? 0.15 : 0 });
+      vis(this.arq[2], k >= 2, anim, { delay: lento ? 0.3 : 0 });
+      vis(this.commit, k >= 3, anim);
+      if (k >= 3 && lento) gsap.fromTo(this.novo, { attr: { r: 0 } }, { attr: { r: 13 }, duration: 0.6, ease: "back.out(2)", delay: 0.2 });
+      vis(this.pages, k >= 4, anim);
+      vis(this.cel, k >= 4, anim, { delay: lento ? 0.3 : 0 });
+      vis(this.quem, k >= 5, anim);
+    },
+  });
+
+  /* ======================================================================
+     B. A anatomia de um painel: as peças aparecem uma a uma, e o filtro funciona.
+     ====================================================================== */
+  Motor.cena("anatomia", {
+    montar(caixa) {
+      caixa.classList.add("cena-a6");
+      const m = html("div", "pmock", caixa);
+      const peca = (n) => { const p = html("div", "peca", m); html("span", "pino", p, n); return p; };
+      this.p = [];
+      const p1 = peca(1);
+      html("h4", null, p1, "A nota dos voos, mês a mês");
+      this.manchete = html("p", "manchete", p1, "");
+      const p2 = peca(2);
+      const chips = html("div", "chips", p2);
+      this.bt = EMP.map((e) => {
+        const b = html("button", null, chips, e);
+        semTeclas(b);
+        b.addEventListener("click", (ev) => { ev.stopPropagation(); this.escolher(e, true); });
+        return b;
+      });
+      const p3 = peca(3);
+      const kp = html("div", "kpis", p3);
+      this.kv = [0, 1, 2].map(() => { const k = html("div", "kpi", kp); return { v: html("div", "v", k, ""), r: html("div", "r", k, "") }; });
+      const p4 = peca(4);
+      html("div", "graf-tit", p4, "Nota média de cada mês");
+      const s = svg("svg", { viewBox: "0 0 640 210", class: "grafico-svg a6" }, p4);
+      this.sx = (i) => 40 + i * 64;
+      this.sy = U.escala(5, 8, 180, 20);
+      [5, 6, 7, 8].forEach((v) => {
+        svg("line", { x1: 30, x2: 630, y1: this.sy(v), y2: this.sy(v), class: "grade-linha" }, s);
+        t(s, 24, this.sy(v) + 6, num(v, 0), "p f", { "text-anchor": "end" });
+      });
+      DADOS.meses.forEach((mm, i) => t(s, this.sx(i), 205, mm, "p f", { "text-anchor": "middle", "font-size": 17 }));
+      this.caminho = svg("polyline", { points: "", class: "reta", style: "stroke-width:3.5" }, s);
+      this.pts = DADOS.meses.map(() => svg("circle", { r: 6, cx: 0, cy: 0, style: "fill: var(--marca)" }, s));
+      this.rot = t(s, 0, 0, "", "p b");
+      const p5 = peca(5);
+      html("div", "rodape", p5, `Fonte: base simulada do curso, ${num(DADOS.linhas, 0)} voos de janeiro a outubro de 2026, 2.000 por companhia. Só números agregados.`);
+      this.p = [p1, p2, p3, p4, p5];
+      this.atual = "Azul";
+      this.y = this.pts.map(() => this.sy(6.5));
+    },
+    escolher(e, anim) {
+      this.atual = e;
+      const D = DADOS.empresas[e], v = D.mensal;
+      const mov = anim && !reduzir();
+      this.bt.forEach((b) => b.classList.toggle("on", b.textContent === e));
+      const imax = v.indexOf(Math.max(...v)), imin = v.indexOf(Math.min(...v));
+      this.manchete.innerHTML = `Na ${e}, o melhor mês foi <b>${MESES_LONGOS[imax]}</b> (${n2(v[imax])}) e o pior, ${MESES_LONGOS[imin]} (${n2(v[imin])}).`;
+      const kp = [[num(D.n, 0), "voos de janeiro a outubro"], [n2(D.nota), "nota média (0 a 10)"], [n2(v[imax] - v[imin]), "entre o melhor e o pior mês"]];
+      this.kv.forEach((k, i) => { k.v.textContent = kp[i][0]; k.r.textContent = kp[i][1]; });
+      if (mov) gsap.fromTo(this.kv.map((k) => k.v), { opacity: 0.25 }, { opacity: 1, duration: 0.5, stagger: 0.08 });
+      const alvo = v.map((x) => this.sy(x));
+      const obj = { y: this.y.slice() };
+      const desenha = () => {
+        this.pts.forEach((p, i) => { p.setAttribute("cx", this.sx(i)); p.setAttribute("cy", obj.y[i]); });
+        this.caminho.setAttribute("points", obj.y.map((y, i) => `${this.sx(i)},${y}`).join(" "));
+        this.rot.setAttribute("x", this.sx(imax)); this.rot.setAttribute("y", obj.y[imax] - 14);
+        this.rot.setAttribute("text-anchor", "middle"); this.rot.textContent = n2(v[imax]);
+      };
+      gsap.killTweensOf(obj);
+      gsap.to(obj.y, Object.assign(alvo.reduce((a, y, i) => { a[i] = y; return a; }, {}), {
+        duration: mov ? 0.7 : 0, ease: "power2.out", onUpdate: desenha, onComplete: () => { this.y = alvo; desenha(); },
+      }));
+      if (!mov) { obj.y = alvo; this.y = alvo; desenha(); }
+    },
+    passo(k, anim) {
+      this.p.forEach((p, i) => vis(p, k >= i + 1, anim));
+      if (!this.feito) { this.feito = true; this.escolher(this.atual, false); }
+      if (k >= 5 && anim) this.escolher(this.atual, true);
+    },
+  });
+
+  /* ======================================================================
+     C. O que acontece num clique: a página lê o número e move a mesma barra.
+     ====================================================================== */
+  Motor.cena("clique", {
+    montar(caixa) {
+      const s = novoSvg(caixa, 1200, 370);
+      const nos = [["1 · clique", "no botão do mês"], ["2 · lê o número", "pronto em dados.json"], ["3 · gsap.to(barra)", "novo tamanho, 0,7 s"], ["4 · gsap.to(linha)", "novo lugar na fila"]];
+      this.nos = nos.map((n, i) => {
+        const x = i * 302;
+        const r = ret(s, x, 0, 290, 78, "no", 10);
+        linhas(s, x + 16, 32, n, i ? "p b" : "p b", 27);
+        if (i < 3) seta(s, x + 291, 39, x + 301, 39);
+        return r;
+      });
+      this.tit = t(s, 0, 122, "", "b");
+      this.x0 = 110; this.L = 800 / 10;
+      for (let v = 0; v <= 10; v += 2) {
+        svg("line", { x1: this.x0 + v * this.L, x2: this.x0 + v * this.L, y1: 140, y2: 362, class: "grade-linha" }, s);
+      }
+      this.lin = EMP.map((e) => {
+        const g = g0(s);
+        t(g, 0, 30, e, "b");
+        const b = ret(g, this.x0, 8, 0, 34, "barra", 4);
+        const v = t(g, this.x0, 33, "", "p b");
+        return { e, g, b, v };
+      });
+      this.mes = -1;
+      this.marcar = (() => {
+        const c = html("div", "ctrl", caixa), bx = html("div", "botoes", c);
+        const nomes = ["jan a out"].concat(DADOS.meses);
+        const bs = nomes.map((n, i) => {
+          const b = html("button", null, bx, n);
+          semTeclas(b);
+          b.addEventListener("click", (ev) => { ev.stopPropagation(); this.mostrar(i - 1, true); });
+          return b;
+        });
+        return (i) => bs.forEach((b, j) => b.classList.toggle("on", j === i + 1));
+      })();
+    },
+    mostrar(mes, anim) {
+      this.mes = mes;
+      const mov = anim && !reduzir();
+      const val = (e) => (mes < 0 ? DADOS.empresas[e].nota : DADOS.empresas[e].mensal[mes]);
+      const ordem = EMP.slice().sort((a, b) => val(b) - val(a));
+      this.marcar(mes);
+      this.tit.textContent = "Nota média da pesquisa pós-voo, " + (mes < 0 ? "de janeiro a outubro" : "em " + MESES_LONGOS[mes]);
+      // os quatro passos acendem em sequência
+      this.nos.forEach((n, i) => {
+        n.classList.remove("on");
+        if (mov) gsap.delayedCall(i * 0.28, () => n.classList.add("on"));
+        else if (mes >= 0 || anim) n.classList.add("on");
+      });
+      this.lin.forEach((o) => {
+        const v = val(o.e), pos = ordem.indexOf(o.e);
+        o.b.setAttribute("class", "barra" + (pos === 0 ? " m" : ""));
+        gsap.to(o.b, { attr: { width: v * this.L }, duration: mov ? 0.7 : 0, delay: mov ? 0.56 : 0, ease: "power2.out", overwrite: "auto" });
+        gsap.to(o.v, { attr: { x: this.x0 + v * this.L + 10 }, duration: mov ? 0.7 : 0, delay: mov ? 0.56 : 0, ease: "power2.out", overwrite: "auto" });
+        o.v.textContent = n2(v);
+        gsap.to(o.g, { y: 140 + pos * 54, duration: mov ? 0.7 : 0, delay: mov ? 0.84 : 0, ease: "power2.inOut", overwrite: "auto" });
+      });
+    },
+    passo(k, anim) { this.mostrar([-1, 0, 6, 8][Math.min(k, 3)], anim); },
+  });
 })();
 </script>
     
