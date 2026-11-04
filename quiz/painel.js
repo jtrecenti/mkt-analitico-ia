@@ -80,7 +80,13 @@ function desenhar() {
       return `<div class="linha${certa}"><span class="letra">${LETRAS[i]}</span>
         <div class="trilho"><i style="width:${revelado ? frac : 0}%"></i><span>${esc(o)}</span></div>
         <span class="pct">${revelado ? frac + "%" : ""}</span></div>`;
-    }).join("")}</div>`;
+    }).join("")}${p.outro ? (() => {
+      const frac = res.total ? Math.round((100 * res.outros.length) / res.total) : 0;
+      return `<div class="linha"><span class="letra">${LETRAS[p.opcoes.length]}</span>
+        <div class="trilho"><i style="width:${revelado ? frac : 0}%"></i><span>Outro</span></div>
+        <span class="pct">${revelado ? frac + "%" : ""}</span></div>`;
+    })() : ""}</div>${p.outro && (revelado || p.mostrarAoVivo) && res.outros.length
+      ? `<div class="mural" style="margin-top:1rem">${res.outros.map((x) => `<div class="cartao">${esc(x)}</div>`).join("")}</div>` : ""}`;
   } else if (p.tipo === "numero") {
     const [a, b] = p.escala || [Math.min(0, ...res.nums), Math.max(1, ...res.nums)];
     const pos = (x) => 100 * (Math.min(b, Math.max(a, x)) - a) / (b - a || 1);

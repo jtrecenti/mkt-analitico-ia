@@ -4,13 +4,17 @@
    "id": "a1-delegar",
    "aula": "Quarta 9h · Habilidades e plugins",
    "tipo": "multipla",
-   "enunciado": "Qual tarefa da sua semana você mais gostaria de entregar para alguém fazer?",
+   "enunciado": "Qual tarefa da sua semana passada você gostaria que uma IA tivesse feito para você?",
    "opcoes": [
-    "Juntar planilhas e relatórios de canais diferentes",
+    "Juntar planilhas e relatórios",
     "Pesquisar concorrentes, mercado e tendências",
     "Escrever e revisar textos, posts e apresentações",
     "Analisar dados de campanhas, vendas ou clientes"
    ],
+   "outro": true,
+   "max": 120,
+   "dicaOutro": "qual tarefa?",
+   "mostrarAoVivo": true,
    "certa": null,
    "porque": "Não há resposta certa: vamos usar isso para escolher os exemplos da manhã."
   },
@@ -53,7 +57,7 @@
     100
    ],
    "mostrarAoVivo": true,
-   "enunciado": "Exercício 5: na variável mais difícil do seu dicionário, em quantos % dos textos a IA concordou com você?",
+   "enunciado": "Exercício 3: na variável mais difícil do seu dicionário, em quantos % dos textos a IA concordou com você?",
    "dica": "um número de 0 a 100"
   },
   {

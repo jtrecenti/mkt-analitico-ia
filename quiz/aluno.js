@@ -93,7 +93,28 @@ function desenhar() {
       }
       box.append(el("button", { classe: cls.join(" "), type: "button", disabled: !aberto, onclick: () => responder(i) }, [el("span", { classe: "letra", texto: LETRAS[i] }), corpo]));
     });
-    tela.append(box);
+    if (p.outro) {
+      // "Outro": a alternativa abre um campo de texto, e o texto é a resposta
+      const k = p.opcoes.length, meu = typeof v === "string";
+      const cls = ["opcao"];
+      if (meu || estado.abrirOutro) cls.push("escolhida");
+      const corpo = el("span", {}, [el("span", { texto: meu ? `Outro: ${v}` : "Outro (escreva)" })]);
+      if (res && res.total) {
+        const frac = Math.round((100 * res.outros.length) / res.total);
+        corpo.append(el("div", { classe: "barra" }, [el("i", { style: `width:${frac}%` })]), el("div", { classe: "votos", texto: `${res.outros.length} de ${res.total} (${frac}%)` }));
+      }
+      box.append(el("button", { classe: cls.join(" "), type: "button", disabled: !aberto,
+        onclick: () => { estado.abrirOutro = true; desenhar(); $("#campo-outro")?.focus(); } },
+        [el("span", { classe: "letra", texto: LETRAS[k] }), corpo]));
+      tela.append(box);
+      if (aberto && (estado.abrirOutro || meu)) {
+        const campo = el("input", { classe: "campo", id: "campo-outro", type: "text", maxlength: p.max || 120, placeholder: p.dicaOutro || "Qual?" });
+        if (meu) campo.value = v;
+        const botao = el("button", { classe: "enviar", type: "button", texto: meu ? "Trocar a resposta" : "Enviar",
+          onclick: () => { const x = campo.value.trim(); if (x) { estado.abrirOutro = false; responder(x); } } });
+        tela.append(campo, botao);
+      }
+    } else tela.append(box);
   } else {
     const multi = p.tipo === "texto" && (p.linhas || 1) > 1;
     const campo = multi
@@ -146,6 +167,7 @@ async function iniciar() {
     if (mudou) {
       estado.pararRespostas && estado.pararRespostas();
       estado.respostas = {};
+      estado.abrirOutro = false;
       if (pub?.pergunta) {
         estado.pararRespostas = acompanhar(`respostas/${pub.pergunta}`, (r) => {
           estado.respostas = r || {};

@@ -131,8 +131,13 @@ export function resumir(p, respostas) {
   const lista = Object.values(respostas || {}).map((r) => r && r.v).filter((v) => v !== undefined && v !== null && v !== "");
   if (p.tipo === "multipla") {
     const contagem = p.opcoes.map(() => 0);
-    for (const v of lista) if (Number.isInteger(v) && v >= 0 && v < contagem.length) contagem[v]++;
-    return { total: lista.length, contagem };
+    // com "outro": true, quem escolhe Outro grava um texto no lugar do número
+    const outros = [];
+    for (const v of lista) {
+      if (Number.isInteger(v) && v >= 0 && v < contagem.length) contagem[v]++;
+      else if (p.outro && typeof v === "string") outros.push(v);
+    }
+    return { total: lista.length, contagem, outros };
   }
   if (p.tipo === "numero") {
     const nums = lista.map(Number).filter((x) => Number.isFinite(x)).sort((a, b) => a - b);
