@@ -162,21 +162,21 @@
   },
   {
    "id": "a5-checagem",
-   "aula": "Quinta 9h · Relatórios reprodutíveis",
+   "aula": "Quinta 9h · Monitores e páginas estáticas",
    "tipo": "multipla",
-   "enunciado": "Qual destas é uma boa checagem para o relatório mensal da Bora?",
+   "enunciado": "Qual destas é uma boa checagem para o monitor de avaliações?",
    "opcoes": [
-    "O relatório foi gerado sem dar erro",
-    "Nenhum pedido aparece duas vezes",
-    "O gráfico final ficou bonito",
-    "O ROAS do mês é maior que 3"
+    "A página foi gerada sem dar erro",
+    "Nenhuma avaliação conta duas vezes",
+    "O gráfico ficou bonito",
+    "A nota média é maior que 3"
    ],
    "certa": 1,
-   "porque": "Uma checagem é uma frase que precisa ser verdade nos dados e que o computador confere sozinho. Gerar sem erro não prova nada, e um ROAS alto pode ser justamente o sinal de um erro."
+   "porque": "Uma checagem é uma frase que precisa ser verdade nos dados e que o computador confere sozinho. Gerar sem erro não prova nada, e a nota média depende do negócio, não da qualidade dos dados."
   },
   {
    "id": "a5-segredo",
-   "aula": "Quinta 9h · Relatórios reprodutíveis",
+   "aula": "Quinta 9h · Monitores e páginas estáticas",
    "tipo": "multipla",
    "enunciado": "Para \"facilitar\", o agente escreveu a chave da API dentro do script, e a pasta vai ser compartilhada com o time. O que fazer?",
    "opcoes": [

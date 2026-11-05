@@ -67,7 +67,8 @@ footer { margin-top: 2.5rem; font-size: .85rem; color: var(--cinza); border-top:
     <li><a href="#graficos">Tipos de variáveis e o gráfico certo</a></li>
     <li><a href="#regressao">Regressão linear</a></li>
     <li><a href="#reprodutivel">Relatório reprodutível e checagens</a></li>
-    <li><a href="#agente">Agente</a></li>
+    <li><a href="#pagina">Página estática publicada</a></li>
+<li><a href="#agente">Agente</a></li>
     <li><a href="#segunda">E agora? Segunda-feira</a></li>
   </ol>
 
@@ -209,6 +210,7 @@ footer { margin-top: 2.5rem; font-size: .85rem; color: var(--cinza); border-top:
       dados novos. A análise mora numa pasta organizada, e não numa conversa.</dd>
       <dt>Para que serve</dt>
       <dd><ul>
+        <li>O monitor diário das avaliações do app: junta a coleta de hoje com as anteriores, sem contar repetidas.</li>
         <li>O relatório mensal de campanhas: chega o arquivo do mês, sai o relatório no mesmo formato.</li>
         <li>O acompanhamento semanal de reclamações, comparável semana a semana.</li>
         <li>Passar a análise para um colega sem uma reunião de uma hora.</li>
@@ -226,8 +228,36 @@ footer { margin-top: 2.5rem; font-size: .85rem; color: var(--cinza); border-top:
     </dl>
   </section>
 
-  <section class="ficha" id="agente">
+  <section class="ficha" id="pagina">
     <div class="n">7</div>
+    <h3>Página estática publicada</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Um único arquivo HTML com os números já calculados, que abre em qualquer navegador e ganha um link
+      público em um minuto. É o contrário de um painel dinâmico (Power BI, Looker Studio), que fica ligado a um
+      banco de dados num servidor.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>O resumo do monitor ou do relatório do mês, para a diretoria abrir no celular.</li>
+        <li>Um painel de campanha que não depende da TI nem de licença.</li>
+        <li>Com Pyodide ou DuckDB-WASM, uma página em que o gestor sobe a própria planilha e a conta roda no
+        computador dele.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>O agente escreve o <code>index.html</code>; você arrasta a pasta no Netlify Drop
+      (app.netlify.com/drop, com conta grátis: sem conta, o link some em uma hora) ou publica pelos Sites do
+      ChatGPT (@Sites). Para atualizar, roda de novo e arrasta a pasta nova no mesmo site.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Faça uma página estática, um único index.html, com a manchete em uma frase, três
+      números-chave, dois gráficos e o rodapé com a fonte e a data. Só números agregados.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Quem tem o link vê tudo o que está na página, inclusive o que está escondido no código.
+      Nada de dado de cliente, nem nas linhas que não aparecem.</dd>
+    </dl>
+  </section>
+
+  <section class="ficha" id="agente">
+    <div class="n">8</div>
     <h3>Agente</h3>
     <dl>
       <dt>O que é</dt>

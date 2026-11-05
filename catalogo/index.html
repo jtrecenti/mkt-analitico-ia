@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de ferramentas de IA para marketing · Marketing Analítico com IA</title>
+<style>
+@font-face { font-family: "GT Ultra Fine"; src: url("../recursos/GTUltraFine-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Inter; src: url("../recursos/Inter-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: Inter; src: url("../recursos/Inter-SemiBold.ttf"); font-weight: 600; }
+:root { --marca: #e50505; --azul: #0e171d; --cinza: #5b5b5b; --claro: #dcdcdc; --sup: #f3f4f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--azul); line-height: 1.5; }
+main { max-width: 1100px; margin: 0 auto; padding: 2.2rem 1.3rem 3rem; }
+.curso { color: var(--marca); font-weight: 600; font-size: .9rem; }
+h1 { font-family: "GT Ultra Fine", Georgia, serif; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; margin: .3rem 0 .8rem; }
+h2 { font-family: "GT Ultra Fine", Georgia, serif; font-size: 1.6rem; margin: 2.4rem 0 .4rem; border-bottom: 2px solid var(--marca); padding-bottom: .2rem; }
+h3 { font-size: 1.05rem; margin: 1.4rem 0 .5rem; color: var(--cinza); }
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: .8rem; }
+.item { background: var(--sup); border-radius: 12px; padding: .8rem 1rem; font-size: .92rem; }
+.item h4 { margin: 0 0 .3rem; font-size: 1.05rem; } .item h4 a { color: var(--azul); }
+.item p { margin: .35rem 0; } .ex { color: #333; } .preco { color: #333; } .obs { color: var(--cinza); font-size: .82rem; }
+.selos span { display: inline-block; font-size: .72rem; background: #fff; border: 1px solid var(--claro); border-radius: 99px; padding: 0 .5rem; margin: 0 .25rem .2rem 0; }
+.filtros { position: sticky; top: 0; background: #fff; padding: .7rem 0; z-index: 2; display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--claro); }
+.filtros input[type=search] { flex: 1; min-width: 240px; font: inherit; padding: .5rem .8rem; border: 1.5px solid var(--claro); border-radius: 10px; }
+.dica { color: var(--cinza); font-size: .92rem; }
+.vazio { display: none; color: var(--cinza); }
+a.volta { color: var(--marca); }
+@media print { .filtros { display: none; } .item { break-inside: avoid; } }
+</style></head><body><main>
+<div class="curso">Marketing Analítico: impulsionando resultados com IA · <a class="volta" href="../">site do curso</a></div>
+<h1>Catálogo de ferramentas de IA para marketing</h1>
+<p>119 ferramentas, skills e plugins para tarefas de marketing: dentro do ChatGPT e de outros agentes, conteúdo e vídeo,
+pesquisa qualitativa, marketing digital, trade marketing e estratégia. Cada item foi conferido no site oficial em 5 de
+novembro de 2026; preços e planos mudam com frequência, então confira antes de assinar.</p>
+<p class="dica"><b>Como usar:</b> busque pela tarefa ("transcrição", "cortes", "gôndola", "concorrente"), e não pelo nome.
+Antes de colocar dados de clientes em qualquer ferramenta, confira se a sua empresa aprovou o uso.</p>
+<div class="filtros">
+<input type="search" id="q" placeholder="Buscar por tarefa: transcrição, legenda, SEO, ponto de venda...">
+<label><input type="checkbox" id="br"> só brasileiras</label>
+<label><input type="checkbox" id="gpt"> só as que se ligam ao ChatGPT</label>
+<span id="n" class="dica"></span>
+</div>
+<h2>Dentro do ChatGPT e dos agentes</h2><section class="cat"><h3>Dentro do ChatGPT</h3><div class="grade"><article class="item" data-busca="adobe para chatgpt (photoshop, express, acrobat) dentro do chatgpt app/conector do chatgpt plugin único da adobe com mais de 70 ferramentas: editar fotos (photoshop), criar peças (express) e editar, juntar, converter e tarjar pdfs (acrobat) sem sair da conversa. ajustar a foto de produto para o banner e depois juntar o briefing e o media kit num único pdf." data-br="0" data-gpt="1">
+<h4><a href="https://www.adobe.com/adobe-connectors/adobe-for-chatgpt.html" target="_blank" rel="noopener">Adobe para ChatGPT (Photoshop, Express, Acrobat)</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Plugin único da Adobe com mais de 70 ferramentas: editar fotos (Photoshop), criar peças (Express) e editar, juntar, converter e tarjar PDFs (Acrobat) sem sair da conversa.</p>
+<p class="ex"><b>Exemplo:</b> Ajustar a foto de produto para o banner e depois juntar o briefing e o media kit num único PDF.</p>
+<p class="preco"><b>Preço:</b> Grátis para usuários do ChatGPT; alguns recursos exigem conta ou plano pago Adobe</p>
+<p class="obs">Lançado em dez/2025 como três apps; em ago/2026 virou um plugin único; em set/2026 ganhou edição manual no painel lateral. Uma página da Adobe diz que o Express no ChatGPT não está disponível em planos Enterprise, Teams e Edu: conferir no workspace.</p>
+</article><article class="item" data-busca="agentes de workspace do chatgpt (e no slack) dentro do chatgpt recurso nativo agentes compartilhados pela equipe para fluxos repetidos, com apps conectados, agenda e publicação de resultados em canais do slack. agente que toda sexta posta no canal #marketing o resumo de leads da semana vindo do hubspot." data-br="0" data-gpt="1">
+<h4><a href="https://help.openai.com/en/articles/20001143-chatgpt-workspace-agents-for-enterprise-and-business" target="_blank" rel="noopener">Agentes de workspace do ChatGPT (e no Slack)</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Agentes compartilhados pela equipe para fluxos repetidos, com apps conectados, agenda e publicação de resultados em canais do Slack.</p>
+<p class="ex"><b>Exemplo:</b> Agente que toda sexta posta no canal #marketing o resumo de leads da semana vindo do HubSpot.</p>
+<p class="preco"><b>Preço:</b> Incluído no ChatGPT Business, Enterprise e Edu; Slack precisa ser pago</p>
+<p class="obs">No Enterprise vem desligado e o admin liga. No Slack, o admin precisa permitir criação de grupos de usuários.</p>
+</article><article class="item" data-busca="canva no chatgpt dentro do chatgpt app/conector do chatgpt cria e edita peças do canva a partir da conversa, com prévia dentro do chatgpt. com plano pago do canva, usa brand kit e modelos da marca. transformar o resumo do relatório mensal de campanhas num carrossel de instagram no padrão da marca." data-br="0" data-gpt="1">
+<h4><a href="https://www.canva.com/help/connect-chatgpt-to-canva/" target="_blank" rel="noopener">Canva no ChatGPT</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Cria e edita peças do Canva a partir da conversa, com prévia dentro do ChatGPT. Com plano pago do Canva, usa brand kit e modelos da marca.</p>
+<p class="ex"><b>Exemplo:</b> Transformar o resumo do relatório mensal de campanhas num carrossel de Instagram no padrão da marca.</p>
+<p class="preco"><b>Preço:</b> App grátis em qualquer conta Canva (inclusive Free e Education); recursos de marca exigem Canva pago</p>
+<p class="obs">Digite @Canva ou conecte em Plugins. No ChatGPT Business/Enterprise o admin precisa liberar; em times Canva o admin pode ter que permitir assistentes de IA. Disponibilidade regional pode variar.</p>
+</article><article class="item" data-busca="figma no chatgpt (figjam e figma slides) dentro do chatgpt app/conector do chatgpt gera diagramas no figjam (fluxogramas, jornadas, gantt) e rascunhos de apresentação no figma slides a partir da conversa. desenhar o funil de conversão da campanha de black friday como fluxograma editável no figjam." data-br="0" data-gpt="1">
+<h4><a href="https://help.figma.com/hc/en-us/articles/35326636109975-Use-ChatGPT-with-Figma" target="_blank" rel="noopener">Figma no ChatGPT (FigJam e Figma Slides)</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Gera diagramas no FigJam (fluxogramas, jornadas, Gantt) e rascunhos de apresentação no Figma Slides a partir da conversa.</p>
+<p class="ex"><b>Exemplo:</b> Desenhar o funil de conversão da campanha de Black Friday como fluxograma editável no FigJam.</p>
+<p class="preco"><b>Preço:</b> Grátis para usar com conta Figma (Starter em diante)</p>
+<p class="obs">Não cria arquivos do Figma Design. Arquivos criados e não reivindicados ficam públicos para quem tiver o link: cuidado com dados de clientes. Não disponível na UE.</p>
+</article><article class="item" data-busca="google drive no chatgpt (docs, sheets e slides) dentro do chatgpt app/conector do chatgpt busca e lê arquivos do drive, e em contas autorizadas edita docs, sheets e slides abertos ao lado da conversa. ler a planilha de investimento por canal no sheets e montar o resumo para a diretoria." data-br="0" data-gpt="1">
+<h4><a href="https://help.openai.com/en/articles/10929079-google-drive-app-and-setup-in-chatgpt" target="_blank" rel="noopener">Google Drive no ChatGPT (Docs, Sheets e Slides)</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Busca e lê arquivos do Drive, e em contas autorizadas edita Docs, Sheets e Slides abertos ao lado da conversa.</p>
+<p class="ex"><b>Exemplo:</b> Ler a planilha de investimento por canal no Sheets e montar o resumo para a diretoria.</p>
+<p class="preco"><b>Preço:</b> Incluído nos planos do ChatGPT (ações novas ligadas por padrão no Business; no Enterprise/Edu o admin liga)</p>
+<p class="obs">Os apps separados de Docs, Sheets e Slides saíram do diretório: tudo passa pelo app Google Drive. Drives compartilhados ainda não aparecem na Biblioteca.</p>
+</article><article class="item" data-busca="gpts personalizados (gpt store) dentro do chatgpt gpt assistentes com instruções e arquivos fixos. ainda funcionam, mas estão sendo aposentados e migrados para plugins (instruções viram skill). migrar o gpt &#x27;revisor de tom de voz da marca&#x27; para um plugin com skill, em meus gpts &gt; migrar para plugin." data-br="0" data-gpt="1">
+<h4><a href="https://learn.chatgpt.com/docs/migrate-custom-gpts" target="_blank" rel="noopener">GPTs personalizados (GPT Store)</a></h4>
+<div class="selos"><span>GPT</span></div>
+<p>Assistentes com instruções e arquivos fixos. Ainda funcionam, mas estão sendo aposentados e migrados para plugins (instruções viram skill).</p>
+<p class="ex"><b>Exemplo:</b> Migrar o GPT &#x27;revisor de tom de voz da marca&#x27; para um plugin com skill, em Meus GPTs &gt; Migrar para plugin.</p>
+<p class="preco"><b>Preço:</b> Incluído nos planos do ChatGPT</p>
+<p class="obs">Em aposentadoria, sem data publicada na página. Ações personalizadas não migram. Para o curso, ensinar skills e não GPTs novos.</p>
+</article><article class="item" data-busca="hubspot no chatgpt dentro do chatgpt app/conector do chatgpt consulta o crm (contatos, empresas, negócios) no chat e na pesquisa profunda, e cria ou atualiza contatos e negócios. perguntar quais segmentos de clientes tiveram mais negócios perdidos no trimestre e por quê." data-br="0" data-gpt="1">
+<h4><a href="https://knowledge.hubspot.com/integrations/connect-your-hubspot-account-to-chatgpt" target="_blank" rel="noopener">HubSpot no ChatGPT</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Consulta o CRM (contatos, empresas, negócios) no chat e na pesquisa profunda, e cria ou atualiza contatos e negócios.</p>
+<p class="ex"><b>Exemplo:</b> Perguntar quais segmentos de clientes tiveram mais negócios perdidos no trimestre e por quê.</p>
+<p class="preco"><b>Preço:</b> Sem custo extra com qualquer assinatura HubSpot; requer ChatGPT pago</p>
+<p class="obs">Cada usuário vê só o que já pode ver no HubSpot. Super Admin conecta primeiro. Dados pessoais de clientes: LGPD, preferir plano empresarial (sem treino de modelo).</p>
+</article><article class="item" data-busca="meetings (plugin) e record do chatgpt dentro do chatgpt recurso nativo grava e transcreve reuniões no app de desktop e gera resumo e próximos passos. gravar a reunião com a agência e sair com a lista de ajustes da campanha por responsável." data-br="0" data-gpt="1">
+<h4><a href="https://help.openai.com/en/articles/20001546-the-meetings-plugin-in-chatgpt" target="_blank" rel="noopener">Meetings (plugin) e Record do ChatGPT</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Grava e transcreve reuniões no app de desktop e gera resumo e próximos passos.</p>
+<p class="ex"><b>Exemplo:</b> Gravar a reunião com a agência e sair com a lista de ajustes da campanha por responsável.</p>
+<p class="preco"><b>Preço:</b> Meetings: beta para Pro e Business no macOS. Record (antigo): Plus, Pro, Business, Edu, só macOS</p>
+<p class="obs">Só macOS (Windows sem data). Peça consentimento dos participantes (LGPD). Usuários relatam que o Record sumiu do novo app unificado.</p>
+</article><article class="item" data-busca="notion no chatgpt (notion mcp) dentro do chatgpt app/conector do chatgpt lê e escreve páginas e bancos de dados do notion a partir do chat. criar no notion o calendário editorial do mês a partir das ideias discutidas na conversa." data-br="0" data-gpt="1">
+<h4><a href="https://www.notion.com/help/notion-mcp" target="_blank" rel="noopener">Notion no ChatGPT (Notion MCP)</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Lê e escreve páginas e bancos de dados do Notion a partir do chat.</p>
+<p class="ex"><b>Exemplo:</b> Criar no Notion o calendário editorial do mês a partir das ideias discutidas na conversa.</p>
+<p class="preco"><b>Preço:</b> Sem custo extra; requer conta Notion</p>
+<p class="obs">O admin pode bloquear servidores MCP. Não confundir com usar o plano do ChatGPT dentro do Notion Agent (outra integração).</p>
+</article><article class="item" data-busca="pesquisa profunda (deep research) do chatgpt dentro do chatgpt recurso nativo faz pesquisa longa na web e em fontes conectadas, com plano editável e relatório com citações. mapear tendências de embalagens sustentáveis no varejo brasileiro com fontes citadas." data-br="0" data-gpt="1">
+<h4><a href="https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt" target="_blank" rel="noopener">Pesquisa profunda (deep research) do ChatGPT</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Faz pesquisa longa na web e em fontes conectadas, com plano editável e relatório com citações.</p>
+<p class="ex"><b>Exemplo:</b> Mapear tendências de embalagens sustentáveis no varejo brasileiro com fontes citadas.</p>
+<p class="preco"><b>Preço:</b> Cota por plano (Edu: 5 por 24 h sem custo extra, segundo a rate card); no Work usa a cota/créditos do Work</p>
+<p class="obs">Conferir a fonte de cada número citado; pode combinar com conectores como HubSpot e Drive.</p>
+</article><article class="item" data-busca="semrush no chatgpt dentro do chatgpt app/conector do chatgpt traz dados ao vivo do semrush (tráfego, palavras-chave, rankings, visibilidade) para a conversa, só leitura. comparar as palavras-chave orgânicas do nosso site com as de dois concorrentes e sugerir pautas de blog." data-br="0" data-gpt="1">
+<h4><a href="https://www.semrush.com/kb/1619-getting-started-with-mcp" target="_blank" rel="noopener">Semrush no ChatGPT</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Traz dados ao vivo do Semrush (tráfego, palavras-chave, rankings, visibilidade) para a conversa, só leitura.</p>
+<p class="ex"><b>Exemplo:</b> Comparar as palavras-chave orgânicas do nosso site com as de dois concorrentes e sugerir pautas de blog.</p>
+<p class="preco"><b>Preço:</b> Sem taxa no ChatGPT; consome unidades de API da assinatura Semrush</p>
+<p class="obs">Disponível em Plus, Pro, Business, Enterprise e Edu. A página do MCP exige Semrush One, SEO Classic ou Trends API com cota mínima de unidades: conferir antes.</p>
+</article><article class="item" data-busca="similarweb no chatgpt dentro do chatgpt app/conector do chatgpt responde com dados de tráfego, audiência e concorrência digital do similarweb. ver de onde vem o tráfego dos três maiores concorrentes e qual canal cresceu no semestre." data-br="0" data-gpt="1">
+<h4><a href="https://docs.similarweb.com/api-v5/similarweb-mcp/available-integrations/chatgpt-integration" target="_blank" rel="noopener">Similarweb no ChatGPT</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span></div>
+<p>Responde com dados de tráfego, audiência e concorrência digital do Similarweb.</p>
+<p class="ex"><b>Exemplo:</b> Ver de onde vem o tráfego dos três maiores concorrentes e qual canal cresceu no semestre.</p>
+<p class="preco"><b>Preço:</b> Requer ChatGPT pago e assinatura Similarweb com acesso à API (consome créditos)</p>
+<p class="obs">Ferramenta cara, típica de empresas maiores.</p>
+</article><article class="item" data-busca="skills no chatgpt dentro do chatgpt skill pacotes de instruções e arquivos para tarefas repetidas; o chatgpt escolhe a skill sozinho ou você chama com @. a skill @skill-creator ajuda a criar uma nova. criar a skill &#x27;relatório mensal de mídia&#x27; com o modelo da empresa, para gerar o relatório sempre no mesmo formato." data-br="0" data-gpt="1">
+<h4><a href="https://learn.chatgpt.com/docs/skills-and-plugins" target="_blank" rel="noopener">Skills no ChatGPT</a></h4>
+<div class="selos"><span>skill</span></div>
+<p>Pacotes de instruções e arquivos para tarefas repetidas; o ChatGPT escolhe a skill sozinho ou você chama com @. A skill @skill-creator ajuda a criar uma nova.</p>
+<p class="ex"><b>Exemplo:</b> Criar a skill &#x27;relatório mensal de mídia&#x27; com o modelo da empresa, para gerar o relatório sempre no mesmo formato.</p>
+<p class="preco"><b>Preço:</b> Incluído no ChatGPT Business, Enterprise, Healthcare e Edu (conforme configuração do workspace)</p>
+<p class="obs">Ficam em Plugins &gt; aba Skills. No Enterprise/Edu o admin define quem cria, usa e compartilha. Por padrão, dados não treinam modelos nos planos empresariais.</p>
+</article><article class="item" data-busca="space e pages do chatgpt dentro do chatgpt recurso nativo transforma uma conversa numa página colaborativa (page) dentro de um space, com edição em tempo real e comentários. transformar a conversa de planejamento num documento de briefing para a equipe comentar." data-br="0" data-gpt="1">
+<h4><a href="https://learn.chatgpt.com/docs/space/pages" target="_blank" rel="noopener">Space e Pages do ChatGPT</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Transforma uma conversa numa página colaborativa (Page) dentro de um Space, com edição em tempo real e comentários.</p>
+<p class="ex"><b>Exemplo:</b> Transformar a conversa de planejamento num documento de briefing para a equipe comentar.</p>
+<p class="preco"><b>Preço:</b> Em liberação gradual nas contas com acesso (lançado em 29/09/2026)</p>
+<p class="obs">Compartilha com pessoas convidadas, não publica na internet. O conteúdo da página fica visível a todos com acesso; no celular só leitura.</p>
+</article><article class="item" data-busca="tarefas agendadas do chatgpt (scheduled) dentro do chatgpt recurso nativo roda um pedido em horário fixo (diário, semanal) ou quando chega um evento no gmail, slack ou github, e guarda o resultado em scheduled. toda segunda às 8h, resumir as menções à marca da semana e as métricas da planilha de campanhas." data-br="0" data-gpt="1">
+<h4><a href="https://learn.chatgpt.com/docs/automations" target="_blank" rel="noopener">Tarefas agendadas do ChatGPT (Scheduled)</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Roda um pedido em horário fixo (diário, semanal) ou quando chega um evento no Gmail, Slack ou GitHub, e guarda o resultado em Scheduled.</p>
+<p class="ex"><b>Exemplo:</b> Toda segunda às 8h, resumir as menções à marca da semana e as métricas da planilha de campanhas.</p>
+<p class="preco"><b>Preço:</b> Incluído conforme plano e configuração do workspace</p>
+<p class="obs">Gatilho por evento exige plano elegível e permissão do admin. Tarefas com arquivos locais precisam do computador ligado e do app aberto.</p>
+</article></div></section><section class="cat"><h3>Dentro do Claude</h3><div class="grade"><article class="item" data-busca="conectores do claude (canva, figma, hubspot, notion e outros) dentro do claude recurso nativo diretório de conectores do claude; vários são interativos e mostram a peça (canva, figma) dentro da conversa. pedir ao claude para puxar os negócios do hubspot e montar no canva o one-pager de resultados." data-br="0" data-gpt="0">
+<h4><a href="https://claude.com/marketplace/connectors-plugins" target="_blank" rel="noopener">Conectores do Claude (Canva, Figma, HubSpot, Notion e outros)</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Diretório de conectores do Claude; vários são interativos e mostram a peça (Canva, Figma) dentro da conversa.</p>
+<p class="ex"><b>Exemplo:</b> Pedir ao Claude para puxar os negócios do HubSpot e montar no Canva o one-pager de resultados.</p>
+<p class="preco"><b>Preço:</b> Diretório aberto a todos; conectores remotos nos planos pagos</p>
+<p class="obs">Tipo real: conector do Claude (marcado como recurso nativo por falta de opção própria). Exige login em cada serviço.</p>
+</article><article class="item" data-busca="skills do claude (documentos e marca) dentro do claude skill skills prontas para criar word, excel, powerpoint e pdf, e skills próprias, por exemplo com o manual da marca. criar uma skill com o guia de marca para que toda apresentação saia com as cores e o tom da empresa." data-br="0" data-gpt="0">
+<h4><a href="https://claude.com/skills" target="_blank" rel="noopener">Skills do Claude (documentos e marca)</a></h4>
+<div class="selos"><span>skill</span></div>
+<p>Skills prontas para criar Word, Excel, PowerPoint e PDF, e skills próprias, por exemplo com o manual da marca.</p>
+<p class="ex"><b>Exemplo:</b> Criar uma skill com o guia de marca para que toda apresentação saia com as cores e o tom da empresa.</p>
+<p class="preco"><b>Preço:</b> Disponível em todos os planos (precisa ligar a execução de código e criação de arquivos)</p>
+<p class="obs">Arquivos até 30 MB. Em Team e Enterprise o owner controla o recurso. Há também skills de parceiros (Canva, Figma, Notion).</p>
+</article><article class="item" data-busca="tarefas agendadas no claude cowork dentro do claude recurso nativo salva um pedido para rodar de hora em hora, diariamente, em dias úteis ou sob demanda (/schedule). todo dia útil às 9h, montar um resumo das notícias do setor e dos concorrentes." data-br="0" data-gpt="0">
+<h4><a href="https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork" target="_blank" rel="noopener">Tarefas agendadas no Claude Cowork</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Salva um pedido para rodar de hora em hora, diariamente, em dias úteis ou sob demanda (/schedule).</p>
+<p class="ex"><b>Exemplo:</b> Todo dia útil às 9h, montar um resumo das notícias do setor e dos concorrentes.</p>
+<p class="preco"><b>Preço:</b> Incluído nos planos pagos (Pro, Max, Ultra, Team, Enterprise)</p>
+<p class="obs">Tarefas só com conectores rodam na nuvem; as que usam arquivos locais exigem o app de desktop aberto.</p>
+</article></div></section><section class="cat"><h3>Dentro do Google Workspace e Gemini</h3><div class="grade"><article class="item" data-busca="anotações do gemini no google meet (take notes for me) dentro do google workspace e gemini recurso nativo gera ata da reunião num google doc salvo no drive do organizador, inclusive em reuniões presenciais. ligar as anotações na reunião de alinhamento de campanha e enviar o documento aos participantes." data-br="0" data-gpt="0">
+<h4><a href="https://support.google.com/meet/answer/14754931" target="_blank" rel="noopener">Anotações do Gemini no Google Meet (Take notes for me)</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Gera ata da reunião num Google Doc salvo no Drive do organizador, inclusive em reuniões presenciais.</p>
+<p class="ex"><b>Exemplo:</b> Ligar as anotações na reunião de alinhamento de campanha e enviar o documento aos participantes.</p>
+<p class="preco"><b>Preço:</b> Workspace Business Standard/Plus e Enterprise Standard/Plus (ou plano Google AI elegível)</p>
+<p class="obs">Aceita português. Não gera notas com menos de 50 palavras faladas nem com várias línguas misturadas. Avise os participantes (LGPD).</p>
+</article><article class="item" data-busca="deep research no gemini dentro do google workspace e gemini recurso nativo pesquisa longa na web, que também aceita arquivos e cadernos como fonte, e entrega relatório com citações. levantar como cinco concorrentes posicionam preço e promessa de marca nos sites e redes." data-br="0" data-gpt="0">
+<h4><a href="https://support.google.com/gemini/answer/15719111" target="_blank" rel="noopener">Deep Research no Gemini</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Pesquisa longa na web, que também aceita arquivos e cadernos como fonte, e entrega relatório com citações.</p>
+<p class="ex"><b>Exemplo:</b> Levantar como cinco concorrentes posicionam preço e promessa de marca nos sites e redes.</p>
+<p class="preco"><b>Preço:</b> Incluído no app Gemini; cota varia por plano</p>
+<p class="obs">Conferir as fontes citadas antes de usar números.</p>
+</article><article class="item" data-busca="gemini notebook (antigo notebooklm) dentro do google workspace e gemini ferramenta independente caderno de pesquisa que responde só com base nas fontes enviadas (pdfs, docs, sites), com resumos e áudios. subir as pesquisas de mercado do ano e perguntar quais dores do cliente aparecem em todas." data-br="0" data-gpt="0">
+<h4><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noopener">Gemini Notebook (antigo NotebookLM)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Caderno de pesquisa que responde só com base nas fontes enviadas (PDFs, Docs, sites), com resumos e áudios.</p>
+<p class="ex"><b>Exemplo:</b> Subir as pesquisas de mercado do ano e perguntar quais dores do cliente aparecem em todas.</p>
+<p class="preco"><b>Preço:</b> Incluído no Workspace Business e Enterprise (limites maiores em Standard e Plus); versão pessoal grátis com limites</p>
+<p class="obs">Renomeado recentemente: materiais antigos ainda chamam de NotebookLM.</p>
+</article><article class="item" data-busca="gems do gemini dentro do google workspace e gemini recurso nativo assistentes personalizados com instruções e arquivos de conhecimento, compartilháveis como arquivo do drive. gem &#x27;redator de posts&#x27; com o guia de tom de voz, compartilhado com o time de social." data-br="0" data-gpt="0">
+<h4><a href="https://support.google.com/gemini/answer/15146780" target="_blank" rel="noopener">Gems do Gemini</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Assistentes personalizados com instruções e arquivos de conhecimento, compartilháveis como arquivo do Drive.</p>
+<p class="ex"><b>Exemplo:</b> Gem &#x27;redator de posts&#x27; com o guia de tom de voz, compartilhado com o time de social.</p>
+<p class="preco"><b>Preço:</b> Incluído no app Gemini (Workspace e contas pessoais)</p>
+<p class="obs">Criação só na web. Quem tem acesso vê instruções e arquivos. Ajuda do Google diz que, a partir de nov/2026, Gems de contas pessoais viram skills.</p>
+</article><article class="item" data-busca="google workspace studio dentro do google workspace e gemini recurso nativo cria agentes com gemini que automatizam fluxos entre gmail, sheets, drive, chat e outros, sem código. quando chegar e-mail de lead do formulário, registrar os dados no sheets e avisar o time no chat." data-br="0" data-gpt="0">
+<h4><a href="https://workspace.google.com/studio/" target="_blank" rel="noopener">Google Workspace Studio</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Cria agentes com Gemini que automatizam fluxos entre Gmail, Sheets, Drive, Chat e outros, sem código.</p>
+<p class="ex"><b>Exemplo:</b> Quando chegar e-mail de lead do formulário, registrar os dados no Sheets e avisar o time no Chat.</p>
+<p class="preco"><b>Preço:</b> Incluído em edições Business, Enterprise e Education elegíveis</p>
+<p class="obs">Admin precisa ter o Gemini ligado. Não funciona no celular. Menores de 18 anos não criam agentes.</p>
+</article></div></section><section class="cat"><h3>Automação e integração</h3><div class="grade"><article class="item" data-busca="zapier mcp automação e integração ferramenta independente dá ao chatgpt (e ao claude) acesso a milhares de apps e ações via zapier, como enviar e-mail, criar linha em planilha ou postar no slack. pedir no chat para criar no mailchimp a lista com os leads aprovados e avisar no slack." data-br="0" data-gpt="0">
+<h4><a href="https://zapier.com/mcp" target="_blank" rel="noopener">Zapier MCP</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Dá ao ChatGPT (e ao Claude) acesso a milhares de apps e ações via Zapier, como enviar e-mail, criar linha em planilha ou postar no Slack.</p>
+<p class="ex"><b>Exemplo:</b> Pedir no chat para criar no Mailchimp a lista com os leads aprovados e avisar no Slack.</p>
+<p class="preco"><b>Preço:</b> Conexão grátis em todos os planos Zapier; cada ação consome 2 tarefas do plano</p>
+<p class="obs">No ChatGPT entra como plugin MCP personalizado (Business, Enterprise ou Edu, ou modo desenvolvedor): instruções da Zapier divergem, conferir. Ações de escrita pedem confirmação.</p>
+</article></div></section><section class="cat"><h3>Publicar páginas</h3><div class="grade"><article class="item" data-busca="chatgpt sites publicar páginas recurso nativo cria e hospeda um site ou pequeno app a partir da conversa (@sites), com opção de link público. publicar a página da pesquisa de satisfação com os gráficos do painel para a diretoria." data-br="0" data-gpt="0">
+<h4><a href="https://learn.chatgpt.com/docs/sites" target="_blank" rel="noopener">ChatGPT Sites</a></h4>
+<div class="selos"><span>recurso nativo</span></div>
+<p>Cria e hospeda um site ou pequeno app a partir da conversa (@Sites), com opção de link público.</p>
+<p class="ex"><b>Exemplo:</b> Publicar a página da pesquisa de satisfação com os gráficos do painel para a diretoria.</p>
+<p class="preco"><b>Preço:</b> Beta em Plus, Pro, Business e Enterprise; hospedagem grátis até 31/12/2026, cobrança acima da cota a partir de 01/01/2027</p>
+<p class="obs">Público só se a publicação pública estiver habilitada (desligada por padrão no Enterprise). Proibido dados de saúde e público menor de 13 anos. Não publicar dados pessoais.</p>
+</article><article class="item" data-busca="cloudflare pages (upload direto) publicar páginas ferramenta independente publica site estático arrastando a pasta no painel da cloudflare, sem git, em endereço pages.dev. hospedar de forma permanente o painel estático da campanha num endereço fixo." data-br="0" data-gpt="0">
+<h4><a href="https://developers.cloudflare.com/pages/get-started/direct-upload/" target="_blank" rel="noopener">Cloudflare Pages (upload direto)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Publica site estático arrastando a pasta no painel da Cloudflare, sem Git, em endereço pages.dev.</p>
+<p class="ex"><b>Exemplo:</b> Hospedar de forma permanente o painel estático da campanha num endereço fixo.</p>
+<p class="preco"><b>Preço:</b> Grátis (500 deploys/mês)</p>
+<p class="obs">Exige conta Cloudflare grátis. Arrastar aceita até 1.000 arquivos e 25 MiB por arquivo. Projeto de upload direto não vira projeto Git depois.</p>
+</article><article class="item" data-busca="netlify drop publicar páginas ferramenta independente arrasta uma pasta ou zip com o site estático e recebe um endereço netlify.app. arrastar a pasta com o index.html do painel gerado pela ia e mandar o link para o gestor." data-br="0" data-gpt="0">
+<h4><a href="https://app.netlify.com/drop" target="_blank" rel="noopener">Netlify Drop</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Arrasta uma pasta ou zip com o site estático e recebe um endereço netlify.app.</p>
+<p class="ex"><b>Exemplo:</b> Arrastar a pasta com o index.html do painel gerado pela IA e mandar o link para o gestor.</p>
+<p class="preco"><b>Preço:</b> Grátis (plano Free com 300 créditos/mês)</p>
+<p class="obs">Sem conta: protegido por senha temporária e precisa ser reivindicado em 1 hora. Melhor entrar com conta antes.</p>
+</article><article class="item" data-busca="tiiny.host publicar páginas ferramenta independente sobe um html, zip ou pdf e gera link na hora, pensado para quem não é técnico. compartilhar um relatório em html com o cliente por um link simples." data-br="0" data-gpt="0">
+<h4><a href="https://tiiny.host/" target="_blank" rel="noopener">Tiiny.host</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Sobe um HTML, zip ou PDF e gera link na hora, pensado para quem não é técnico.</p>
+<p class="ex"><b>Exemplo:</b> Compartilhar um relatório em HTML com o cliente por um link simples.</p>
+<p class="preco"><b>Preço:</b> Grátis com limites (1 site, 3 MB, faixa da Tiiny); pago a partir de US$ 5/mês</p>
+<p class="obs">Páginas da própria Tiiny divergem sobre duração do site grátis (sem prazo se logar a cada 3 meses, ou 7 dias). Conferir na hora.</p>
+</article><article class="item" data-busca="vercel drop publicar páginas ferramenta independente arrasta arquivo, pasta ou zip em vercel.com/drop e publica em produção com link. publicar um protótipo de landing page para teste com clientes." data-br="0" data-gpt="0">
+<h4><a href="https://vercel.com/drop" target="_blank" rel="noopener">Vercel Drop</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Arrasta arquivo, pasta ou zip em vercel.com/drop e publica em produção com link.</p>
+<p class="ex"><b>Exemplo:</b> Publicar um protótipo de landing page para teste com clientes.</p>
+<p class="preco"><b>Preço:</b> Grátis no plano Hobby</p>
+<p class="obs">Sem conta (desde 19/10/2026): só sites estáticos, expira em 1 hora se não for reivindicado. Plano Hobby é para uso não comercial.</p>
+</article></div></section><h2>Conteúdo, vídeo e pesquisa qualitativa</h2><section class="cat"><h3>Transcrição e reuniões</h3><div class="grade"><article class="item" data-busca="chatgpt: modo de gravação (record) transcrição e reuniões recurso nativo grava reunião ou ditado pelo app do chatgpt para mac e gera transcrição e notas que podem ser usadas depois na conversa. gravar uma conversa presencial com um cliente e pedir ao chatgpt um e-mail de follow-up com base nela." data-br="0" data-gpt="1">
+<h4><a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT: modo de gravação (Record)</a></h4>
+<div class="selos"><span>recurso nativo</span><span>português</span><span>integra com o ChatGPT</span></div>
+<p>Grava reunião ou ditado pelo app do ChatGPT para Mac e gera transcrição e notas que podem ser usadas depois na conversa.</p>
+<p class="ex"><b>Exemplo:</b> Gravar uma conversa presencial com um cliente e pedir ao ChatGPT um e-mail de follow-up com base nela.</p>
+<p class="preco"><b>Preço:</b> incluído nos planos pagos (Plus, Pro, Business, Enterprise, Edu)</p>
+<p class="obs">Só no app para macOS. A página oficial de preços não cita o recurso; confirme no app. Desative o uso dos dados para treino nas configurações e peça consentimento antes de gravar.</p>
+</article><article class="item" data-busca="fireflies.ai transcrição e reuniões ferramenta independente assistente que entra em reuniões do meet, zoom e teams, grava, transcreve, resume e lista próximos passos; integra com crms. gravar todas as reuniões de briefing com a agência e receber automaticamente o resumo com tarefas no slack." data-br="0" data-gpt="0">
+<h4><a href="https://fireflies.ai" target="_blank" rel="noopener">Fireflies.ai</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Assistente que entra em reuniões do Meet, Zoom e Teams, grava, transcreve, resume e lista próximos passos; integra com CRMs.</p>
+<p class="ex"><b>Exemplo:</b> Gravar todas as reuniões de briefing com a agência e receber automaticamente o resumo com tarefas no Slack.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; Pro a partir de US$ 10/usuário/mês no anual (US$ 18 no mensal)</p>
+<p class="obs">A página de preços lista português entre os idiomas em beta, mas não exibe valores em texto; preço tirado do blog oficial. O robô aparece como participante: avise e peça consentimento antes de gravar. Dados ficam em servidores fora do Brasil (LGPD).</p>
+</article><article class="item" data-busca="google meet: anotar para mim (gemini) transcrição e reuniões recurso nativo o gemini toma notas da reunião no meet e salva um google doc com resumo, próximos passos e notas completas. ligar o anotar para mim na reunião semanal de mídia e mandar o documento para quem faltou." data-br="0" data-gpt="0">
+<h4><a href="https://workspace.google.com/products/meet/" target="_blank" rel="noopener">Google Meet: Anotar para mim (Gemini)</a></h4>
+<div class="selos"><span>recurso nativo</span><span>português</span></div>
+<p>O Gemini toma notas da reunião no Meet e salva um Google Doc com resumo, próximos passos e notas completas.</p>
+<p class="ex"><b>Exemplo:</b> Ligar o Anotar para mim na reunião semanal de mídia e mandar o documento para quem faltou.</p>
+<p class="preco"><b>Preço:</b> incluído em edições elegíveis do Google Workspace ou nos planos Google AI</p>
+<p class="obs">Funciona em um idioma por reunião (português suportado). O organizador precisa ter a edição certa. Dados ficam no Workspace da empresa, o que simplifica a governança.</p>
+</article><article class="item" data-busca="granola transcrição e reuniões ferramenta independente bloco de notas com ia que capta o áudio do próprio computador (sem robô na reunião) e completa as anotações do usuário com a transcrição. anotar só os pontos-chave durante uma entrevista com consumidor e deixar o granola montar a ata completa no fim." data-br="0" data-gpt="0">
+<h4><a href="https://www.granola.ai" target="_blank" rel="noopener">Granola</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Bloco de notas com IA que capta o áudio do próprio computador (sem robô na reunião) e completa as anotações do usuário com a transcrição.</p>
+<p class="ex"><b>Exemplo:</b> Anotar só os pontos-chave durante uma entrevista com consumidor e deixar o Granola montar a ata completa no fim.</p>
+<p class="preco"><b>Preço:</b> grátis (histórico de 30 dias); Business US$ 14/usuário/mês</p>
+<p class="obs">Como não há robô, os participantes não são avisados automaticamente: avise você e peça consentimento. Suporte a vários idiomas em todos os planos.</p>
+</article><article class="item" data-busca="microsoft teams com microsoft 365 copilot transcrição e reuniões recurso nativo o teams transcreve reuniões nativamente; com o copilot, gera resumo, responde perguntas sobre a reunião e lista tarefas. perguntar ao copilot, no fim da reunião com a agência, quais prazos foram combinados e quem ficou responsável." data-br="0" data-gpt="0">
+<h4><a href="https://www.microsoft.com/microsoft-365/copilot" target="_blank" rel="noopener">Microsoft Teams com Microsoft 365 Copilot</a></h4>
+<div class="selos"><span>recurso nativo</span><span>português</span></div>
+<p>O Teams transcreve reuniões nativamente; com o Copilot, gera resumo, responde perguntas sobre a reunião e lista tarefas.</p>
+<p class="ex"><b>Exemplo:</b> Perguntar ao Copilot, no fim da reunião com a agência, quais prazos foram combinados e quem ficou responsável.</p>
+<p class="preco"><b>Preço:</b> transcrição incluída nos planos do Teams; Copilot Business a partir de US$ 21/usuário/mês no anual (promoção de US$ 18 até o fim de 2026)</p>
+<p class="obs">Boa opção para empresas que já usam Microsoft 365: os dados ficam no ambiente corporativo. O Copilot é complemento pago à licença do Microsoft 365.</p>
+</article><article class="item" data-busca="notta transcrição e reuniões ferramenta independente transcreve reuniões e arquivos de áudio e vídeo, com identificação de falantes, resumos e tradução bilíngue. subir a gravação de um grupo focal e receber a transcrição com falantes separados e um resumo." data-br="0" data-gpt="0">
+<h4><a href="https://www.notta.ai" target="_blank" rel="noopener">Notta</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Transcreve reuniões e arquivos de áudio e vídeo, com identificação de falantes, resumos e tradução bilíngue.</p>
+<p class="ex"><b>Exemplo:</b> Subir a gravação de um grupo focal e receber a transcrição com falantes separados e um resumo.</p>
+<p class="preco"><b>Preço:</b> grátis com limites (120 min/mês, até 3 min por conversa); Pro a partir de US$ 8,17/mês no anual</p>
+<p class="obs">A página de preços não confirma a lista de idiomas de transcrição; teste com um áudio real em português antes de assinar.</p>
+</article><article class="item" data-busca="otter.ai transcrição e reuniões ferramenta independente um dos líderes em transcrição de reuniões em inglês, com identificação de falantes e chat sobre as conversas. transcrever reuniões com a matriz ou com fornecedores em inglês." data-br="0" data-gpt="0">
+<h4><a href="https://otter.ai" target="_blank" rel="noopener">Otter.ai</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Um dos líderes em transcrição de reuniões em inglês, com identificação de falantes e chat sobre as conversas.</p>
+<p class="ex"><b>Exemplo:</b> Transcrever reuniões com a matriz ou com fornecedores em inglês.</p>
+<p class="preco"><b>Preço:</b> grátis com limites (300 min/mês); Pro a partir de US$ 8,33/mês no anual (US$ 16,99 no mensal)</p>
+<p class="obs">A página lista transcrição só em inglês, espanhol, francês, alemão, japonês e chinês. Não serve para reuniões em português.</p>
+</article><article class="item" data-busca="read.ai transcrição e reuniões ferramenta independente gera relatórios de reunião com decisões, perguntas e itens de ação, além de métricas de engajamento dos participantes. gerar o relatório de cada call de vendas e comparar quais objeções aparecem com mais frequência no mês." data-br="0" data-gpt="0">
+<h4><a href="https://www.read.ai" target="_blank" rel="noopener">Read.ai</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Gera relatórios de reunião com decisões, perguntas e itens de ação, além de métricas de engajamento dos participantes.</p>
+<p class="ex"><b>Exemplo:</b> Gerar o relatório de cada call de vendas e comparar quais objeções aparecem com mais frequência no mês.</p>
+<p class="preco"><b>Preço:</b> grátis com limites (5 transcrições/mês, reuniões de até 1 h); Pro a partir de US$ 15/usuário/mês no anual (US$ 19,75 no mensal)</p>
+<p class="obs">Mede engajamento e sentimento dos participantes: informe os presentes. Peça consentimento para gravar.</p>
+</article><article class="item" data-busca="tl;dv transcrição e reuniões ferramenta independente grava e transcreve reuniões do meet, zoom e teams, gera notas com ia e permite buscar trechos entre várias reuniões. buscar em todas as entrevistas com clientes do trimestre os trechos em que alguém menciona preço." data-br="0" data-gpt="0">
+<h4><a href="https://tldv.io" target="_blank" rel="noopener">tl;dv</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Grava e transcreve reuniões do Meet, Zoom e Teams, gera notas com IA e permite buscar trechos entre várias reuniões.</p>
+<p class="ex"><b>Exemplo:</b> Buscar em todas as entrevistas com clientes do trimestre os trechos em que alguém menciona preço.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; Pro a partir de 18 EUR/usuário/mês no anual (29 EUR no mensal)</p>
+<p class="obs">A página de preços não lista idiomas; o suporte a português aparece em outras páginas do site. Robô visível na reunião: peça consentimento.</p>
+</article><article class="item" data-busca="vozparatexto transcrição e reuniões ferramenta independente serviço voltado ao brasil que transcreve áudio e vídeo com separação de falantes (diarização), resumo e exportação em vários formatos. transcrever entrevistas em profundidade gravadas no celular e exportar em docx para a equipe de pesquisa." data-br="0" data-gpt="0">
+<h4><a href="https://www.vozparatexto.com.br" target="_blank" rel="noopener">VozParaTexto</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Serviço voltado ao Brasil que transcreve áudio e vídeo com separação de falantes (diarização), resumo e exportação em vários formatos.</p>
+<p class="ex"><b>Exemplo:</b> Transcrever entrevistas em profundidade gravadas no celular e exportar em DOCX para a equipe de pesquisa.</p>
+<p class="preco"><b>Preço:</b> grátis com 30 min/mês; pago a partir de R$ 19,90/mês (7 h)</p>
+<p class="obs">Opção brasileira, com preços em reais. A página não informa onde os dados são processados: pergunte antes de subir gravações com dados de clientes.</p>
+</article><article class="item" data-busca="whisper e gpt-transcribe (openai) transcrição e reuniões ferramenta independente modelos de transcrição da openai: o whisper é de código aberto e roda no próprio computador; pela api há o gpt-transcribe e um modelo com rótulo de falantes. transcrever no próprio notebook, sem enviar a nuvem, 20 entrevistas sensíveis com clientes." data-br="0" data-gpt="0">
+<h4><a href="https://github.com/openai/whisper" target="_blank" rel="noopener">Whisper e gpt-transcribe (OpenAI)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Modelos de transcrição da OpenAI: o Whisper é de código aberto e roda no próprio computador; pela API há o gpt-transcribe e um modelo com rótulo de falantes.</p>
+<p class="ex"><b>Exemplo:</b> Transcrever no próprio notebook, sem enviar a nuvem, 20 entrevistas sensíveis com clientes.</p>
+<p class="preco"><b>Preço:</b> Whisper de código aberto: grátis (roda localmente); API: pago por uso</p>
+<p class="obs">Exige algum conhecimento técnico. Rodar localmente é a opção mais segura para LGPD. Na API, whisper-1 e gpt-4o-transcribe-diarize estão descontinuados e saem do ar em 26/2/2027; o recomendado é gpt-transcribe.</p>
+</article><article class="item" data-busca="zoom: resumos de reunião e zoommate transcrição e reuniões recurso nativo resumos de reunião e transcrição continuam embutidos no zoom workplace; o zoommate é o novo complemento de ia que busca, cria documentos e automatiza tarefas a partir das reuniões. usar o resumo automático do zoom para documentar cada entrevista com cliente e pedir ao zoommate uma apresentação com os achados." data-br="0" data-gpt="0">
+<h4><a href="https://www.zoom.com/en/products/ai-assistant/" target="_blank" rel="noopener">Zoom: resumos de reunião e ZoomMate</a></h4>
+<div class="selos"><span>recurso nativo</span><span>português (parcial)</span></div>
+<p>Resumos de reunião e transcrição continuam embutidos no Zoom Workplace; o ZoomMate é o novo complemento de IA que busca, cria documentos e automatiza tarefas a partir das reuniões.</p>
+<p class="ex"><b>Exemplo:</b> Usar o resumo automático do Zoom para documentar cada entrevista com cliente e pedir ao ZoomMate uma apresentação com os achados.</p>
+<p class="preco"><b>Preço:</b> resumos incluídos em planos pagos elegíveis (grátis limitado a 3 reuniões/mês); ZoomMate US$ 16,67/usuário/mês no anual (US$ 20 no mensal)</p>
+<p class="obs">O antigo complemento Custom AI Companion foi encerrado em 1/6/2026 e substituído pelo ZoomMate. As páginas consultadas não listam os idiomas suportados: teste em português.</p>
+</article></div></section><section class="cat"><h3>Entrevistas e pesquisa qualitativa</h3><div class="grade"><article class="item" data-busca="condens entrevistas e pesquisa qualitativa ferramenta independente organiza entrevistas e testes com usuários, com transcrição, tags sugeridas por ia, agrupamento automático, análise de sentimento e resumos. marcar trechos de 12 entrevistas sobre a jornada de compra e deixar a ia sugerir os agrupamentos para o mapa de afinidade." data-br="0" data-gpt="0">
+<h4><a href="https://condens.io" target="_blank" rel="noopener">Condens</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Organiza entrevistas e testes com usuários, com transcrição, tags sugeridas por IA, agrupamento automático, análise de sentimento e resumos.</p>
+<p class="ex"><b>Exemplo:</b> Marcar trechos de 12 entrevistas sobre a jornada de compra e deixar a IA sugerir os agrupamentos para o mapa de afinidade.</p>
+<p class="preco"><b>Preço:</b> teste grátis de 15 dias; Lite a partir de 15 EUR/mês</p>
+<p class="obs">Transcrição ilimitada em todos os planos; a página não lista idiomas. Empresa europeia (GDPR).</p>
+</article><article class="item" data-busca="dovetail entrevistas e pesquisa qualitativa ferramenta independente repositório de pesquisa com clientes: transcreve, agrupa feedback em temas, gera resumos e permite perguntar à base com respostas citadas. reunir entrevistas, tickets de suporte e respostas de nps e perguntar quais são os 5 motivos mais citados de cancelamento." data-br="0" data-gpt="0">
+<h4><a href="https://dovetail.com" target="_blank" rel="noopener">Dovetail</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Repositório de pesquisa com clientes: transcreve, agrupa feedback em temas, gera resumos e permite perguntar à base com respostas citadas.</p>
+<p class="ex"><b>Exemplo:</b> Reunir entrevistas, tickets de suporte e respostas de NPS e perguntar quais são os 5 motivos mais citados de cancelamento.</p>
+<p class="preco"><b>Preço:</b> teste grátis de 30 dias; planos anuais com preço sob consulta</p>
+<p class="obs">Diz aceitar feedback em qualquer idioma com transcrição e tradução, mas não lista idiomas. Plano Gold tem redação automática de dados pessoais, útil para LGPD.</p>
+</article><article class="item" data-busca="gemini notebook (antigo notebooklm) entrevistas e pesquisa qualitativa ferramenta independente caderno de pesquisa do google que responde só com base nas fontes enviadas (transcrições, pdfs, planilhas), com citações, resumos em áudio e mapas mentais. subir as transcrições de 8 grupos focais e perguntar em que pontos jovens e adultos discordam, com o trecho de cada um." data-br="0" data-gpt="0">
+<h4><a href="https://notebook.google" target="_blank" rel="noopener">Gemini Notebook (antigo NotebookLM)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Caderno de pesquisa do Google que responde só com base nas fontes enviadas (transcrições, PDFs, planilhas), com citações, resumos em áudio e mapas mentais.</p>
+<p class="ex"><b>Exemplo:</b> Subir as transcrições de 8 grupos focais e perguntar em que pontos jovens e adultos discordam, com o trecho de cada um.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; mais capacidade nos planos Google AI Plus, Pro e Ultra</p>
+<p class="obs">Renomeado de NotebookLM para Gemini Notebook em 16/7/2026; os links antigos redirecionam. Prefira a versão do Google Workspace da empresa para dados de clientes.</p>
+</article><article class="item" data-busca="looppanel entrevistas e pesquisa qualitativa ferramenta independente grava e transcreve entrevistas, organiza notas por pergunta do roteiro e faz análise automática dos temas. organizar automaticamente as respostas de 15 entrevistas por pergunta do roteiro de pesquisa de marca." data-br="0" data-gpt="0">
+<h4><a href="https://www.looppanel.com" target="_blank" rel="noopener">Looppanel</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Grava e transcreve entrevistas, organiza notas por pergunta do roteiro e faz análise automática dos temas.</p>
+<p class="ex"><b>Exemplo:</b> Organizar automaticamente as respostas de 15 entrevistas por pergunta do roteiro de pesquisa de marca.</p>
+<p class="preco"><b>Preço:</b> teste grátis de 15 dias; Solo a partir de US$ 45/mês no anual (US$ 49 no mensal)</p>
+<p class="obs">Diz transcrever em mais de 96 idiomas, sem citar português nominalmente. Plano Solo tem só 5 horas de transcrição por mês.</p>
+</article><article class="item" data-busca="marvin (heymarvin) entrevistas e pesquisa qualitativa ferramenta independente plataforma de pesquisa com notetaker de ia, análise temática e de sentimento, relatórios e entrevistas moderadas por ia. rodar entrevistas moderadas por ia com 50 clientes e receber os temas principais com trechos de evidência." data-br="0" data-gpt="0">
+<h4><a href="https://heymarvin.com" target="_blank" rel="noopener">Marvin (HeyMarvin)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Plataforma de pesquisa com notetaker de IA, análise temática e de sentimento, relatórios e entrevistas moderadas por IA.</p>
+<p class="ex"><b>Exemplo:</b> Rodar entrevistas moderadas por IA com 50 clientes e receber os temas principais com trechos de evidência.</p>
+<p class="preco"><b>Preço:</b> grátis com recursos básicos; planos pagos sob consulta</p>
+<p class="obs">Menciona tradução automática, mas não lista idiomas. Redação automática de dados pessoais só no Enterprise.</p>
+</article></div></section><section class="cat"><h3>Vídeo: cortes, legendas e dublagem</h3><div class="grade"><article class="item" data-busca="capcut vídeo: cortes, legendas e dublagem ferramenta independente editor de vídeo popular para redes sociais, com legendas automáticas, modelos prontos e ferramentas de ia, no celular e no computador. montar um reels de lançamento usando um modelo pronto e legendas automáticas em português." data-br="0" data-gpt="0">
+<h4><a href="https://www.capcut.com" target="_blank" rel="noopener">CapCut</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Editor de vídeo popular para redes sociais, com legendas automáticas, modelos prontos e ferramentas de IA, no celular e no computador.</p>
+<p class="ex"><b>Exemplo:</b> Montar um Reels de lançamento usando um modelo pronto e legendas automáticas em português.</p>
+<p class="preco"><b>Preço:</b> grátis com recursos básicos; Pro R$ 87,90/mês (R$ 689,90/ano)</p>
+<p class="obs">Da ByteDance (dona do TikTok). Leia os termos de uso de conteúdo antes de subir material de clientes ou campanhas não lançadas.</p>
+</article><article class="item" data-busca="captions vídeo: cortes, legendas e dublagem ferramenta independente app de vídeo com legendas em mais de 100 idiomas, edição automática por ia, tradução com sincronia labial e voz clonada. traduzir para espanhol, com sincronia labial, um vídeo de produto gravado em português." data-br="0" data-gpt="0">
+<h4><a href="https://www.captions.ai" target="_blank" rel="noopener">Captions</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>App de vídeo com legendas em mais de 100 idiomas, edição automática por IA, tradução com sincronia labial e voz clonada.</p>
+<p class="ex"><b>Exemplo:</b> Traduzir para espanhol, com sincronia labial, um vídeo de produto gravado em português.</p>
+<p class="preco"><b>Preço:</b> grátis com recursos básicos (sem créditos de IA); Max US$ 24,99/mês</p>
+<p class="obs">Preços da página referem-se ao iOS. Sincronia labial e clonagem de voz exigem autorização de quem aparece no vídeo.</p>
+</article><article class="item" data-busca="descript vídeo: cortes, legendas e dublagem ferramenta independente edita áudio e vídeo editando o texto da transcrição; remove vícios de linguagem, gera legendas, traduz e dubla. cortar um depoimento de cliente apagando frases na transcrição, como se fosse um documento de texto." data-br="0" data-gpt="0">
+<h4><a href="https://www.descript.com" target="_blank" rel="noopener">Descript</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Edita áudio e vídeo editando o texto da transcrição; remove vícios de linguagem, gera legendas, traduz e dubla.</p>
+<p class="ex"><b>Exemplo:</b> Cortar um depoimento de cliente apagando frases na transcrição, como se fosse um documento de texto.</p>
+<p class="preco"><b>Preço:</b> grátis com limites (60 min/mês, marca d&#x27;água); Hobbyist a partir de US$ 16/mês no anual (US$ 24 no mensal)</p>
+<p class="obs">Transcreve português do Brasil; tradução de legendas em 61 idiomas e dublagem em 30. Clonar voz de alguém exige autorização da pessoa.</p>
+</article><article class="item" data-busca="elevenlabs vídeo: cortes, legendas e dublagem ferramenta independente vozes sintéticas realistas, clonagem de voz, dublagem de vídeos e transcrição (scribe) com identificação de falantes. gerar a locução em português de um vídeo de produto e dublar a versão em espanhol." data-br="0" data-gpt="0">
+<h4><a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Vozes sintéticas realistas, clonagem de voz, dublagem de vídeos e transcrição (Scribe) com identificação de falantes.</p>
+<p class="ex"><b>Exemplo:</b> Gerar a locução em português de um vídeo de produto e dublar a versão em espanhol.</p>
+<p class="preco"><b>Preço:</b> grátis com 10 mil créditos/mês; Starter US$ 6/mês (primeiro mês US$ 1)</p>
+<p class="obs">O Scribe transcreve português com alta precisão e separa falantes, útil também para entrevistas. Dublagem só a partir do Starter. Clonar voz exige consentimento do dono da voz.</p>
+</article><article class="item" data-busca="heygen vídeo: cortes, legendas e dublagem ferramenta independente cria vídeos com avatares digitais e traduz vídeos com voz e sincronia labial em até 175 idiomas e dialetos. traduzir o vídeo do ceo para inglês e espanhol mantendo a voz e o movimento da boca." data-br="0" data-gpt="0">
+<h4><a href="https://www.heygen.com" target="_blank" rel="noopener">HeyGen</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Cria vídeos com avatares digitais e traduz vídeos com voz e sincronia labial em até 175 idiomas e dialetos.</p>
+<p class="ex"><b>Exemplo:</b> Traduzir o vídeo do CEO para inglês e espanhol mantendo a voz e o movimento da boca.</p>
+<p class="preco"><b>Preço:</b> grátis com 3 vídeos/mês de até 1 min (marca d&#x27;água); Creator a partir de US$ 24/mês no anual (US$ 29 no mensal)</p>
+<p class="obs">Avatar ou voz de pessoa real só com autorização por escrito. Sinalize ao público que o vídeo foi gerado ou traduzido por IA.</p>
+</article><article class="item" data-busca="kapwing vídeo: cortes, legendas e dublagem ferramenta independente editor de vídeo colaborativo no navegador com legendas automáticas, tradução para mais de 60 idiomas, dublagem e corte de silêncios. remover automaticamente as pausas de um tutorial gravado e gerar legendas em português." data-br="0" data-gpt="0">
+<h4><a href="https://www.kapwing.com" target="_blank" rel="noopener">Kapwing</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Editor de vídeo colaborativo no navegador com legendas automáticas, tradução para mais de 60 idiomas, dublagem e corte de silêncios.</p>
+<p class="ex"><b>Exemplo:</b> Remover automaticamente as pausas de um tutorial gravado e gerar legendas em português.</p>
+<p class="preco"><b>Preço:</b> grátis com limites (marca d&#x27;água, 720p); Pro US$ 16/mês</p>
+<p class="obs">Dublagem só nos planos pagos (50 min/mês no Pro). Clonagem de voz e sincronia labial no Business.</p>
+</article><article class="item" data-busca="opusclip vídeo: cortes, legendas e dublagem ferramenta independente transforma vídeos longos em cortes curtos para reels, tiktok e shorts, com reenquadramento vertical, legendas animadas e publicação agendada. gerar 10 cortes verticais legendados a partir de um webinar de 1 hora." data-br="0" data-gpt="0">
+<h4><a href="https://www.opus.pro" target="_blank" rel="noopener">OpusClip</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Transforma vídeos longos em cortes curtos para Reels, TikTok e Shorts, com reenquadramento vertical, legendas animadas e publicação agendada.</p>
+<p class="ex"><b>Exemplo:</b> Gerar 10 cortes verticais legendados a partir de um webinar de 1 hora.</p>
+<p class="preco"><b>Preço:</b> grátis com limites (marca d&#x27;água, arquivos por 3 dias); Starter a partir de US$ 15/mês</p>
+<p class="obs">Português listado na central de ajuda entre os mais de 25 idiomas. Revise os cortes: a IA escolhe trechos por potencial viral, não por mensagem de marca.</p>
+</article><article class="item" data-busca="submagic vídeo: cortes, legendas e dublagem ferramenta independente legendas animadas no estilo de criadores, cortes, zoom automático e b-roll para vídeos curtos. colocar legendas animadas com destaque de palavras em um vídeo de 60 segundos do porta-voz da marca." data-br="0" data-gpt="0">
+<h4><a href="https://www.submagic.co" target="_blank" rel="noopener">Submagic</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Legendas animadas no estilo de criadores, cortes, zoom automático e b-roll para vídeos curtos.</p>
+<p class="ex"><b>Exemplo:</b> Colocar legendas animadas com destaque de palavras em um vídeo de 60 segundos do porta-voz da marca.</p>
+<p class="preco"><b>Preço:</b> teste grátis; Starter R$ 79/mês no mensal (R$ 39/mês no anual) ou US$ 19/mês</p>
+<p class="obs">Tem preço em reais. A página de preços não confirma os idiomas: teste com um vídeo em português.</p>
+</article><article class="item" data-busca="veed vídeo: cortes, legendas e dublagem ferramenta independente editor de vídeo no navegador com legendas automáticas, tradução, dublagem e avatares. gerar legendas em português e inglês para um vídeo institucional sem instalar nada." data-br="0" data-gpt="0">
+<h4><a href="https://www.veed.io" target="_blank" rel="noopener">VEED</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Editor de vídeo no navegador com legendas automáticas, tradução, dublagem e avatares.</p>
+<p class="ex"><b>Exemplo:</b> Gerar legendas em português e inglês para um vídeo institucional sem instalar nada.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; pago a partir de cerca de US$ 12/usuário/mês no anual</p>
+<p class="obs">A página oficial não exibiu os valores em texto na consulta; o valor de entrada vem de fontes secundárias e deve ser reconferido. Tradução consome minutos do plano.</p>
+</article><article class="item" data-busca="vizard vídeo: cortes, legendas e dublagem ferramenta independente corta vídeos longos em clipes para redes sociais, com legendas, tradução de legendas e agendamento de posts. transformar a gravação de um podcast da marca em clipes verticais e já agendar a publicação." data-br="0" data-gpt="0">
+<h4><a href="https://vizard.ai" target="_blank" rel="noopener">Vizard</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Corta vídeos longos em clipes para redes sociais, com legendas, tradução de legendas e agendamento de posts.</p>
+<p class="ex"><b>Exemplo:</b> Transformar a gravação de um podcast da marca em clipes verticais e já agendar a publicação.</p>
+<p class="preco"><b>Preço:</b> grátis com 60 créditos/mês (1 crédito = 1 min, marca d&#x27;água); planos pagos Creator e Business</p>
+<p class="obs">A página de preços não exibiu os valores dos planos pagos nem a lista de idiomas no momento da consulta.</p>
+</article></div></section><section class="cat"><h3>Imagem e design</h3><div class="grade"><article class="item" data-busca="adobe express imagem e design ferramenta independente editor de design simples com modelos, ia generativa do firefly, kit de marca e geração de apresentações. montar um panfleto de evento a partir de um modelo e trocar imagens e textos pela conversa no chatgpt." data-br="0" data-gpt="1">
+<h4><a href="https://www.adobe.com/br/express/" target="_blank" rel="noopener">Adobe Express</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span><span>integra com o ChatGPT</span></div>
+<p>Editor de design simples com modelos, IA generativa do Firefly, kit de marca e geração de apresentações.</p>
+<p class="ex"><b>Exemplo:</b> Montar um panfleto de evento a partir de um modelo e trocar imagens e textos pela conversa no ChatGPT.</p>
+<p class="preco"><b>Preço:</b> grátis com gerações diárias; Premium com teste de 30 dias; equipes a partir de US$ 4,99/licença/mês no primeiro ano (anual)</p>
+<p class="obs">Os apps do Adobe Express e do Photoshop no ChatGPT são grátis para usuários do ChatGPT no mundo todo.</p>
+</article><article class="item" data-busca="adobe firefly imagem e design ferramenta independente gera e edita imagens, vídeos e áudio com os modelos da adobe (treinados com conteúdo licenciado) e de parceiros como google e openai. gerar variações de fundo para a foto de uma campanha com uso comercial mais seguro." data-br="0" data-gpt="0">
+<h4><a href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noopener">Adobe Firefly</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Gera e edita imagens, vídeos e áudio com os modelos da Adobe (treinados com conteúdo licenciado) e de parceiros como Google e OpenAI.</p>
+<p class="ex"><b>Exemplo:</b> Gerar variações de fundo para a foto de uma campanha com uso comercial mais seguro.</p>
+<p class="preco"><b>Preço:</b> gerações grátis diárias; Standard a partir de 11,17 EUR/mês (Pro US$ 19,99/mês)</p>
+<p class="obs">Modelos próprios da Adobe são indicados para uso comercial; modelos de parceiros têm regras próprias. Créditos generativos limitam o volume.</p>
+</article><article class="item" data-busca="canva (magic studio e canva ai) imagem e design ferramenta independente plataforma de design com ia para gerar imagens, textos, apresentações e redimensionar peças para várias redes, com kit de marca. criar um post para instagram e redimensioná-lo automaticamente para stories e linkedin com as cores da marca." data-br="0" data-gpt="1">
+<h4><a href="https://www.canva.com" target="_blank" rel="noopener">Canva (Magic Studio e Canva AI)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span><span>integra com o ChatGPT</span></div>
+<p>Plataforma de design com IA para gerar imagens, textos, apresentações e redimensionar peças para várias redes, com kit de marca.</p>
+<p class="ex"><b>Exemplo:</b> Criar um post para Instagram e redimensioná-lo automaticamente para Stories e LinkedIn com as cores da marca.</p>
+<p class="preco"><b>Preço:</b> grátis com recursos básicos; Pro cerca de R$ 35/mês ou R$ 290/ano no Brasil (US$ 18/mês nos EUA)</p>
+<p class="obs">A página de preços bloqueou a consulta automática; o preço em reais vem de fontes secundárias e deve ser reconferido. O app do Canva no ChatGPT funciona inclusive com conta grátis do Canva.</p>
+</article><article class="item" data-busca="chatgpt imagens imagem e design recurso nativo gera e edita imagens dentro da conversa do chatgpt, inclusive a partir de fotos enviadas e com texto na imagem. enviar a foto do produto e pedir três cenários de uso para testar em anúncios." data-br="0" data-gpt="1">
+<h4><a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT Imagens</a></h4>
+<div class="selos"><span>recurso nativo</span><span>português</span><span>integra com o ChatGPT</span></div>
+<p>Gera e edita imagens dentro da conversa do ChatGPT, inclusive a partir de fotos enviadas e com texto na imagem.</p>
+<p class="ex"><b>Exemplo:</b> Enviar a foto do produto e pedir três cenários de uso para testar em anúncios.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; Go cerca de R$ 39,99/mês; Plus cerca de R$ 99,90/mês</p>
+<p class="obs">A página oficial não exibiu os valores em reais na consulta; valores de fontes secundárias. Confira direitos de imagem de pessoas e marcas de terceiros.</p>
+</article><article class="item" data-busca="gemini com nano banana (google) imagem e design ferramenta independente geração e edição de imagens do google no app gemini, com boa consistência de produto e de pessoa entre edições. colocar a mesma embalagem em 5 ambientes diferentes mantendo o rótulo idêntico." data-br="0" data-gpt="0">
+<h4><a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini com Nano Banana (Google)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Geração e edição de imagens do Google no app Gemini, com boa consistência de produto e de pessoa entre edições.</p>
+<p class="ex"><b>Exemplo:</b> Colocar a mesma embalagem em 5 ambientes diferentes mantendo o rótulo idêntico.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; Google AI Plus a partir de cerca de R$ 24,99/mês; Pro (Nano Banana Pro ampliado) cerca de R$ 96,99/mês</p>
+<p class="obs">A página oficial não exibiu os preços em texto; valores em reais de fontes secundárias. Imagens recebem marca d&#x27;água invisível SynthID.</p>
+</article><article class="item" data-busca="ideogram imagem e design ferramenta independente gerador de imagens que acerta bem texto dentro da imagem, útil para cartazes, logos de teste e peças com tipografia. gerar 4 versões de um cartaz com a frase da promoção escrita corretamente na arte." data-br="0" data-gpt="0">
+<h4><a href="https://ideogram.ai" target="_blank" rel="noopener">Ideogram</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Gerador de imagens que acerta bem texto dentro da imagem, útil para cartazes, logos de teste e peças com tipografia.</p>
+<p class="ex"><b>Exemplo:</b> Gerar 4 versões de um cartaz com a frase da promoção escrita corretamente na arte.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; pago a partir de US$ 15/mês no anual (Plus)</p>
+<p class="obs">A página de preços bloqueou a consulta automática; segundo registros de outubro de 2026, o plano Basic de US$ 8 deixou de ser vendido. Revise acentos em textos em português.</p>
+</article><article class="item" data-busca="midjourney imagem e design ferramenta independente gerador de imagens reconhecido pela qualidade estética, útil para moodboards, conceitos de campanha e vídeos curtos. criar um moodboard com 20 direções visuais para a nova campanha antes de contratar a produção." data-br="0" data-gpt="0">
+<h4><a href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Gerador de imagens reconhecido pela qualidade estética, útil para moodboards, conceitos de campanha e vídeos curtos.</p>
+<p class="ex"><b>Exemplo:</b> Criar um moodboard com 20 direções visuais para a nova campanha antes de contratar a produção.</p>
+<p class="preco"><b>Preço:</b> sem plano grátis; Basic US$ 10/mês (20% de desconto no anual)</p>
+<p class="obs">Funciona melhor com instruções em inglês. Sem modo privado (Stealth) nos planos de entrada: as imagens ficam visíveis na galeria pública.</p>
+</article><article class="item" data-busca="photoroom imagem e design ferramenta independente edição de fotos de produto com ia: remove fundo, cria cenários, sombras, modelos de moda virtuais e vídeos de produto. padronizar o fundo de 300 fotos do catálogo do e-commerce em lote." data-br="0" data-gpt="0">
+<h4><a href="https://www.photoroom.com" target="_blank" rel="noopener">Photoroom</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Edição de fotos de produto com IA: remove fundo, cria cenários, sombras, modelos de moda virtuais e vídeos de produto.</p>
+<p class="ex"><b>Exemplo:</b> Padronizar o fundo de 300 fotos do catálogo do e-commerce em lote.</p>
+<p class="preco"><b>Preço:</b> teste grátis; Pro cerca de US$ 12,99/mês no mensal (cerca de US$ 7,50/mês no anual)</p>
+<p class="obs">A página oficial lista os planos (Pro, Max, Ultra) mas não exibiu valores em texto; preço de fontes secundárias. Integra com Shopify a partir do Max.</p>
+</article></div></section><section class="cat"><h3>Texto, apresentações e vídeo gerado</h3><div class="grade"><article class="item" data-busca="beautiful.ai texto, apresentações e vídeo gerado ferramenta independente apresentações com diagramação automática, geração de slides por ia e tradução para mais de 100 idiomas. gerar o deck de resultados trimestrais com layout padronizado da marca." data-br="0" data-gpt="0">
+<h4><a href="https://www.beautiful.ai" target="_blank" rel="noopener">Beautiful.ai</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Apresentações com diagramação automática, geração de slides por IA e tradução para mais de 100 idiomas.</p>
+<p class="ex"><b>Exemplo:</b> Gerar o deck de resultados trimestrais com layout padronizado da marca.</p>
+<p class="preco"><b>Preço:</b> teste grátis de 14 dias (pede cartão); Pro US$ 14,50/mês no anual</p>
+<p class="obs">O teste vira assinatura automaticamente se não for cancelado.</p>
+</article><article class="item" data-busca="copy.ai texto, apresentações e vídeo gerado ferramenta independente plataforma de ia para marketing e vendas com chat em vários modelos, voz de marca e fluxos automatizados (ex.: artigo de seo, plano de conta). montar um fluxo que pesquisa o tema, gera um artigo de seo e o traduz para espanhol." data-br="0" data-gpt="0">
+<h4><a href="https://www.copy.ai" target="_blank" rel="noopener">Copy.ai</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Plataforma de IA para marketing e vendas com chat em vários modelos, voz de marca e fluxos automatizados (ex.: artigo de SEO, plano de conta).</p>
+<p class="ex"><b>Exemplo:</b> Montar um fluxo que pesquisa o tema, gera um artigo de SEO e o traduz para espanhol.</p>
+<p class="preco"><b>Preço:</b> Chat a partir de US$ 24/mês no anual (US$ 29 no mensal, até 5 usuários)</p>
+<p class="obs">Planos com fluxos automatizados começam em US$ 1.000/mês; o plano Chat é o de entrada.</p>
+</article><article class="item" data-busca="gamma texto, apresentações e vídeo gerado ferramenta independente cria apresentações, documentos e páginas web a partir de um texto ou tópico, com exportação para powerpoint e pdf. colar o resumo da pesquisa com clientes e gerar em minutos um deck de 10 slides para a diretoria." data-br="0" data-gpt="0">
+<h4><a href="https://gamma.app" target="_blank" rel="noopener">Gamma</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Cria apresentações, documentos e páginas web a partir de um texto ou tópico, com exportação para PowerPoint e PDF.</p>
+<p class="ex"><b>Exemplo:</b> Colar o resumo da pesquisa com clientes e gerar em minutos um deck de 10 slides para a diretoria.</p>
+<p class="preco"><b>Preço:</b> grátis com créditos limitados; Plus cerca de US$ 9/mês no anual (US$ 12 no mensal)</p>
+<p class="obs">A página oficial bloqueou a consulta automática; preços de fontes secundárias, reconferir.</p>
+</article><article class="item" data-busca="google flow (veo e gemini omni) texto, apresentações e vídeo gerado ferramenta independente ferramenta do google para gerar e editar vídeos com ia, com controle de cenas, primeiro e último quadro e áudio. gerar um vídeo de 8 segundos do produto em uso para testar o conceito antes da filmagem." data-br="0" data-gpt="0">
+<h4><a href="https://labs.google/flow" target="_blank" rel="noopener">Google Flow (Veo e Gemini Omni)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Ferramenta do Google para gerar e editar vídeos com IA, com controle de cenas, primeiro e último quadro e áudio.</p>
+<p class="ex"><b>Exemplo:</b> Gerar um vídeo de 8 segundos do produto em uso para testar o conceito antes da filmagem.</p>
+<p class="preco"><b>Preço:</b> incluído nos planos Google AI: Plus com 200 créditos/mês (cerca de R$ 24,99/mês); Pro com 1.000 créditos (cerca de R$ 96,99/mês)</p>
+<p class="obs">Desde o Google I/O de maio de 2026, o modelo Gemini Omni passou a substituir o Veo no app Gemini. Valores em reais de fontes secundárias. Vídeos têm marca d&#x27;água SynthID; sinalize conteúdo gerado por IA. Alternativa ao Sora, que a OpenAI descontinuou em abril de 2026.</p>
+</article><article class="item" data-busca="jasper texto, apresentações e vídeo gerado ferramenta independente plataforma de conteúdo de marketing com voz de marca, modelos de campanha e agentes para produzir e adaptar textos em escala. cadastrar o tom de voz da marca e gerar 20 variações de anúncio para teste a/b." data-br="0" data-gpt="0">
+<h4><a href="https://www.jasper.ai" target="_blank" rel="noopener">Jasper</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Plataforma de conteúdo de marketing com voz de marca, modelos de campanha e agentes para produzir e adaptar textos em escala.</p>
+<p class="ex"><b>Exemplo:</b> Cadastrar o tom de voz da marca e gerar 20 variações de anúncio para teste A/B.</p>
+<p class="preco"><b>Preço:</b> teste grátis de 7 dias; Pro US$ 59/usuário/mês no anual (US$ 69 no mensal)</p>
+<p class="obs">Mais de 30 idiomas. Revise sempre afirmações sobre produto e preço.</p>
+</article><article class="item" data-busca="runway texto, apresentações e vídeo gerado ferramenta independente estúdio de vídeo e imagem com ia que reúne modelos próprios (gen-4.5, aleph) e de terceiros (kling, seedance, nano banana) para gerar e editar cenas. trocar o cenário de uma cena já filmada do comercial usando o aleph, sem refilmar." data-br="0" data-gpt="0">
+<h4><a href="https://runway.com" target="_blank" rel="noopener">Runway</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Estúdio de vídeo e imagem com IA que reúne modelos próprios (Gen-4.5, Aleph) e de terceiros (Kling, Seedance, Nano Banana) para gerar e editar cenas.</p>
+<p class="ex"><b>Exemplo:</b> Trocar o cenário de uma cena já filmada do comercial usando o Aleph, sem refilmar.</p>
+<p class="preco"><b>Preço:</b> grátis com 125 créditos (uma vez); Standard US$ 12/mês no anual (US$ 15 no mensal)</p>
+<p class="obs">Interface em inglês; instruções em português costumam funcionar, mas teste. Créditos acabam rápido em vídeo.</p>
+</article><article class="item" data-busca="sabiá (maritaca ai) texto, apresentações e vídeo gerado ferramenta independente assistente de ia brasileiro com modelos treinados para o português e o contexto do brasil, com chat, apps e api. reescrever um texto de campanha com expressões regionais do nordeste e checar se soa natural." data-br="0" data-gpt="0">
+<h4><a href="https://chat.maritaca.ai" target="_blank" rel="noopener">Sabiá (Maritaca AI)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português</span></div>
+<p>Assistente de IA brasileiro com modelos treinados para o português e o contexto do Brasil, com chat, apps e API.</p>
+<p class="ex"><b>Exemplo:</b> Reescrever um texto de campanha com expressões regionais do Nordeste e checar se soa natural.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; Premium a partir de R$ 30/mês no anual (R$ 59,90 no mensal)</p>
+<p class="obs">Opção brasileira, com inferência em território nacional segundo o site, o que ajuda na LGPD.</p>
+</article><article class="item" data-busca="writer texto, apresentações e vídeo gerado ferramenta independente plataforma corporativa de ia com agentes, playbooks e perfis de voz de marca, voltada a equipes grandes com governança. criar um playbook que transforma o briefing de produto em post de blog, e-mail e posts sociais no tom da marca." data-br="0" data-gpt="0">
+<h4><a href="https://writer.com" target="_blank" rel="noopener">Writer</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>português (parcial)</span></div>
+<p>Plataforma corporativa de IA com agentes, playbooks e perfis de voz de marca, voltada a equipes grandes com governança.</p>
+<p class="ex"><b>Exemplo:</b> Criar um playbook que transforma o briefing de produto em post de blog, e-mail e posts sociais no tom da marca.</p>
+<p class="preco"><b>Preço:</b> teste grátis de 14 dias; Starter US$ 29/usuário/mês no anual (US$ 39 no mensal)</p>
+<p class="obs">Foco em empresas, com controles de governança. Desconto de 20% para instituições de ensino.</p>
+</article></div></section><h2>Marketing digital, trade e estratégia</h2><section class="cat"><h3>SEO e conteúdo</h3><div class="grade"><article class="item" data-busca="ahrefs seo e conteúdo ferramenta independente ferramenta de seo (backlinks, palavras-chave, auditoria de site) com o módulo brand radar, que acompanha menções da marca em respostas de ia. descobrir quais páginas de concorrentes ganham mais links e tráfego orgânico em uma categoria de produto." data-br="0" data-gpt="1">
+<h4><a href="https://ahrefs.com/" target="_blank" rel="noopener">Ahrefs</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>integra com o ChatGPT</span></div>
+<p>Ferramenta de SEO (backlinks, palavras-chave, auditoria de site) com o módulo Brand Radar, que acompanha menções da marca em respostas de IA.</p>
+<p class="ex"><b>Exemplo:</b> Descobrir quais páginas de concorrentes ganham mais links e tráfego orgânico em uma categoria de produto.</p>
+<p class="preco"><b>Preço:</b> Starter a partir de US$ 29/mês; Lite US$ 129/mês; Brand Radar AI a partir de US$ 199/mês</p>
+<p class="obs">Conector MCP listado no diretório de apps do ChatGPT (2026), exige plano pago. Fonte: https://docs.ahrefs.com/mcp/docs/chatgpt-web</p>
+</article><article class="item" data-busca="mlabs seo e conteúdo ferramenta independente gerenciador brasileiro de redes sociais para agendar posts, responder mensagens e gerar relatórios, com ia para legendas e análise de concorrentes no instagram. agendar o calendário mensal de posts de três redes e gerar legendas com hashtags sugeridas pela ia." data-br="1" data-gpt="1">
+<h4><a href="https://www.mlabs.com.br/" target="_blank" rel="noopener">mLabs</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span><span>integra com o ChatGPT</span></div>
+<p>Gerenciador brasileiro de redes sociais para agendar posts, responder mensagens e gerar relatórios, com IA para legendas e análise de concorrentes no Instagram.</p>
+<p class="ex"><b>Exemplo:</b> Agendar o calendário mensal de posts de três redes e gerar legendas com hashtags sugeridas pela IA.</p>
+<p class="preco"><b>Preço:</b> a partir de R$ 29,90/mês por marca</p>
+<p class="obs">A integração com o ChatGPT é interna (para criar legendas), não um app dentro do ChatGPT.</p>
+</article><article class="item" data-busca="semrush seo e conteúdo ferramenta independente plataforma de seo, conteúdo e anúncios que agora mede também a visibilidade da marca em buscas com ia (chatgpt, perplexity, gemini, ai overviews). comparar as palavras-chave orgânicas da sua marca com as de dois concorrentes e ver em quais respostas de ia cada um aparece." data-br="0" data-gpt="1">
+<h4><a href="https://www.semrush.com/" target="_blank" rel="noopener">Semrush</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>integra com o ChatGPT</span></div>
+<p>Plataforma de SEO, conteúdo e anúncios que agora mede também a visibilidade da marca em buscas com IA (ChatGPT, Perplexity, Gemini, AI Overviews).</p>
+<p class="ex"><b>Exemplo:</b> Comparar as palavras-chave orgânicas da sua marca com as de dois concorrentes e ver em quais respostas de IA cada um aparece.</p>
+<p class="preco"><b>Preço:</b> grátis (limitado); plano SEO a partir de US$ 117,33/mês no anual (US$ 139 no mensal)</p>
+<p class="obs">App oficial no ChatGPT lançado em 17/12/2025 (exige plano pago Semrush). Fonte: https://www.semrush.com/news/439260-semrush-launches-official-app-in-chatgpt-offering-users-direct-access-to-semrush-data/</p>
+</article><article class="item" data-busca="surfer seo e conteúdo ferramenta independente otimiza textos para seo com recomendações de ia e acompanha diariamente se a marca é citada em chatgpt, gemini e ai overviews. revisar um artigo do blog com as diretrizes do surfer antes de publicar e acompanhar 25 perguntas que clientes fazem a assistentes de ia." data-br="0" data-gpt="0">
+<h4><a href="https://surfer.ai/" target="_blank" rel="noopener">Surfer</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Otimiza textos para SEO com recomendações de IA e acompanha diariamente se a marca é citada em ChatGPT, Gemini e AI Overviews.</p>
+<p class="ex"><b>Exemplo:</b> Revisar um artigo do blog com as diretrizes do Surfer antes de publicar e acompanhar 25 perguntas que clientes fazem a assistentes de IA.</p>
+<p class="preco"><b>Preço:</b> a partir de US$ 49/mês (plano Discovery, anual)</p>
+<p class="obs">O domínio surferseo.com agora redireciona para surfer.ai. Planos Pro e superiores incluem MCP.</p>
+</article></div></section><section class="cat"><h3>Mídia paga</h3><div class="grade"><article class="item" data-busca="google ai max para campanhas de pesquisa mídia paga recurso nativo da plataforma camada de ia ativada dentro de campanhas de pesquisa existentes que amplia a correspondência de termos, reescreve títulos e descrições e escolhe a página de destino. ativar o ai max numa campanha de pesquisa de seguros e comparar conversões com o período anterior, mantendo exclusões de marca." data-br="0" data-gpt="0">
+<h4><a href="https://ads.google.com/" target="_blank" rel="noopener">Google AI Max para campanhas de Pesquisa</a></h4>
+<div class="selos"><span>recurso nativo da plataforma</span></div>
+<p>Camada de IA ativada dentro de campanhas de Pesquisa existentes que amplia a correspondência de termos, reescreve títulos e descrições e escolhe a página de destino.</p>
+<p class="ex"><b>Exemplo:</b> Ativar o AI Max numa campanha de pesquisa de seguros e comparar conversões com o período anterior, mantendo exclusões de marca.</p>
+<p class="preco"><b>Preço:</b> sem custo de ferramenta (paga-se a mídia veiculada)</p>
+<p class="obs">Lançado em maio de 2025. O ganho de 14% em conversões divulgado é número do próprio Google.</p>
+</article><article class="item" data-busca="google performance max mídia paga recurso nativo da plataforma tipo de campanha do google ads orientado a metas que usa ia para veicular em todo o inventário do google (pesquisa, youtube, display, maps, gmail) a partir de uma só campanha. subir criativos, sinais de público e meta de roas de um e-commerce e deixar a ia distribuir entre youtube e pesquisa." data-br="0" data-gpt="0">
+<h4><a href="https://ads.google.com/" target="_blank" rel="noopener">Google Performance Max</a></h4>
+<div class="selos"><span>recurso nativo da plataforma</span></div>
+<p>Tipo de campanha do Google Ads orientado a metas que usa IA para veicular em todo o inventário do Google (Pesquisa, YouTube, Display, Maps, Gmail) a partir de uma só campanha.</p>
+<p class="ex"><b>Exemplo:</b> Subir criativos, sinais de público e meta de ROAS de um e-commerce e deixar a IA distribuir entre YouTube e Pesquisa.</p>
+<p class="preco"><b>Preço:</b> sem custo de ferramenta (paga-se a mídia veiculada)</p>
+
+</article><article class="item" data-busca="meta advantage+ mídia paga recurso nativo da plataforma conjunto de automações com ia da meta que escolhe público, posicionamento, orçamento e variações de criativo em campanhas de facebook e instagram. rodar uma campanha de vendas advantage+ com 10 criativos e deixar o algoritmo distribuir a verba entre públicos e posicionamentos." data-br="0" data-gpt="0">
+<h4><a href="https://www.facebook.com/business/ads/meta-advantage-plus" target="_blank" rel="noopener">Meta Advantage+</a></h4>
+<div class="selos"><span>recurso nativo da plataforma</span></div>
+<p>Conjunto de automações com IA da Meta que escolhe público, posicionamento, orçamento e variações de criativo em campanhas de Facebook e Instagram.</p>
+<p class="ex"><b>Exemplo:</b> Rodar uma campanha de vendas Advantage+ com 10 criativos e deixar o algoritmo distribuir a verba entre públicos e posicionamentos.</p>
+<p class="preco"><b>Preço:</b> sem custo de ferramenta (paga-se a mídia veiculada)</p>
+<p class="obs">Inclui campanhas de vendas (antes chamadas Shopping), de apps e de leads.</p>
+</article></div></section><section class="cat"><h3>CRM e automação</h3><div class="grade"><article class="item" data-busca="conector hubspot para chatgpt crm e automação app/conector do chatgpt conector oficial que permite ao chatgpt ler contatos, empresas, negócios e tickets do crm hubspot (somente leitura). perguntar ao chatgpt quais negócios abertos acima de r$ 50 mil estão parados há mais de 30 dias." data-br="0" data-gpt="1">
+<h4><a href="https://knowledge.hubspot.com/integrations/connect-your-hubspot-account-to-chatgpt" target="_blank" rel="noopener">Conector HubSpot para ChatGPT</a></h4>
+<div class="selos"><span>app/conector do ChatGPT</span><span>integra com o ChatGPT</span></div>
+<p>Conector oficial que permite ao ChatGPT ler contatos, empresas, negócios e tickets do CRM HubSpot (somente leitura).</p>
+<p class="ex"><b>Exemplo:</b> Perguntar ao ChatGPT quais negócios abertos acima de R$ 50 mil estão parados há mais de 30 dias.</p>
+<p class="preco"><b>Preço:</b> grátis (exige conta HubSpot e plano pago do ChatGPT)</p>
+<p class="obs">Disponível desde 24/07/2025. Não lê atividades (engagements). Precisa de aprovação de um Super Admin.</p>
+</article><article class="item" data-busca="hubspot marketing hub (breeze) crm e automação ferramenta independente crm e automação de marketing com agentes de ia (cliente, dados, prospecção, conteúdo) e módulo aeo que mede como a marca aparece em buscadores de ia. criar um fluxo de nutrição de leads por e-mail e deixar o agente de dados enriquecer as empresas no crm." data-br="0" data-gpt="1">
+<h4><a href="https://www.hubspot.com/" target="_blank" rel="noopener">HubSpot Marketing Hub (Breeze)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>integra com o ChatGPT</span></div>
+<p>CRM e automação de marketing com agentes de IA (cliente, dados, prospecção, conteúdo) e módulo AEO que mede como a marca aparece em buscadores de IA.</p>
+<p class="ex"><b>Exemplo:</b> Criar um fluxo de nutrição de leads por e-mail e deixar o agente de dados enriquecer as empresas no CRM.</p>
+<p class="preco"><b>Preço:</b> grátis (até 2 usuários); Starter a partir de US$ 7/mês por usuário; Professional a partir de US$ 800/mês</p>
+<p class="obs">A página de preços não usa mais o nome Breeze para os agentes. Tem conector oficial para ChatGPT (ver item próprio).</p>
+</article><article class="item" data-busca="klaviyo crm e automação ferramenta independente plataforma de e-mail, sms e dados de clientes para e-commerce com o agente composer, que cria campanhas e fluxos e responde perguntas sobre os dados. pedir ao composer um fluxo de carrinho abandonado e uma análise de quais campanhas mais venderam no mês." data-br="0" data-gpt="1">
+<h4><a href="https://www.klaviyo.com/" target="_blank" rel="noopener">Klaviyo</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>integra com o ChatGPT</span></div>
+<p>Plataforma de e-mail, SMS e dados de clientes para e-commerce com o agente Composer, que cria campanhas e fluxos e responde perguntas sobre os dados.</p>
+<p class="ex"><b>Exemplo:</b> Pedir ao Composer um fluxo de carrinho abandonado e uma análise de quais campanhas mais venderam no mês.</p>
+<p class="preco"><b>Preço:</b> grátis (até 250 perfis ativos e 500 envios/mês); planos pagos conforme a base de contatos</p>
+<p class="obs">App oficial no ChatGPT e servidor MCP remoto. Fonte: https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server</p>
+</article><article class="item" data-busca="optimizely (experimentação e personalização) crm e automação ferramenta independente plataforma de testes a/b, multipágina e server-side e de personalização em tempo real, com agentes de ia para criar e analisar experimentos. testar duas versões da página de checkout e personalizar o banner para visitantes recorrentes." data-br="0" data-gpt="0">
+<h4><a href="https://www.optimizely.com/" target="_blank" rel="noopener">Optimizely (experimentação e personalização)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Plataforma de testes A/B, multipágina e server-side e de personalização em tempo real, com agentes de IA para criar e analisar experimentos.</p>
+<p class="ex"><b>Exemplo:</b> Testar duas versões da página de checkout e personalizar o banner para visitantes recorrentes.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">A oferta se chama Agentic Experimentation.</p>
+</article><article class="item" data-busca="rd station marketing crm e automação ferramenta independente plataforma brasileira de automação de marketing (e-mail, landing pages, lead scoring) com copiloto de ia e a ia lynn, que prioriza leads e sugere ações. montar uma régua de e-mails para leads de um webinar e usar a lista inteligente para achar os contatos com maior chance de compra." data-br="1" data-gpt="0">
+<h4><a href="https://www.rdstation.com/" target="_blank" rel="noopener">RD Station Marketing</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Plataforma brasileira de automação de marketing (e-mail, landing pages, lead scoring) com copiloto de IA e a IA LYNN, que prioriza leads e sugere ações.</p>
+<p class="ex"><b>Exemplo:</b> Montar uma régua de e-mails para leads de um webinar e usar a Lista Inteligente para achar os contatos com maior chance de compra.</p>
+<p class="preco"><b>Preço:</b> Light a partir de R$ 50/mês nos 3 primeiros meses; Basic R$ 309/mês</p>
+<p class="obs">O plano Pro (R$ 1.121/mês mais implantação) inclui integração com IAs via MCP.</p>
+</article><article class="item" data-busca="salesforce marketing cloud next (agentforce) crm e automação ferramenta independente suíte de marketing da salesforce com agentes de ia (agentforce) que criam campanhas, conteúdo, personalização e otimização de mídia paga. pedir ao campaign agent um rascunho de campanha de reativação com segmento, e-mails e sms a partir do brief." data-br="0" data-gpt="0">
+<h4><a href="https://www.salesforce.com/marketing/" target="_blank" rel="noopener">Salesforce Marketing Cloud Next (Agentforce)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Suíte de marketing da Salesforce com agentes de IA (Agentforce) que criam campanhas, conteúdo, personalização e otimização de mídia paga.</p>
+<p class="ex"><b>Exemplo:</b> Pedir ao Campaign Agent um rascunho de campanha de reativação com segmento, e-mails e SMS a partir do brief.</p>
+<p class="preco"><b>Preço:</b> a partir de US$ 1.500/mês por org (Growth Edition, anual)</p>
+<p class="obs">Complementos como Personalization (US$ 8.000) e Marketing Intelligence (US$ 10.000) são cobrados à parte.</p>
+</article><article class="item" data-busca="vwo (wingify) crm e automação ferramenta independente ferramenta de testes a/b, multivariados e rollout de funcionalidades, com sugestões de texto geradas por ia no editor. testar um novo título na home e deixar a ia sugerir variações de texto para o botão de compra." data-br="0" data-gpt="0">
+<h4><a href="https://vwo.com/" target="_blank" rel="noopener">VWO (Wingify)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Ferramenta de testes A/B, multivariados e rollout de funcionalidades, com sugestões de texto geradas por IA no editor.</p>
+<p class="ex"><b>Exemplo:</b> Testar um novo título na home e deixar a IA sugerir variações de texto para o botão de compra.</p>
+<p class="preco"><b>Preço:</b> sob consulta (planos Growth, Pro e Enterprise)</p>
+<p class="obs">vwo.com/pricing redireciona para wingify.com. Não confirmei plano grátis.</p>
+</article></div></section><section class="cat"><h3>Relatórios e BI</h3><div class="grade"><article class="item" data-busca="looker studio relatórios e bi ferramenta independente ferramenta do google para dashboards conectados a ga4, google ads, planilhas e bigquery; a versão pro adiciona o gemini para perguntas em linguagem natural. montar um painel semanal de mídia com google ads e ga4 para a diretoria." data-br="0" data-gpt="0">
+<h4><a href="https://lookerstudio.google.com/" target="_blank" rel="noopener">Looker Studio</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Ferramenta do Google para dashboards conectados a GA4, Google Ads, planilhas e BigQuery; a versão Pro adiciona o Gemini para perguntas em linguagem natural.</p>
+<p class="ex"><b>Exemplo:</b> Montar um painel semanal de mídia com Google Ads e GA4 para a diretoria.</p>
+<p class="preco"><b>Preço:</b> grátis; Pro cerca de US$ 9/usuário/mês por projeto (fontes de terceiros)</p>
+<p class="obs">Não consegui abrir a página oficial de preço do Pro; o valor de US$ 9 vem de sites de terceiros e pode estar desatualizado.</p>
+</article><article class="item" data-busca="reportei relatórios e bi ferramenta independente ferramenta brasileira de relatórios e dashboards de marketing que reúne mais de 50 fontes (meta ads, google ads, ga4, rd station) e gera análises com ia. gerar o relatório mensal de mídia do cliente com o reportei ai escrevendo os comentários e enviar por whatsapp." data-br="1" data-gpt="0">
+<h4><a href="https://reportei.com/" target="_blank" rel="noopener">Reportei</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Ferramenta brasileira de relatórios e dashboards de marketing que reúne mais de 50 fontes (Meta Ads, Google Ads, GA4, RD Station) e gera análises com IA.</p>
+<p class="ex"><b>Exemplo:</b> Gerar o relatório mensal de mídia do cliente com o Reportei AI escrevendo os comentários e enviar por WhatsApp.</p>
+<p class="preco"><b>Preço:</b> não exibido no site oficial (Enterprise sob consulta); o G2 cita a partir de US$ 24/mês</p>
+<p class="obs">Tem Reportei Studio (monta apresentações por chat) e Reportei MCP. Preço de entrada vem de terceiro: https://www.g2.com/products/reportei/pricing</p>
+</article><article class="item" data-busca="supermetrics relatórios e bi ferramenta independente conector que leva dados de mídia e marketing para planilhas, bi, data warehouse e assistentes de ia como chatgpt, claude e copilot. puxar gastos e conversões de meta, google e tiktok para uma planilha e perguntar ao chatgpt qual canal teve o melhor cpa." data-br="0" data-gpt="1">
+<h4><a href="https://supermetrics.com/" target="_blank" rel="noopener">Supermetrics</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>integra com o ChatGPT</span></div>
+<p>Conector que leva dados de mídia e marketing para planilhas, BI, data warehouse e assistentes de IA como ChatGPT, Claude e Copilot.</p>
+<p class="ex"><b>Exemplo:</b> Puxar gastos e conversões de Meta, Google e TikTok para uma planilha e perguntar ao ChatGPT qual canal teve o melhor CPA.</p>
+<p class="preco"><b>Preço:</b> a partir de US$ 39/mês (Starter, anual) ou US$ 49 no mensal</p>
+<p class="obs">O ChatGPT aparece como destino nativo em todos os planos.</p>
+</article></div></section><section class="cat"><h3>Social listening e reputação</h3><div class="grade"><article class="item" data-busca="appbot social listening e reputação ferramenta independente análise de avaliações de apps com ia (sentimento, tópicos, emoções), perguntas em linguagem natural e respostas sugeridas. perguntar ao appbot quais funcionalidades os usuários mais criticaram depois da última atualização." data-br="0" data-gpt="1">
+<h4><a href="https://appbot.co/" target="_blank" rel="noopener">Appbot</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>integra com o ChatGPT</span></div>
+<p>Análise de avaliações de apps com IA (sentimento, tópicos, emoções), perguntas em linguagem natural e respostas sugeridas.</p>
+<p class="ex"><b>Exemplo:</b> Perguntar ao Appbot quais funcionalidades os usuários mais criticaram depois da última atualização.</p>
+<p class="preco"><b>Preço:</b> sob consulta (por número de fontes; teste grátis de 14 dias)</p>
+<p class="obs">O Appbot MCP funciona com Claude, ChatGPT e outras ferramentas compatíveis.</p>
+</article><article class="item" data-busca="appfollow social listening e reputação ferramenta independente gestão de avaliações e aso de apps, com respostas automáticas por ia e um kit mcp que leva as avaliações para assistentes de ia. classificar as avaliações de 1 estrela da última versão do app e responder automaticamente as mais comuns." data-br="0" data-gpt="0">
+<h4><a href="https://appfollow.io/" target="_blank" rel="noopener">AppFollow</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Gestão de avaliações e ASO de apps, com respostas automáticas por IA e um kit MCP que leva as avaliações para assistentes de IA.</p>
+<p class="ex"><b>Exemplo:</b> Classificar as avaliações de 1 estrela da última versão do app e responder automaticamente as mais comuns.</p>
+<p class="preco"><b>Preço:</b> sob consulta (teste grátis)</p>
+
+</article><article class="item" data-busca="brandwatch social listening e reputação ferramenta independente plataforma de consumer intelligence com social listening, gestão de redes, influenciadores e monitoramento de mídia e de ia generativa, com o assistente iris. medir o sentimento sobre o lançamento de um produto e identificar temas emergentes de reclamação." data-br="0" data-gpt="0">
+<h4><a href="https://www.brandwatch.com/" target="_blank" rel="noopener">Brandwatch</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Plataforma de consumer intelligence com social listening, gestão de redes, influenciadores e monitoramento de mídia e de IA generativa, com o assistente Iris.</p>
+<p class="ex"><b>Exemplo:</b> Medir o sentimento sobre o lançamento de um produto e identificar temas emergentes de reclamação.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Tem oferta conjunta com a Cision para grandes empresas.</p>
+</article><article class="item" data-busca="buzzmonitor social listening e reputação ferramenta independente plataforma brasileira de social listening, atendimento, dashboards e agendamento, com ia para classificar menções, sugerir respostas e gerar alertas. monitorar menções da marca e de concorrentes e priorizar no atendimento os posts com risco de crise." data-br="1" data-gpt="1">
+<h4><a href="https://buzzmonitor.com/" target="_blank" rel="noopener">Buzzmonitor</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span><span>integra com o ChatGPT</span></div>
+<p>Plataforma brasileira de social listening, atendimento, dashboards e agendamento, com IA para classificar menções, sugerir respostas e gerar alertas.</p>
+<p class="ex"><b>Exemplo:</b> Monitorar menções da marca e de concorrentes e priorizar no atendimento os posts com risco de crise.</p>
+<p class="preco"><b>Preço:</b> a partir de R$ 1.790/mês</p>
+<p class="obs">Integra o ChatGPT internamente para textos, imagens e hashtags.</p>
+</article><article class="item" data-busca="meltwater social listening e reputação ferramenta independente monitoramento de mídia e redes sociais, social listening e relações com imprensa, com a ia mira em todos os planos. receber alerta diário de matérias e posts que citam a marca, com um resumo gerado pela mira." data-br="0" data-gpt="0">
+<h4><a href="https://www.meltwater.com/" target="_blank" rel="noopener">Meltwater</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Monitoramento de mídia e redes sociais, social listening e relações com imprensa, com a IA Mira em todos os planos.</p>
+<p class="ex"><b>Exemplo:</b> Receber alerta diário de matérias e posts que citam a marca, com um resumo gerado pela Mira.</p>
+<p class="preco"><b>Preço:</b> sob consulta (contrato anual mínimo de 12 meses)</p>
+
+</article><article class="item" data-busca="reclame aqui para empresas (ra data hub e ra hugme) social listening e reputação ferramenta independente soluções pagas do reclame aqui para monitorar a reputação da empresa e de concorrentes (data hub) e gerir o atendimento das reclamações (hugme). acompanhar mensalmente a nota e o índice de solução da sua empresa e de cinco concorrentes no reclame aqui." data-br="1" data-gpt="0">
+<h4><a href="https://solucoes.reclameaqui.com.br/" target="_blank" rel="noopener">Reclame AQUI para empresas (RA Data Hub e RA HugMe)</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Soluções pagas do Reclame AQUI para monitorar a reputação da empresa e de concorrentes (Data Hub) e gerir o atendimento das reclamações (HugMe).</p>
+<p class="ex"><b>Exemplo:</b> Acompanhar mensalmente a nota e o índice de solução da sua empresa e de cinco concorrentes no Reclame AQUI.</p>
+<p class="preco"><b>Preço:</b> RA Data Hub a partir de R$ 191,90/mês (1 empresa); RA HugMe a partir de R$ 687/mês</p>
+<p class="obs">A página oficial bloqueou a leitura direta (403); os preços vieram do trecho da página oficial no buscador. Não confirmei recursos de IA específicos.</p>
+</article><article class="item" data-busca="sprout social social listening e reputação ferramenta independente gestão de redes sociais com caixa de entrada unificada, relatórios, avaliações e o agente de ia trellis; listening é módulo adicional. centralizar respostas de instagram e linkedin e pedir ao trellis um resumo do que os clientes mais pediram na semana." data-br="0" data-gpt="0">
+<h4><a href="https://sproutsocial.com/" target="_blank" rel="noopener">Sprout Social</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Gestão de redes sociais com caixa de entrada unificada, relatórios, avaliações e o agente de IA Trellis; listening é módulo adicional.</p>
+<p class="ex"><b>Exemplo:</b> Centralizar respostas de Instagram e LinkedIn e pedir ao Trellis um resumo do que os clientes mais pediram na semana.</p>
+<p class="preco"><b>Preço:</b> a partir de US$ 79/usuário/mês (Essentials, anual)</p>
+<p class="obs">Listening exige plano Standard (US$ 199) ou superior e é cobrado à parte, sem preço público.</p>
+</article><article class="item" data-busca="stilingue by blip social listening e reputação ferramenta independente plataforma brasileira de social listening com ia treinada para o português (ironia, gírias, regionalismos) e atendimento integrado (smart care). acompanhar a repercussão de um patrocínio no bbb e separar críticas de elogios automaticamente." data-br="1" data-gpt="0">
+<h4><a href="https://www.blip.ai/en/stilingue/" target="_blank" rel="noopener">Stilingue by Blip</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Plataforma brasileira de social listening com IA treinada para o português (ironia, gírias, regionalismos) e atendimento integrado (Smart Care).</p>
+<p class="ex"><b>Exemplo:</b> Acompanhar a repercussão de um patrocínio no BBB e separar críticas de elogios automaticamente.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Faz parte da Blip; recursos Smart Reply, Smart Tagging e Smart Alert.</p>
+</article><article class="item" data-busca="talkwalker (lumen by talkwalker) social listening e reputação ferramenta independente plataforma de social listening, monitoramento de mídia e benchmarking de redes, agora integrada à hootsuite. comparar o share of voice da marca com três concorrentes durante uma campanha." data-br="0" data-gpt="0">
+<h4><a href="https://www.talkwalker.com/" target="_blank" rel="noopener">Talkwalker (Lumen by Talkwalker)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Plataforma de social listening, monitoramento de mídia e benchmarking de redes, agora integrada à Hootsuite.</p>
+<p class="ex"><b>Exemplo:</b> Comparar o share of voice da marca com três concorrentes durante uma campanha.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Produto renomeado para Lumen by Talkwalker e aproximado da Hootsuite.</p>
+</article></div></section><section class="cat"><h3>Trade marketing e varejo</h3><div class="grade"><article class="item" data-busca="involves stage trade marketing e varejo ferramenta independente plataforma brasileira de execução de trade marketing com roteirização, índice de loja perfeita, bi de execução e reconhecimento de imagem por ia. promotores fotografam a gôndola e a ia aponta ruptura e share de prateleira por loja." data-br="1" data-gpt="0">
+<h4><a href="https://www.involves.com/" target="_blank" rel="noopener">Involves Stage</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Plataforma brasileira de execução de trade marketing com roteirização, índice de Loja Perfeita, BI de execução e reconhecimento de imagem por IA.</p>
+<p class="ex"><b>Exemplo:</b> Promotores fotografam a gôndola e a IA aponta ruptura e share de prateleira por loja.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Mais de 900 marcas clientes, segundo o site.</p>
+</article><article class="item" data-busca="neogrid horus trade marketing e varejo ferramenta independente inteligência de mercado e de shopper da neogrid baseada em notas fiscais do varejo: quem compra, o quê, onde, quando e como paga. ver em quais canais e regiões o tíquete médio da categoria caiu no último trimestre em relação ao concorrente." data-br="1" data-gpt="0">
+<h4><a href="https://neogrid.com/" target="_blank" rel="noopener">Neogrid Horus</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Inteligência de mercado e de shopper da Neogrid baseada em notas fiscais do varejo: quem compra, o quê, onde, quando e como paga.</p>
+<p class="ex"><b>Exemplo:</b> Ver em quais canais e regiões o tíquete médio da categoria caiu no último trimestre em relação ao concorrente.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">A Neogrid comprou 100% da Horus em jan/2024. Não consegui abrir uma página de produto atual da Horus; descrição confirmada pelo RI da Neogrid e por notícias.</p>
+</article><article class="item" data-busca="paralleldots shelfwatch trade marketing e varejo ferramenta independente monitoramento de gôndola por imagem com indicadores de planograma, share of shelf, materiais de pdv, etiqueta de preço e disponibilidade. checar a conformidade do planograma nas pontas de gôndola de uma rede de supermercados." data-br="0" data-gpt="0">
+<h4><a href="https://www.paralleldots.com/shelfwatch" target="_blank" rel="noopener">ParallelDots ShelfWatch</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Monitoramento de gôndola por imagem com indicadores de planograma, share of shelf, materiais de PDV, etiqueta de preço e disponibilidade.</p>
+<p class="ex"><b>Exemplo:</b> Checar a conformidade do planograma nas pontas de gôndola de uma rede de supermercados.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Relatórios em Power BI personalizáveis.</p>
+</article><article class="item" data-busca="repsly trade marketing e varejo ferramenta independente software de execução no varejo para equipes de campo, com reconhecimento de imagem (shelfscan) e recomendações de território por ia. planejar rotas de visita e usar o shelfscan para medir a saúde da prateleira em cada loja." data-br="0" data-gpt="0">
+<h4><a href="https://www.repsly.com/" target="_blank" rel="noopener">Repsly</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Software de execução no varejo para equipes de campo, com reconhecimento de imagem (ShelfScan) e recomendações de território por IA.</p>
+<p class="ex"><b>Exemplo:</b> Planejar rotas de visita e usar o ShelfScan para medir a saúde da prateleira em cada loja.</p>
+<p class="preco"><b>Preço:</b> sob consulta (compromisso mínimo de 12 meses)</p>
+<p class="obs">O ShelfScan é complemento dos planos Scale e Flex.</p>
+</article><article class="item" data-busca="trax trade marketing e varejo ferramenta independente reconhecimento de imagem de prateleira e execução no varejo para a indústria de bens de consumo: disponibilidade, share of shelf, preço e conformidade. auditar preço e presença de skus concorrentes em 500 lojas a partir de fotos dos representantes." data-br="0" data-gpt="0">
+<h4><a href="https://traxretail.com/" target="_blank" rel="noopener">Trax</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Reconhecimento de imagem de prateleira e execução no varejo para a indústria de bens de consumo: disponibilidade, share of shelf, preço e conformidade.</p>
+<p class="ex"><b>Exemplo:</b> Auditar preço e presença de SKUs concorrentes em 500 lojas a partir de fotos dos representantes.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Agora unida à FORM.</p>
+</article></div></section><section class="cat"><h3>Pesquisa e consumidor</h3><div class="grade"><article class="item" data-busca="mindminers pesquisa e consumidor ferramenta independente plataforma brasileira de pesquisa com consumidores, painel de mais de 5 milhões de pessoas, estudos prontos (clusters) e análise das respostas por ia. rodar em poucos dias uma pesquisa de hábitos de compra com mulheres de 25 a 40 anos no nordeste." data-br="1" data-gpt="0">
+<h4><a href="https://mindminers.com/" target="_blank" rel="noopener">MindMiners</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Plataforma brasileira de pesquisa com consumidores, painel de mais de 5 milhões de pessoas, estudos prontos (Clusters) e análise das respostas por IA.</p>
+<p class="ex"><b>Exemplo:</b> Rodar em poucos dias uma pesquisa de hábitos de compra com mulheres de 25 a 40 anos no Nordeste.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+
+</article><article class="item" data-busca="opinion box pesquisa e consumidor ferramenta independente empresa brasileira de pesquisa de mercado e cx com plataforma self-service, painel de mais de 1 milhão de respondentes e ia para montar questionários e categorizar respostas abertas. contratar uma pesquisa rápida de intenção de compra e receber o resultado em até 5 dias úteis." data-br="1" data-gpt="0">
+<h4><a href="https://www.opinionbox.com/" target="_blank" rel="noopener">Opinion Box</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>brasileira</span></div>
+<p>Empresa brasileira de pesquisa de mercado e CX com plataforma self-service, painel de mais de 1 milhão de respondentes e IA para montar questionários e categorizar respostas abertas.</p>
+<p class="ex"><b>Exemplo:</b> Contratar uma pesquisa rápida de intenção de compra e receber o resultado em até 5 dias úteis.</p>
+<p class="preco"><b>Preço:</b> pesquisas a partir de R$ 300</p>
+
+</article><article class="item" data-busca="qualtrics (edge audiences) pesquisa e consumidor ferramenta independente plataforma de pesquisa e experiência do cliente com ia para análise de texto e vídeo e painéis sintéticos (edge audiences) que misturam respondentes gerados por ia e humanos. testar rapidamente cinco conceitos de embalagem com painel sintético e validar o vencedor com consumidores reais." data-br="0" data-gpt="0">
+<h4><a href="https://www.qualtrics.com/" target="_blank" rel="noopener">Qualtrics (Edge Audiences)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Plataforma de pesquisa e experiência do cliente com IA para análise de texto e vídeo e painéis sintéticos (Edge Audiences) que misturam respondentes gerados por IA e humanos.</p>
+<p class="ex"><b>Exemplo:</b> Testar rapidamente cinco conceitos de embalagem com painel sintético e validar o vencedor com consumidores reais.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Créditos de painel sintético só via executivo de contas. Preços: https://www.qualtrics.com/pricing/</p>
+</article><article class="item" data-busca="surveymonkey pesquisa e consumidor ferramenta independente criação e análise de pesquisas online, com análise por ia e análise temática de respostas abertas nos planos de equipe. rodar uma pesquisa de satisfação pós-compra e pedir à ia os principais temas das respostas abertas." data-br="0" data-gpt="0">
+<h4><a href="https://www.surveymonkey.com/" target="_blank" rel="noopener">SurveyMonkey</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Criação e análise de pesquisas online, com análise por IA e análise temática de respostas abertas nos planos de equipe.</p>
+<p class="ex"><b>Exemplo:</b> Rodar uma pesquisa de satisfação pós-compra e pedir à IA os principais temas das respostas abertas.</p>
+<p class="preco"><b>Preço:</b> grátis (Basic); Team Advantage R$ 2.082/ano para 3 usuários</p>
+
+</article><article class="item" data-busca="toluna (synthetic personas) pesquisa e consumidor ferramenta independente pesquisa de mercado com painel de mais de 81 milhões de consumidores, plataforma self-service toluna start e personas sintéticas para triagem de ideias e mensagens. fazer uma triagem de dez claims de produto com personas sintéticas antes de levar os três melhores para campo." data-br="0" data-gpt="0">
+<h4><a href="https://tolunacorporate.com/" target="_blank" rel="noopener">Toluna (Synthetic Personas)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Pesquisa de mercado com painel de mais de 81 milhões de consumidores, plataforma self-service Toluna Start e personas sintéticas para triagem de ideias e mensagens.</p>
+<p class="ex"><b>Exemplo:</b> Fazer uma triagem de dez claims de produto com personas sintéticas antes de levar os três melhores para campo.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">A Toluna afirma cerca de 80% de correlação entre personas sintéticas e respostas humanas (número da própria empresa).</p>
+</article><article class="item" data-busca="typeform pesquisa e consumidor ferramenta independente formulários e pesquisas conversacionais com criação assistida por ia, perguntas de esclarecimento e análise de resultados. criar com ia um formulário de qualificação de leads e usar o smart insights para resumir as respostas." data-br="0" data-gpt="0">
+<h4><a href="https://www.typeform.com/" target="_blank" rel="noopener">Typeform</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Formulários e pesquisas conversacionais com criação assistida por IA, perguntas de esclarecimento e análise de resultados.</p>
+<p class="ex"><b>Exemplo:</b> Criar com IA um formulário de qualificação de leads e usar o Smart Insights para resumir as respostas.</p>
+<p class="preco"><b>Preço:</b> grátis; Basic a partir de US$ 28/mês no anual (US$ 39 no mensal)</p>
+
+</article></div></section><section class="cat"><h3>Inteligência competitiva e pesquisa profunda</h3><div class="grade"><article class="item" data-busca="chatgpt (deep research e apps) inteligência competitiva e pesquisa profunda recurso nativo da plataforma assistente da openai com modo de pesquisa profunda, que navega na web e entrega relatório com fontes, e apps que conectam ferramentas como hubspot, semrush e similarweb. pedir um relatório com fontes sobre o mercado brasileiro de bebidas proteicas e cruzar com dados do hubspot." data-br="0" data-gpt="1">
+<h4><a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT (deep research e apps)</a></h4>
+<div class="selos"><span>recurso nativo da plataforma</span><span>integra com o ChatGPT</span></div>
+<p>Assistente da OpenAI com modo de pesquisa profunda, que navega na web e entrega relatório com fontes, e apps que conectam ferramentas como HubSpot, Semrush e Similarweb.</p>
+<p class="ex"><b>Exemplo:</b> Pedir um relatório com fontes sobre o mercado brasileiro de bebidas proteicas e cruzar com dados do HubSpot.</p>
+<p class="preco"><b>Preço:</b> grátis (pesquisa profunda limitada); Plus US$ 20/mês</p>
+<p class="obs">A página oficial não exibiu os valores no texto lido; os US$ 20 do Plus foram confirmados por terceiros (Wise, ago/2026).</p>
+</article><article class="item" data-busca="crayon inteligência competitiva e pesquisa profunda ferramenta independente plataforma de inteligência competitiva que monitora sites, preços e mensagens de concorrentes e gera battlecards com ia. receber alerta quando um concorrente muda preço ou posicionamento na página de produto." data-br="0" data-gpt="0">
+<h4><a href="https://www.crayon.co/" target="_blank" rel="noopener">Crayon</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Plataforma de inteligência competitiva que monitora sites, preços e mensagens de concorrentes e gera battlecards com IA.</p>
+<p class="ex"><b>Exemplo:</b> Receber alerta quando um concorrente muda preço ou posicionamento na página de produto.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+
+</article><article class="item" data-busca="gemini deep research inteligência competitiva e pesquisa profunda recurso nativo da plataforma assistente de pesquisa do gemini que monta um plano, navega em centenas de sites (e, se autorizado, gmail e drive) e entrega relatório de várias páginas. pedir um panorama dos principais players de pet food premium no brasil, com fontes." data-br="0" data-gpt="0">
+<h4><a href="https://gemini.google/overview/deep-research/" target="_blank" rel="noopener">Gemini Deep Research</a></h4>
+<div class="selos"><span>recurso nativo da plataforma</span></div>
+<p>Assistente de pesquisa do Gemini que monta um plano, navega em centenas de sites (e, se autorizado, Gmail e Drive) e entrega relatório de várias páginas.</p>
+<p class="ex"><b>Exemplo:</b> Pedir um panorama dos principais players de pet food premium no Brasil, com fontes.</p>
+<p class="preco"><b>Preço:</b> grátis com limites; Google AI Pro R$ 96,99/mês</p>
+<p class="obs">Preço do AI Pro conforme a página oficial de assinaturas no Brasil: https://gemini.google/br/subscriptions/?hl=pt-BR</p>
+</article><article class="item" data-busca="klue inteligência competitiva e pesquisa profunda ferramenta independente inteligência competitiva e análise de ganhos e perdas com agentes de ia que pesquisam concorrentes e entrevistam compradores. gerar automaticamente a história de por que um grande negócio foi perdido a partir do crm e das gravações de chamadas." data-br="0" data-gpt="0">
+<h4><a href="https://klue.com/" target="_blank" rel="noopener">Klue</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Inteligência competitiva e análise de ganhos e perdas com agentes de IA que pesquisam concorrentes e entrevistam compradores.</p>
+<p class="ex"><b>Exemplo:</b> Gerar automaticamente a história de por que um grande negócio foi perdido a partir do CRM e das gravações de chamadas.</p>
+<p class="preco"><b>Preço:</b> sob consulta</p>
+<p class="obs">Permite atualizar battlecards também pelo Claude.</p>
+</article><article class="item" data-busca="notebooklm (gemini notebook) inteligência competitiva e pesquisa profunda ferramenta independente caderno de pesquisa do google que responde só com base nos documentos enviados (pdfs, sites, vídeos) e gera resumos em áudio e vídeo. subir 20 relatórios de mercado e perguntar quais tendências aparecem em mais de um deles, com citação da página." data-br="0" data-gpt="0">
+<h4><a href="https://notebooklm.google/" target="_blank" rel="noopener">NotebookLM (Gemini Notebook)</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Caderno de pesquisa do Google que responde só com base nos documentos enviados (PDFs, sites, vídeos) e gera resumos em áudio e vídeo.</p>
+<p class="ex"><b>Exemplo:</b> Subir 20 relatórios de mercado e perguntar quais tendências aparecem em mais de um deles, com citação da página.</p>
+<p class="preco"><b>Preço:</b> grátis; limites maiores nos planos Google AI (Plus, Pro, Ultra)</p>
+<p class="obs">notebooklm.google redireciona para notebook.google; fontes de terceiros indicam que o produto passou a se chamar Gemini Notebook em 2026.</p>
+</article><article class="item" data-busca="perplexity inteligência competitiva e pesquisa profunda ferramenta independente buscador com ia que responde com fontes citadas e tem modo de pesquisa profunda (research) para relatórios. levantar em 10 minutos as notícias e números recentes sobre um concorrente, com links para checar." data-br="0" data-gpt="0">
+<h4><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity</a></h4>
+<div class="selos"><span>ferramenta independente</span></div>
+<p>Buscador com IA que responde com fontes citadas e tem modo de pesquisa profunda (Research) para relatórios.</p>
+<p class="ex"><b>Exemplo:</b> Levantar em 10 minutos as notícias e números recentes sobre um concorrente, com links para checar.</p>
+<p class="preco"><b>Preço:</b> grátis; Pro US$ 20/mês; Max US$ 200/mês</p>
+<p class="obs">A página de preços oficial cita Max a US$ 167/mês no anual: https://www.perplexity.ai/hub/pricing</p>
+</article><article class="item" data-busca="similarweb inteligência competitiva e pesquisa profunda ferramenta independente inteligência digital de mercado: tráfego de sites e apps, busca, anúncios e visibilidade em ia generativa, com agentes de ia e relatórios de pesquisa profunda. estimar o tráfego e as fontes de visita dos sites de três concorrentes e ver qual cresce mais via buscas por ia." data-br="0" data-gpt="1">
+<h4><a href="https://www.similarweb.com/" target="_blank" rel="noopener">Similarweb</a></h4>
+<div class="selos"><span>ferramenta independente</span><span>integra com o ChatGPT</span></div>
+<p>Inteligência digital de mercado: tráfego de sites e apps, busca, anúncios e visibilidade em IA generativa, com agentes de IA e relatórios de pesquisa profunda.</p>
+<p class="ex"><b>Exemplo:</b> Estimar o tráfego e as fontes de visita dos sites de três concorrentes e ver qual cresce mais via buscas por IA.</p>
+<p class="preco"><b>Preço:</b> sob consulta (planos self-service e corporativos)</p>
+<p class="obs">App oficial no ChatGPT, consome créditos de API. Fonte: https://docs.similarweb.com/api-v5/similarweb-mcp/available-integrations/chatgpt-integration</p>
+</article></div></section><section class="cat"><h3>Dados públicos</h3><div class="grade"><article class="item" data-busca="banco central sgs dados públicos dados abertos sistema gerenciador de séries temporais do banco central, com milhares de séries (juros, crédito, inflação, câmbio) e api em json ou csv. puxar a série de saldo de crédito livre e a selic para explicar a queda de vendas parceladas." data-br="1" data-gpt="0">
+<h4><a href="https://www3.bcb.gov.br/sgspub/" target="_blank" rel="noopener">Banco Central SGS</a></h4>
+<div class="selos"><span>dados abertos</span><span>brasileira</span></div>
+<p>Sistema Gerenciador de Séries Temporais do Banco Central, com milhares de séries (juros, crédito, inflação, câmbio) e API em JSON ou CSV.</p>
+<p class="ex"><b>Exemplo:</b> Puxar a série de saldo de crédito livre e a Selic para explicar a queda de vendas parceladas.</p>
+<p class="preco"><b>Preço:</b> grátis</p>
+<p class="obs">Formato da API: https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados?formato=json</p>
+</article><article class="item" data-busca="google trends dados públicos dados abertos mostra o interesse relativo de busca por termos ao longo do tempo e por região, e o que está em alta no momento. comparar a sazonalidade das buscas por protetor solar e repelente por estado para planejar a mídia." data-br="0" data-gpt="0">
+<h4><a href="https://trends.google.com/" target="_blank" rel="noopener">Google Trends</a></h4>
+<div class="selos"><span>dados abertos</span></div>
+<p>Mostra o interesse relativo de busca por termos ao longo do tempo e por região, e o que está em alta no momento.</p>
+<p class="ex"><b>Exemplo:</b> Comparar a sazonalidade das buscas por protetor solar e repelente por estado para planejar a mídia.</p>
+<p class="preco"><b>Preço:</b> grátis</p>
+<p class="obs">Os dados são índices relativos (0 a 100), não volumes absolutos.</p>
+</article><article class="item" data-busca="ibge sidra dados públicos dados abertos banco de tabelas do ibge com censo, pnad, pesquisas de comércio e preços (ipca), acessível por site e api. baixar população e renda por município para dimensionar o mercado potencial de uma nova loja." data-br="1" data-gpt="0">
+<h4><a href="https://sidra.ibge.gov.br/" target="_blank" rel="noopener">IBGE SIDRA</a></h4>
+<div class="selos"><span>dados abertos</span><span>brasileira</span></div>
+<p>Banco de tabelas do IBGE com Censo, PNAD, pesquisas de comércio e preços (IPCA), acessível por site e API.</p>
+<p class="ex"><b>Exemplo:</b> Baixar população e renda por município para dimensionar o mercado potencial de uma nova loja.</p>
+<p class="preco"><b>Preço:</b> grátis</p>
+<p class="obs">O site bloqueou a leitura automática (403); existência e API confirmadas pela documentação do IBGE.</p>
+</article></div></section>
+<p class="vazio" id="vazio">Nada encontrado. Tente outra palavra.</p>
+<p class="dica" style="margin-top:2.5rem">Pesquisa feita para o curso em 5/11/2026, com fontes oficiais de cada ferramenta. Nenhuma ferramenta
+pagou para aparecer aqui.</p>
+</main>
+<script>
+const q = document.getElementById("q"), br = document.getElementById("br"), gpt = document.getElementById("gpt"), n = document.getElementById("n");
+function filtrar() {
+  const t = q.value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  let k = 0;
+  document.querySelectorAll(".item").forEach((it) => {
+    const txt = it.dataset.busca.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const ok = (!t || t.split(/\s+/).every((p) => txt.includes(p))) && (!br.checked || it.dataset.br === "1") && (!gpt.checked || it.dataset.gpt === "1");
+    it.style.display = ok ? "" : "none"; if (ok) k++;
+  });
+  document.querySelectorAll("section.cat").forEach((s) => { s.style.display = [...s.querySelectorAll(".item")].some((i) => i.style.display !== "none") ? "" : "none"; });
+  document.querySelectorAll("h2").forEach((h) => {
+    let el = h.nextElementSibling, vis = false;
+    while (el && el.tagName !== "H2") { if (el.matches("section.cat") && el.style.display !== "none") vis = true; el = el.nextElementSibling; }
+    h.style.display = vis ? "" : "none";
+  });
+  n.textContent = k + " de 119";
+  document.getElementById("vazio").style.display = k ? "none" : "block";
+}
+[q, br, gpt].forEach((x) => x.addEventListener("input", filtrar));
+filtrar();
+</script>
+</body></html>
