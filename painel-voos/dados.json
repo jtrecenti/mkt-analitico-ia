@@ -1,0 +1,518 @@
+{
+ "fonte": "Base simulada do curso (dados/voos_2026.csv): 8.000 voos de janeiro a outubro de 2026, 2.000 por companhia",
+ "gerado_em": "03/11/2026",
+ "empresas": {
+  "LATAM": {
+   "n": 2000,
+   "nota_media": 6.7336,
+   "pct_atraso_1h": 0.1645,
+   "pct_reacomodado": 0.04,
+   "conexoes_perdidas": 0.0706,
+   "situacoes": [
+    {
+     "situacao": "no horário",
+     "n": 746,
+     "nota": 6.9344
+    },
+    {
+     "situacao": "15 min a 1h",
+     "n": 925,
+     "nota": 6.8498
+    },
+    {
+     "situacao": "1h a 3h",
+     "n": 241,
+     "nota": 6.4056
+    },
+    {
+     "situacao": "mais de 3h",
+     "n": 8,
+     "nota": 5.825
+    },
+    {
+     "situacao": "reacomodado",
+     "n": 80,
+     "nota": 4.5951
+    }
+   ],
+   "problemas": [
+    {
+     "problema": "Voo reacomodado",
+     "n": 80,
+     "pct": 0.04,
+     "nota_com": 4.5951,
+     "nota_sem": 6.8227,
+     "diferenca": -2.2276
+    },
+    {
+     "problema": "Atraso acima de 1 hora",
+     "n": 329,
+     "pct": 0.1645,
+     "nota_com": 5.9512,
+     "nota_sem": 6.8876,
+     "diferenca": -0.9364
+    },
+    {
+     "problema": "Mais de 20% perdem a conexão",
+     "n": 176,
+     "pct": 0.088,
+     "nota_com": 5.4502,
+     "nota_sem": 6.8574,
+     "diferenca": -1.4072
+    },
+    {
+     "problema": "5 ou mais malas extraviadas por mil",
+     "n": 300,
+     "pct": 0.15,
+     "nota_com": 6.2574,
+     "nota_sem": 6.8176,
+     "diferenca": -0.5602
+    },
+    {
+     "problema": "Falha no check-in pelo app acima de 10%",
+     "n": 696,
+     "pct": 0.348,
+     "nota_com": 6.4623,
+     "nota_sem": 6.8784,
+     "diferenca": -0.4161
+    }
+   ],
+   "mensal": [
+    {
+     "mes": "jan",
+     "n": 204,
+     "nota": 6.5334
+    },
+    {
+     "mes": "fev",
+     "n": 179,
+     "nota": 6.8585
+    },
+    {
+     "mes": "mar",
+     "n": 194,
+     "nota": 6.6402
+    },
+    {
+     "mes": "abr",
+     "n": 196,
+     "nota": 6.7815
+    },
+    {
+     "mes": "mai",
+     "n": 193,
+     "nota": 6.9457
+    },
+    {
+     "mes": "jun",
+     "n": 200,
+     "nota": 6.8171
+    },
+    {
+     "mes": "jul",
+     "n": 187,
+     "nota": 6.4112
+    },
+    {
+     "mes": "ago",
+     "n": 223,
+     "nota": 6.9316
+    },
+    {
+     "mes": "set",
+     "n": 180,
+     "nota": 6.6977
+    },
+    {
+     "mes": "out",
+     "n": 244,
+     "nota": 6.7013
+    }
+   ]
+  },
+  "Gol": {
+   "n": 2000,
+   "nota_media": 6.7837,
+   "pct_atraso_1h": 0.2875,
+   "pct_reacomodado": 0.0315,
+   "conexoes_perdidas": 0.1215,
+   "situacoes": [
+    {
+     "situacao": "no horário",
+     "n": 635,
+     "nota": 7.4423
+    },
+    {
+     "situacao": "15 min a 1h",
+     "n": 789,
+     "nota": 7.1263
+    },
+    {
+     "situacao": "1h a 3h",
+     "n": 444,
+     "nota": 6.0766
+    },
+    {
+     "situacao": "mais de 3h",
+     "n": 69,
+     "nota": 4.7042
+    },
+    {
+     "situacao": "reacomodado",
+     "n": 63,
+     "nota": 3.1144
+    }
+   ],
+   "problemas": [
+    {
+     "problema": "Voo reacomodado",
+     "n": 63,
+     "pct": 0.0315,
+     "nota_com": 3.1144,
+     "nota_sem": 6.903,
+     "diferenca": -3.7886
+    },
+    {
+     "problema": "Atraso acima de 1 hora",
+     "n": 575,
+     "pct": 0.2875,
+     "nota_com": 5.5846,
+     "nota_sem": 7.2675,
+     "diferenca": -1.6829
+    },
+    {
+     "problema": "Mais de 20% perdem a conexão",
+     "n": 347,
+     "pct": 0.1735,
+     "nota_com": 5.0979,
+     "nota_sem": 7.1375,
+     "diferenca": -2.0396
+    },
+    {
+     "problema": "5 ou mais malas extraviadas por mil",
+     "n": 410,
+     "pct": 0.205,
+     "nota_com": 6.2478,
+     "nota_sem": 6.9218,
+     "diferenca": -0.6741
+    },
+    {
+     "problema": "Falha no check-in pelo app acima de 10%",
+     "n": 189,
+     "pct": 0.0945,
+     "nota_com": 6.6693,
+     "nota_sem": 6.7956,
+     "diferenca": -0.1263
+    }
+   ],
+   "mensal": [
+    {
+     "mes": "jan",
+     "n": 210,
+     "nota": 6.4082
+    },
+    {
+     "mes": "fev",
+     "n": 186,
+     "nota": 6.8386
+    },
+    {
+     "mes": "mar",
+     "n": 193,
+     "nota": 6.9069
+    },
+    {
+     "mes": "abr",
+     "n": 184,
+     "nota": 6.7645
+    },
+    {
+     "mes": "mai",
+     "n": 193,
+     "nota": 6.9173
+    },
+    {
+     "mes": "jun",
+     "n": 205,
+     "nota": 6.8429
+    },
+    {
+     "mes": "jul",
+     "n": 220,
+     "nota": 6.5075
+    },
+    {
+     "mes": "ago",
+     "n": 213,
+     "nota": 6.888
+    },
+    {
+     "mes": "set",
+     "n": 195,
+     "nota": 6.9402
+    },
+    {
+     "mes": "out",
+     "n": 201,
+     "nota": 6.8753
+    }
+   ]
+  },
+  "Azul": {
+   "n": 2000,
+   "nota_media": 7.1547,
+   "pct_atraso_1h": 0.239,
+   "pct_reacomodado": 0.1155,
+   "conexoes_perdidas": 0.1233,
+   "situacoes": [
+    {
+     "situacao": "no horário",
+     "n": 982,
+     "nota": 7.6691
+    },
+    {
+     "situacao": "15 min a 1h",
+     "n": 539,
+     "nota": 7.5323
+    },
+    {
+     "situacao": "1h a 3h",
+     "n": 241,
+     "nota": 7.0822
+    },
+    {
+     "situacao": "mais de 3h",
+     "n": 7,
+     "nota": 6.4314
+    },
+    {
+     "situacao": "reacomodado",
+     "n": 231,
+     "nota": 4.1847
+    }
+   ],
+   "problemas": [
+    {
+     "problema": "Voo reacomodado",
+     "n": 231,
+     "pct": 0.1155,
+     "nota_com": 4.1847,
+     "nota_sem": 7.5426,
+     "diferenca": -3.3579
+    },
+    {
+     "problema": "Atraso acima de 1 hora",
+     "n": 478,
+     "pct": 0.239,
+     "nota_com": 5.6757,
+     "nota_sem": 7.6193,
+     "diferenca": -1.9435
+    },
+    {
+     "problema": "Mais de 20% perdem a conexão",
+     "n": 326,
+     "pct": 0.163,
+     "nota_com": 5.0396,
+     "nota_sem": 7.5667,
+     "diferenca": -2.527
+    },
+    {
+     "problema": "5 ou mais malas extraviadas por mil",
+     "n": 340,
+     "pct": 0.17,
+     "nota_com": 6.3081,
+     "nota_sem": 7.3282,
+     "diferenca": -1.0201
+    },
+    {
+     "problema": "Falha no check-in pelo app acima de 10%",
+     "n": 35,
+     "pct": 0.0175,
+     "nota_com": 7.4134,
+     "nota_sem": 7.1501,
+     "diferenca": 0.2633
+    }
+   ],
+   "mensal": [
+    {
+     "mes": "jan",
+     "n": 228,
+     "nota": 6.8863
+    },
+    {
+     "mes": "fev",
+     "n": 183,
+     "nota": 7.1979
+    },
+    {
+     "mes": "mar",
+     "n": 199,
+     "nota": 7.0088
+    },
+    {
+     "mes": "abr",
+     "n": 194,
+     "nota": 7.2831
+    },
+    {
+     "mes": "mai",
+     "n": 188,
+     "nota": 7.1593
+    },
+    {
+     "mes": "jun",
+     "n": 191,
+     "nota": 7.1198
+    },
+    {
+     "mes": "jul",
+     "n": 192,
+     "nota": 7.0739
+    },
+    {
+     "mes": "ago",
+     "n": 211,
+     "nota": 7.3645
+    },
+    {
+     "mes": "set",
+     "n": 196,
+     "nota": 7.3505
+    },
+    {
+     "mes": "out",
+     "n": 218,
+     "nota": 7.1373
+    }
+   ]
+  },
+  "TAP": {
+   "n": 2000,
+   "nota_media": 5.7971,
+   "pct_atraso_1h": 0.2675,
+   "pct_reacomodado": 0.0335,
+   "conexoes_perdidas": 0.1658,
+   "situacoes": [
+    {
+     "situacao": "no horário",
+     "n": 592,
+     "nota": 6.8244
+    },
+    {
+     "situacao": "15 min a 1h",
+     "n": 872,
+     "nota": 6.416
+    },
+    {
+     "situacao": "1h a 3h",
+     "n": 424,
+     "nota": 4.2754
+    },
+    {
+     "situacao": "mais de 3h",
+     "n": 45,
+     "nota": 1.6218
+    },
+    {
+     "situacao": "reacomodado",
+     "n": 67,
+     "nota": 1.0994
+    }
+   ],
+   "problemas": [
+    {
+     "problema": "Voo reacomodado",
+     "n": 67,
+     "pct": 0.0335,
+     "nota_com": 1.0994,
+     "nota_sem": 5.9599,
+     "diferenca": -4.8605
+    },
+    {
+     "problema": "Atraso acima de 1 hora",
+     "n": 535,
+     "pct": 0.2675,
+     "nota_com": 3.6526,
+     "nota_sem": 6.5803,
+     "diferenca": -2.9277
+    },
+    {
+     "problema": "Mais de 20% perdem a conexão",
+     "n": 480,
+     "pct": 0.24,
+     "nota_com": 3.1928,
+     "nota_sem": 6.6195,
+     "diferenca": -3.4267
+    },
+    {
+     "problema": "5 ou mais malas extraviadas por mil",
+     "n": 1096,
+     "pct": 0.548,
+     "nota_com": 4.9895,
+     "nota_sem": 6.7762,
+     "diferenca": -1.7867
+    },
+    {
+     "problema": "Falha no check-in pelo app acima de 10%",
+     "n": 302,
+     "pct": 0.151,
+     "nota_com": 5.6191,
+     "nota_sem": 5.8287,
+     "diferenca": -0.2096
+    }
+   ],
+   "mensal": [
+    {
+     "mes": "jan",
+     "n": 203,
+     "nota": 5.697
+    },
+    {
+     "mes": "fev",
+     "n": 187,
+     "nota": 5.8951
+    },
+    {
+     "mes": "mar",
+     "n": 216,
+     "nota": 5.8483
+    },
+    {
+     "mes": "abr",
+     "n": 206,
+     "nota": 5.8057
+    },
+    {
+     "mes": "mai",
+     "n": 190,
+     "nota": 5.9507
+    },
+    {
+     "mes": "jun",
+     "n": 181,
+     "nota": 5.7935
+    },
+    {
+     "mes": "jul",
+     "n": 202,
+     "nota": 5.5606
+    },
+    {
+     "mes": "ago",
+     "n": 239,
+     "nota": 5.5811
+    },
+    {
+     "mes": "set",
+     "n": 186,
+     "nota": 6.0056
+    },
+    {
+     "mes": "out",
+     "n": 190,
+     "nota": 5.9087
+    }
+   ]
+  }
+ }
+}

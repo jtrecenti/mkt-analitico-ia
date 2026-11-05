@@ -38,13 +38,14 @@ footer a { color: var(--marca); }
   <img class="logo" src="recursos/logo-insper-preto.png" alt="Insper">
   <div class="curso">Educação Executiva · novembro de 2026</div>
   <h1>Marketing Analítico: impulsionando resultados com IA</h1>
-  <p>Material das aulas de quarta e quinta. Dez exercícios numa linha só: construir uma base de dados com o ChatGPT
-  (habilidades, plugins, raspagem e extração com IA) e depois analisá-la (gráficos, regressão, projeto e painel).
+  <p>Material das aulas de quarta e quinta. Nove exercícios numa linha só: construir uma base de dados com o ChatGPT
+  (habilidades, plugins, raspagem e extração com IA), analisá-la (gráficos e regressão), transformar a análise
+  num relatório que roda de novo todo mês e, no fim, uma peça de portfólio escolhida por você.
   O roteiro de cada exercício está no pacote de materiais, na pasta <code>exercicios/</code>.</p>
 
   <div class="atalhos">
     <a href="quiz/">Quiz ao vivo<small>responda pelo celular</small></a>
-    <a href="painel-reclamacoes/">Painel de exemplo<small>exercício 8</small></a>
+    <a href="guia/">Guia de bolso<small>o que é, para que serve e como funciona</small></a>
     <a href="materiais/mkt-analitico-materiais.zip" download>Materiais (.zip)<small>dados, exercícios e habilidades</small></a>
   </div>
 
@@ -55,22 +56,24 @@ footer a { color: var(--marca); }
   <a class="aula" href="slides/04-regressao.html"><span class="h">tarde</span><span><b>Regressão linear com o ChatGPT</b><span class="d">O que é, para que serve e como funciona; exercício 5, rodada 1</span></span></a>
   <a class="aula" id="e3" href="slides/04-estudio-regressao.html"><span class="h">estúdio 3</span><span><b>Estúdio 3: a rodada 2 do exercício 5</b><span class="d">A entrega da tarde: o que a regressão não vê sozinha</span></span></a>
   <div class="dia">Quinta-feira, 5 de novembro</div>
-  <a class="aula breve" id="a5" href="slides/05-codex-qualidade.html"><span class="h">9h</span><span><b>Do chat ao projeto: Codex e qualidade de código</b><span class="d">Exercícios 6 e 7: o projeto e um teste que pega o erro</span></span></a>
-  <a class="aula" href="slides/06-estudio-painel.html"><span class="h">11h · estúdio</span><span><b>Um painel numa página, publicado na internet</b><span class="d">Exercício 8: o painel</span></span></a>
+  <a class="aula" id="a5" href="slides/05-relatorio-reprodutivel.html"><span class="h">manhã</span><span><b>Relatórios reprodutíveis com o ChatGPT Work</b><span class="d">Exercícios 6 a 8: uma pasta que refaz o relatório de mídia da Bora Bebidas, as checagens que pegam os problemas de outubro e a skill que leva tudo para o time</span></span></a>
+  <a class="aula" href="slides/06-estudio-portfolio.html"><span class="h">estúdio 4</span><span><b>O seu portfólio de IA</b><span class="d">Exercício 9: estúdio livre, com cinco trilhas (skill, plugin, relatório reprodutível, explorar o que já existe, painel)</span></span></a>
   <p class="pdfs">Os slides em PDF:
     <a href="slides/pdf/01-chatgpt-work.pdf">quarta de manhã</a> ·
     <a href="slides/pdf/03-modelagem-visualizacao.pdf">visualização</a> ·
     <a href="slides/pdf/04-regressao.pdf">regressão</a> ·
     <a href="slides/pdf/04-estudio-regressao.pdf">estúdio 3</a> ·
-    <a href="slides/pdf/06-estudio-painel.pdf">painel</a></p>
+    <a href="slides/pdf/05-relatorio-reprodutivel.pdf">relatórios reprodutíveis</a> ·
+    <a href="slides/pdf/06-estudio-portfolio.pdf">estúdio de portfólio</a> ·
+    <a href="guia/guia-de-bolso.pdf">guia de bolso</a></p>
   <footer>
-    Prof. Julio Trecenti · Insper. Dados: avaliações públicas da App Store e sentenças públicas do TJSP; a base de voos é simulada, para fins didáticos.
+    Prof. Julio Trecenti · Insper. Dados: avaliações públicas da App Store e sentenças públicas do TJSP; a base de voos e os arquivos da Bora Bebidas são simulados, para fins didáticos.
     Nos slides, a tecla <b>d</b> alterna entre claro e escuro.
   </footer>
 </main>
 <script>
 // slides liberados depois da aula aparecem sozinhos quando o arquivo existir
-for (const id of ["e3", "a5"]) {
+for (const id of []) {
   const a = document.getElementById(id);
   fetch(a.getAttribute("href"), { method: "HEAD" }).then((r) => { if (r.ok) a.classList.remove("breve"); }).catch(() => {});
 }

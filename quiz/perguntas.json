@@ -119,27 +119,83 @@
    "dica": "o fator e a recomendação, em poucas palavras"
   },
   {
-   "id": "a5-segredo",
-   "aula": "Quinta 9h · Codex",
+   "id": "e3-auditoria",
+   "aula": "Quarta 16h · Estúdio 3",
    "tipo": "multipla",
-   "enunciado": "Para \"facilitar\", o agente escreveu a chave da API direto no script, que vai para o GitHub. O que fazer?",
+   "enunciado": "Rodada 2: reclamacoes_7d_por_mil conta as reclamações dos 7 dias seguintes ao voo. O que fazer com ela no modelo do que pesa na nota?",
    "opcoes": [
-    "Deixar: o repositório é privado",
-    "Apagar a chave do script no próximo commit",
-    "Mover a chave para o .env e, se ela já subiu, trocar a chave",
-    "Pedir ao agente para criptografar a chave no código"
+    "Manter: é o fator que mais explica a nota",
+    "Tirar: ela nasce depois da nota e é consequência dela",
+    "Manter, mas em escala logarítmica",
+    "Não importa: a regressão controla por ela"
    ],
-   "certa": 2,
-   "porque": "O histórico do Git guarda a chave mesmo depois de apagada. Chave que subiu é chave vazada: troque e passe a ler do .env."
+   "certa": 1,
+   "porque": "Uma coluna que só existe depois da nota não pode explicar a nota: é outra medida da mesma insatisfação. Com ela (e com os comentários negativos e a compensação), o R² vai a 0,94, mas a recomendação \"reduza as reclamações\" não diz o que mudar no voo."
   },
   {
-   "id": "e4-link",
-   "aula": "Quinta 11h · Estúdio 4",
-   "tipo": "link",
-   "max": 300,
+   "id": "e3-r2-limpo",
+   "aula": "Quarta 16h · Estúdio 3",
+   "tipo": "numero",
+   "escala": [
+    0,
+    100
+   ],
    "mostrarAoVivo": true,
-   "enunciado": "Cole o link do seu painel publicado.",
-   "dica": "https://..."
+   "enunciado": "Rodada 2: só com as colunas de antes e de durante o voo, que R² o modelo da sua companhia deu?",
+   "dica": "de 0 a 100",
+   "porque": "Na preparação, com as colunas de antes e de durante: LATAM 30%, Gol 54%, Azul 61%, TAP 79%. Com as colunas que nascem junto ou depois da nota, 94% a 96% em todas."
+  },
+  {
+   "id": "e3-hipotese",
+   "aula": "Quarta 16h · Estúdio 3",
+   "tipo": "multipla",
+   "mostrarAoVivo": true,
+   "enunciado": "Rodada 2: a hipótese da manhã, no modelo auditado da sua companhia:",
+   "opcoes": [
+    "Confirmou: o fator da hipótese é o que mais pesa",
+    "Em parte: pesa, mas outro fator pesa mais",
+    "Refutou: quase não pesa",
+    "Não dá para testar com as colunas da base"
+   ],
+   "certa": null,
+   "porque": "Não há resposta certa: o painel mostra como cada grupo saiu da tarde."
+  },
+  {
+   "id": "a5-checagem",
+   "aula": "Quinta 9h · Relatórios reprodutíveis",
+   "tipo": "multipla",
+   "enunciado": "Qual destas é uma boa checagem para o relatório mensal da Bora?",
+   "opcoes": [
+    "O relatório foi gerado sem dar erro",
+    "Nenhum pedido aparece duas vezes",
+    "O gráfico final ficou bonito",
+    "O ROAS do mês é maior que 3"
+   ],
+   "certa": 1,
+   "porque": "Uma checagem é uma frase que precisa ser verdade nos dados e que o computador confere sozinho. Gerar sem erro não prova nada, e um ROAS alto pode ser justamente o sinal de um erro."
+  },
+  {
+   "id": "a5-segredo",
+   "aula": "Quinta 9h · Relatórios reprodutíveis",
+   "tipo": "multipla",
+   "enunciado": "Para \"facilitar\", o agente escreveu a chave da API dentro do script, e a pasta vai ser compartilhada com o time. O que fazer?",
+   "opcoes": [
+    "Deixar: a pasta é só do time",
+    "Apagar a chave do script e seguir",
+    "Mover a chave para o .env e, se ela já foi compartilhada, pedir uma nova",
+    "Pedir ao agente para esconder a chave no código"
+   ],
+   "certa": 2,
+   "porque": "Quem recebeu uma cópia da pasta já tem a chave, mesmo que você apague depois. Chave compartilhada é chave vazada: peça uma nova e passe a ler do .env."
+  },
+  {
+   "id": "e4-portfolio",
+   "aula": "Quinta 11h · Estúdio 4",
+   "tipo": "texto",
+   "max": 400,
+   "mostrarAoVivo": true,
+   "enunciado": "Cole a sua ficha de portfólio: o problema, o que a IA faz e o antes e depois.",
+   "dica": "três frases curtas"
   }
  ]
 }

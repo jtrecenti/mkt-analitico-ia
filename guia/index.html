@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia de bolso · Marketing Analítico com IA · Insper</title>
+<style>
+@font-face { font-family: "GT Ultra Fine"; src: url("../recursos/GTUltraFine-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Inter; src: url("../recursos/Inter-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: Inter; src: url("../recursos/Inter-SemiBold.ttf"); font-weight: 600; }
+:root { --marca: #e50505; --azul: #0e171d; --cinza: #5b5b5b; --claro: #dcdcdc; --sup: #f3f4f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--azul); line-height: 1.5; }
+main { max-width: 860px; margin: 0 auto; padding: 2.4rem 1.3rem 3rem; }
+.logo { height: 40px; }
+.curso { color: var(--marca); font-weight: 600; font-size: .9rem; margin-top: 2rem; }
+h1 { font-family: "GT Ultra Fine", Georgia, serif; font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.1; margin: .3rem 0 .8rem; }
+h2 { font-family: "GT Ultra Fine", Georgia, serif; font-size: 1.5rem; margin: 2.4rem 0 .6rem; }
+h3 { font-family: "GT Ultra Fine", Georgia, serif; font-size: 1.2rem; margin: 0 0 .5rem; }
+a { color: var(--marca); }
+code { font-size: .9em; background: var(--sup); padding: 0 .25em; border-radius: 4px; }
+.indice { columns: 2; padding-left: 1.2rem; }
+.ficha { background: var(--sup); border-radius: 12px; padding: 1rem 1.2rem; margin: 1rem 0; border-left: 5px solid var(--marca); break-inside: avoid; }
+.ficha .n { color: var(--marca); font-weight: 600; font-size: .85rem; }
+.ficha dl { display: grid; grid-template-columns: 9.5rem 1fr; gap: .35rem 1rem; margin: 0; }
+.ficha dt { font-weight: 600; color: var(--cinza); }
+.ficha dd { margin: 0; }
+.ficha dd ul { margin: 0; padding-left: 1.1rem; }
+.pedido { font-style: italic; background: #fff; border: 1px solid var(--claro); border-radius: 8px; padding: .4rem .7rem; }
+.cuidado { color: #9a0303; }
+.caixa { border: 1.5px solid var(--claro); border-radius: 12px; padding: 1rem 1.2rem; margin: 1rem 0; break-inside: avoid; }
+.caixa h3 { margin-top: 0; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; margin: .6rem 0; }
+th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--claro); vertical-align: top; }
+th { color: var(--cinza); font-weight: 600; }
+.semanas { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+.semanas div { background: var(--sup); border-radius: 12px; padding: .8rem 1rem; break-inside: avoid; }
+.semanas b { color: var(--marca); display: block; }
+.modelo td:first-child { width: 30%; font-weight: 600; }
+.modelo td:last-child { color: var(--cinza); }
+footer { margin-top: 2.5rem; font-size: .85rem; color: var(--cinza); border-top: 1px solid var(--claro); padding-top: 1rem; }
+@media (max-width: 640px) { .ficha dl { grid-template-columns: 1fr; } .indice { columns: 1; } .semanas { grid-template-columns: 1fr; } }
+@page { size: A4; margin: 14mm 13mm; }
+@media print {
+  body { font-size: 10pt; }
+  main { max-width: none; padding: 0; }
+  .curso { margin-top: .8rem; }
+  h2 { margin-top: 1.2rem; break-after: avoid; }
+  h2.quebra { break-before: page; }
+  .ficha, .caixa { margin: .55rem 0; padding: .7rem .9rem; }
+  a { color: var(--azul); text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="../recursos/logo-insper-preto.png" alt="Insper">
+  <div class="curso">Marketing Analítico: impulsionando resultados com IA · novembro de 2026</div>
+  <h1>Guia de bolso: o que é, para que serve e como funciona</h1>
+  <p>As técnicas da semana, uma ficha para cada, com um exemplo do dia a dia de marketing, um pedido que
+  funciona e o erro mais comum. No fim, o que fazer quando voltar ao trabalho na segunda-feira.</p>
+
+  <ol class="indice">
+    <li><a href="#habilidade">Habilidade (skill)</a></li>
+    <li><a href="#plugin">Plugin com dados públicos</a></li>
+    <li><a href="#extracao">Colunas extraídas de textos</a></li>
+    <li><a href="#graficos">Tipos de variáveis e o gráfico certo</a></li>
+    <li><a href="#regressao">Regressão linear</a></li>
+    <li><a href="#reprodutivel">Relatório reprodutível e checagens</a></li>
+    <li><a href="#agente">Agente</a></li>
+    <li><a href="#segunda">E agora? Segunda-feira</a></li>
+  </ol>
+
+  <h2>As técnicas da semana</h2>
+
+  <section class="ficha" id="habilidade">
+    <div class="n">1</div>
+    <h3>Habilidade (skill) do ChatGPT</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Um pacote de instruções, e às vezes de scripts, que o ChatGPT segue sempre que a tarefa aparece.
+      Você escreve uma vez e reaproveita em qualquer conversa, ou entrega para o time.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>Contar menções a preço, atendimento ou concorrente na transcrição de um grupo focal.</li>
+        <li>Padronizar o resumo semanal de NPS, sempre com as mesmas seções.</li>
+        <li>Revisar textos de campanha com o tom de voz da marca.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>A habilidade diz o passo a passo e, quando há conta a fazer, manda o ChatGPT rodar Python em vez de
+      contar "de cabeça". Na quarta, a contagem feita de cabeça variava de uma conversa para outra; com o
+      script, o número é o mesmo toda vez.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Crie uma habilidade que, dada a transcrição de um grupo focal, conte com Python as falas
+      sobre preço de cada participante e devolva uma tabela e três citações de exemplo.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Habilidade vaga vira conversa de novo. Escreva o que entra, o que sai e como conferir
+      o resultado.</dd>
+    </dl>
+  </section>
+
+  <section class="ficha" id="plugin">
+    <div class="n">2</div>
+    <h3>Plugin ou conector com dados públicos</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Uma ponte entre o ChatGPT e um serviço de fora: uma API pública, a planilha da empresa, o CRM.
+      O ChatGPT busca o dado na fonte, em vez de adivinhar.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>Completar o cadastro de agências ou revendas com razão social, endereço e situação do CNPJ.</li>
+        <li>Conferir CEPs de clientes antes de uma ação de mídia regional.</li>
+        <li>Trazer indicadores públicos (IBGE, Banco Central) para o contexto de um relatório.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>Para cada linha da planilha, o ChatGPT chama o serviço (na quarta, a BrasilAPI) e guarda a resposta
+      em colunas novas. A planilha original não muda: sai um arquivo novo, com o que veio de onde.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Para cada CNPJ desta planilha, consulte a BrasilAPI e acrescente razão social, município
+      e situação cadastral. Diga quantos CNPJs não foram encontrados e por quê.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Dado público continua precisando de conferência: CNPJ digitado errado volta vazio, e o
+      vazio precisa aparecer no relatório, e não sumir.</dd>
+    </dl>
+  </section>
+
+  <section class="ficha" id="extracao">
+    <div class="n">3</div>
+    <h3>Colunas extraídas de textos com IA</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Transformar textos livres (avaliações, reclamações, respostas abertas) numa tabela, com uma coluna
+      para cada pergunta que você faria a cada texto.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>Classificar milhares de avaliações de aplicativo por tema e tom.</li>
+        <li>Ler as respostas abertas do NPS e marcar o motivo da nota.</li>
+        <li>Separar reclamações por produto, canal e gravidade.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>Você escreve um dicionário: o nome de cada coluna, a pergunta e as respostas possíveis. O modelo lê
+      cada texto e preenche as colunas. Na quarta, foram avaliações da App Store e sentenças do TJSP.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Use este dicionário de variáveis para extrair tema, tom e se o texto fala de preço em
+      cada avaliação. Depois sorteie 20 avaliações para eu conferir à mão.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Confira uma amostra antes de confiar no total. Dois modelos (OpenAI e Jev) concordaram
+      em 86% dos temas; quando o Jev estava seguro, em 96%. A dúvida do modelo diz onde ler.</dd>
+    </dl>
+  </section>
+
+  <section class="ficha" id="graficos">
+    <div class="n">4</div>
+    <h3>Tipos de variáveis e o gráfico certo</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Antes do gráfico, a pergunta: a coluna é uma categoria (canal, região), uma ordem (faixa de
+      satisfação), um número (gasto, nota) ou uma data? Cada tipo pede um gráfico.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>Mostrar o investimento por canal em barras, e não em pizza com doze fatias.</li>
+        <li>Mostrar a evolução do NPS no tempo em linha.</li>
+        <li>Comparar a nota de dois públicos com a distribuição inteira, e não só a média.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>Categoria vai em barras ordenadas; número contra número, em pontos; número no tempo, em linha;
+      distribuição, em histograma. O relatório descritivo responde "o que aconteceu", sem ainda dizer por quê.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Classifique cada coluna desta base em categoria, ordem, número ou data. Depois sugira
+      um gráfico por pergunta do briefing e diga por que escolheu cada um.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Média esconde muita coisa. Mostre quantos casos há em cada barra e evite eixo que não
+      começa no zero em gráfico de barras.</dd>
+    </dl>
+  </section>
+
+  <section class="ficha" id="regressao">
+    <div class="n">5</div>
+    <h3>Regressão linear</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Uma conta que mede quanto um resultado (a nota, a venda, a conversão) muda quando um fator muda,
+      com os outros fatores parados. Serve para explicar e para prever.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>Separar o efeito do atraso do efeito da conexão perdida na nota do cliente.</li>
+        <li>Estimar quanto cada canal de mídia contribui para as vendas da semana.</li>
+        <li>Prever a demanda do mês que vem a partir do que já se sabe hoje.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>A regressão traça a reta que erra menos. O coeficiente é a diferença entre casos parecidos em tudo,
+      menos naquele fator. Pôr outras colunas no modelo é o controle: comparar iguais com iguais. Quando duas
+      colunas andam juntas, só com as duas no modelo dá para saber qual pesa.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Rode uma regressão da nota contra estas colunas, todas conhecidas antes da nota. Mostre
+      o coeficiente de cada uma em linguagem de negócio e diga quais colunas andam juntas.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Vazamento: uma coluna que nasce depois do resultado (reclamações depois do voo, por
+      exemplo) deixa o R² lindo e a recomendação inútil. Só explica o que existe antes.</dd>
+    </dl>
+  </section>
+
+  <section class="ficha" id="reprodutivel">
+    <div class="n">6</div>
+    <h3>Relatório reprodutível e checagens de consistência</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Um relatório que sai igual quando refeito com os mesmos dados, e que se refaz sozinho quando chegam
+      dados novos. A análise mora numa pasta organizada, e não numa conversa.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>O relatório mensal de campanhas: chega o arquivo do mês, sai o relatório no mesmo formato.</li>
+        <li>O acompanhamento semanal de reclamações, comparável semana a semana.</li>
+        <li>Passar a análise para um colega sem uma reunião de uma hora.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>Dados brutos que ninguém edita, passos escritos em ordem, um <code>AGENTS.md</code> com as regras que o
+      agente lê antes de tudo e checagens que precisam ser verdade (sem linhas duplicadas, cliques nunca maiores
+      que impressões, totais que batem). Quando a estrutura funciona, ela vira uma habilidade para o mês seguinte.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Antes de qualquer número, rode as checagens do AGENTS.md no arquivo novo e me diga quais
+      falharam, em quantas linhas e com um exemplo de cada.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Checagem que nunca falha não está checando nada. Quebre o dado de propósito uma vez
+      para ver a checagem reclamar.</dd>
+    </dl>
+  </section>
+
+  <section class="ficha" id="agente">
+    <div class="n">7</div>
+    <h3>Agente</h3>
+    <dl>
+      <dt>O que é</dt>
+      <dd>Um assistente que recebe um objetivo, decide os passos, usa ferramentas (arquivos, habilidades,
+      conectores) e confere o próprio resultado antes de entregar.</dd>
+      <dt>Para que serve</dt>
+      <dd><ul>
+        <li>Montar o relatório da semana juntando três fontes, sem você conduzir cada passo.</li>
+        <li>Monitorar menções à marca e avisar quando algo foge do normal.</li>
+      </ul></dd>
+      <dt>Como funciona</dt>
+      <dd>As peças são as desta semana: habilidades dizem como fazer, conectores trazem os dados e as regras e
+      checagens dizem quando o trabalho está pronto.</dd>
+      <dt>Como pedir</dt>
+      <dd class="pedido">Todo mês, quando o arquivo de campanhas chegar, rode a habilidade do relatório, confira
+      as checagens e me mande o resumo com o que mudou em relação ao mês anterior.</dd>
+      <dt>Cuidado</dt>
+      <dd class="cuidado">Quanto mais o agente faz sozinho, mais importam as checagens. Comece supervisionando
+      cada entrega.</dd>
+    </dl>
+  </section>
+
+  <h2 class="quebra" id="segunda">E agora? Segunda-feira</h2>
+
+  <div class="caixa">
+    <h3>Onde procurar oportunidades</h3>
+    <ul>
+      <li><b>Tarefas que se repetem</b> toda semana ou todo mês: o relatório de mídia, o resumo de NPS, o
+      fechamento de campanha.</li>
+      <li><b>Textos em volume</b> que ninguém lê inteiros: reclamações, avaliações, respostas abertas de
+      pesquisa, transcrições.</li>
+      <li><b>Cadastros a enriquecer</b>: parceiros, revendas e clientes com CNPJ, CEP ou segmento faltando.</li>
+      <li><b>Relatórios que alguém refaz à mão</b>, copiando e colando de três planilhas.</li>
+    </ul>
+    <p><b>Para escolher por onde começar</b>, dê uma nota de 1 a 3 para cada candidata:</p>
+    <table>
+      <tr><th>critério</th><th>pergunta</th><th>melhor</th></tr>
+      <tr><td>frequência</td><td>quantas vezes por mês isso acontece?</td><td>muitas</td></tr>
+      <tr><td>tempo gasto</td><td>quantas horas leva cada vez?</td><td>muitas</td></tr>
+      <tr><td>risco do erro</td><td>o que acontece se um número sair errado?</td><td>pouco</td></tr>
+    </table>
+    <p>Comece pela tarefa frequente, demorada e de baixo risco. Deixe as de alto risco para quando as
+    checagens estiverem maduras.</p>
+  </div>
+
+  <div class="caixa">
+    <h3>Como ser a pessoa de IA do time, sem ser especialista</h3>
+    <ul>
+      <li><b>Comece com um caso pequeno</b>, que você mesmo faz hoje e conhece bem.</li>
+      <li><b>Documente como habilidade</b>: o passo a passo escrito é o que permite que outra pessoa use.</li>
+      <li><b>Mostre antes e depois em números</b>: horas por mês, erros encontrados, prazo de entrega.</li>
+      <li><b>Combine as regras de dados</b> com a área de tecnologia e o jurídico: LGPD, chaves de API só no
+      <code>.env</code> e nunca no chat, nenhum dado pessoal em ferramenta que a empresa não aprovou.</li>
+      <li><b>Ensine pelo exemplo</b>: uma demonstração de dez minutos com o caso real do time convence mais que
+      um treinamento genérico.</li>
+    </ul>
+  </div>
+
+  <h2>Um plano de 30 dias</h2>
+  <div class="semanas">
+    <div><b>Semana 1: escolher</b>Liste cinco tarefas candidatas, dê as notas de frequência, tempo e risco e
+    escolha uma. Meça quanto ela leva hoje.</div>
+    <div><b>Semana 2: fazer</b>Resolva a tarefa com o ChatGPT numa conversa. Anote o que deu errado e o que
+    você precisou conferir.</div>
+    <div><b>Semana 3: organizar</b>Transforme o que funcionou em pasta organizada, regras escritas e
+    checagens. Depois, numa habilidade.</div>
+    <div><b>Semana 4: mostrar</b>Rode de novo com dados novos, meça o tempo e apresente o antes e depois ao
+    time. Escolha a próxima tarefa.</div>
+  </div>
+
+  <h2>Ficha de portfólio</h2>
+  <p>Uma ficha para cada coisa que você construir. Ela vira o seu portfólio e o argumento para a próxima.</p>
+  <table class="modelo">
+    <tr><td>Problema</td><td>O que é feito hoje, por quem, quantas vezes e quanto tempo leva.</td></tr>
+    <tr><td>O que a IA faz</td><td>A habilidade, o plugin ou a análise, em duas frases.</td></tr>
+    <tr><td>Antes e depois</td><td>Tempo, erros, prazo ou alcance, em números.</td></tr>
+    <tr><td>Como rodar de novo</td><td>Onde está a pasta ou a habilidade, o que entra e o que sai.</td></tr>
+    <tr><td>Cuidados</td><td>As checagens, os dados sensíveis e o que ainda precisa de conferência humana.</td></tr>
+    <tr><td>Próximo passo</td><td>A próxima tarefa ou a próxima pessoa do time que vai usar.</td></tr>
+  </table>
+
+  <footer>
+    Prof. Julio Trecenti · Insper, Educação Executiva.
+    Material completo do curso em <a href="../">jtrecenti.github.io/mkt-analitico-ia</a>.
+  </footer>
+</main>
+</body>
+</html>
