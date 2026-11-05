@@ -1836,29 +1836,33 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <h2>Exercício 6: monitor diário das avaliações</h2>
 <p><span class="ex-num">Exercício 6</span> <span class="chip desktop">aplicativo de desktop, modo Work</span> <span class="chip papel">em duplas</span></p>
 <div class="ficha">
+<p><span class="r">O que vocês constroem</span></p>
+<div class="v">
+<p>Uma pasta que, com um pedido, junta as coletas, confere os dados e gera a página <code>index.html</code> do monitor.</p>
+</div>
 <p><span class="r">Situação</span></p>
 <div class="v">
-<p>Avaliação chega todo dia. O relatório da quarta vira um monitor que se atualiza com um pedido.</p>
+<p>As avaliações chegam todo dia. Em vez de refazer o relatório numa conversa nova, vocês montam a pasta uma vez e depois só pedem para atualizar.</p>
 </div>
 <p><span class="r">Material</span></p>
 <div class="v">
-<p>As coletas reais de 3/11 e 5/11 em <code>dados/app/</code> e a habilidade <code>avaliacoes-app</code>. O pedido, em <code>exercicios/06-monitor-avaliacoes/</code>.</p>
+<p>As coletas de 3/11 e 5/11 em <code>dados/app/</code>, a habilidade <code>avaliacoes-app</code> e o pedido pronto em <code>exercicios/06-monitor-avaliacoes/</code>.</p>
 </div>
 <p><span class="r">Passos</span></p>
 <div class="v">
 <ol type="1">
-<li>Montem a pasta <code>monitor-app</code> com <code>dados/coletas/</code> e abram-na no modo Work.</li>
-<li>Colem o pedido do roteiro: passos, <code>AGENTS.md</code>, checagens e a página.</li>
-<li>Peçam a coleta de agora e rodem de novo: o que chegou desde a madrugada?</li>
+<li>Criem a pasta <code>monitor-app</code>, ponham as coletas em <code>dados/coletas/</code> e abram a pasta no modo Work.</li>
+<li>Colem o pedido do roteiro: o agente escreve as regras, os passos, as checagens e a página.</li>
+<li>Peçam a coleta de agora, depois “atualize o monitor”, e abram a página.</li>
 </ol>
 </div>
-<p><span class="r">Para conferir</span></p>
+<p><span class="r">Como conferir</span></p>
 <div class="v">
-<p>Com as duas coletas do pacote: <strong>2.010</strong> avaliações diferentes, <strong>10</strong> novas.</p>
+<p>Com as duas coletas do pacote, a página mostra <strong>2.010</strong> avaliações e <strong>10</strong> novas.</p>
 </div>
 </div>
 <div class="miudo">
-<p>Por que não começar criando uma skill? Daqui a pouco.</p>
+<p>E a skill? Ela vem depois que a pasta funciona: é o próximo assunto.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1886,70 +1890,28 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
 <section class="slide level2">
-<h2>Por que o exercício 6 não começa pela skill</h2>
-<div class="cena" data-cena="rs-linha-tempo">
+<h2>Primeiro a pasta, depois a skill</h2>
+<div class="cena" data-cena="rs-primeiro-pasta">
 
 </div>
 <div class="legendas">
 <div>
-<p>No primeiro dia, você ainda não sabe quais são as regras. Monta a pasta e descobre o processo: como juntar as coletas e o que conferir.</p>
+<p>A boa prática: primeiro resolva o problema na pasta do projeto, rodando de verdade algumas vezes. A skill vem depois.</p>
 </div>
 <div>
-<p>No segundo dia, aparece o que ninguém previu: uma avaliação mudou de nota entre as coletas. Isso vira uma regra nova e uma checagem nova.</p>
+<p>Na primeira rodada aparecem as surpresas: avaliações repetidas entre as coletas e um telefone no meio de um texto. Cada uma vira uma regra no AGENTS.md.</p>
 </div>
 <div>
-<p>No terceiro dia, o monitor roda com um pedido e nada surpreende. O processo está estável.</p>
+<p>Na segunda rodada, outra surpresa: uma avaliação mudou de nota. Mais uma regra.</p>
 </div>
 <div>
-<p>Só então vale fazer a skill: ela guarda um processo que já funcionou duas ou três vezes, para outra pessoa rodar.</p>
+<p>Na terceira, nada surpreende e os números batem. Agora você sabe que o processo funciona.</p>
 </div>
 <div>
-<p>Uma skill feita no primeiro dia guardaria as regras erradas, e cada pessoa que a usasse repetiria o erro.</p>
+<p>Só então o que funcionou vira skill. Feita no primeiro dia, ela guardaria regras incompletas, e cada pessoa que a usasse repetiria o mesmo erro.</p>
 </div>
 </div>
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
-</section>
-<section class="slide level2">
-<h2>Pasta ou skill: como decidir</h2>
-<div data-p="1" style="margin-bottom:16px">
-<p><strong>Ainda estou descobrindo as regras?</strong> Fique na pasta. Rode, anote o que surpreendeu e corrija as regras no AGENTS.md.</p>
-</div>
-<div data-p="2" style="margin-bottom:16px">
-<p><strong>Rodou duas ou três vezes sem surpresa?</strong> O processo está pronto para virar skill.</p>
-</div>
-<div data-p="3" style="margin-bottom:16px">
-<p><strong>Outra pessoa vai rodar, em outra pasta ou com outra base?</strong> Faça a skill. É ela que leva o processo junto.</p>
-</div>
-<div data-p="4" style="margin-bottom:16px">
-<p><strong>É uma análise de uma vez só?</strong> Nem pasta organizada nem skill: uma conversa resolve.</p>
-</div>
-<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
-</section>
-<section class="slide level2 exercicio-capa">
-<h2>Exercício 7: a skill do monitor</h2>
-<p><span class="ex-num">Exercício 7</span> <span class="chip desktop">aplicativo de desktop, modo Work</span> <span class="chip papel">em duplas</span></p>
-<div class="ficha">
-<p><span class="r">Objetivo</span></p>
-<div class="v">
-<p>Fazer o monitor rodar fora da sua pasta: uma colega que nunca viu o projeto atualiza o monitor amanhã com um pedido.</p>
-</div>
-<p><span class="r">Situação</span></p>
-<div class="v">
-<p>O monitor do exercício 6 funciona, mas só na pasta de vocês e com a conversa de vocês.</p>
-</div>
-<p><span class="r">Passos</span></p>
-<div class="v">
-<ol type="1">
-<li>Na pasta do projeto, peçam ao agente a skill <code>monitor-avaliacoes-app</code> (o pedido está em <code>exercicios/07-skill-do-monitor/</code>).</li>
-<li>Instalem a skill no ChatGPT, como na terça.</li>
-<li>Abram uma conversa nova, sem a pasta, anexem as duas coletas e peçam: “atualize o monitor de avaliações”.</li>
-</ol>
-</div>
-<p><span class="r">Como saber que deu certo</span></p>
-<div class="v">
-<p>Os mesmos números do projeto: <strong>2.010</strong> avaliações e <strong>10</strong> novas.</p>
-</div>
-</div>
 </section>
 <section class="slide level2 secao">
 <h2>Ferramentas estáticas e dinâmicas</h2>
@@ -1958,28 +1920,28 @@ coleta de hoje (5/11) ........ 2.000 linhas
 </div>
 </section>
 <section class="slide level2">
-<h2>Painéis estáticos e painéis dinâmicos</h2>
-<div class="cena" data-cena="rs-estatico">
+<h2>Páginas estáticas e dinâmicas: frontend e backend</h2>
+<div class="cena" data-cena="rs-arquitetura">
 
 </div>
 <div class="legendas">
 <div>
-<p><strong>Estático:</strong> o script roda uma vez e gera um arquivo. Depois de publicado, nada roda: o leitor só abre a página.</p>
+<p><strong>Estático:</strong> o navegador (o frontend) baixa arquivos que já estão prontos, guardados num servidor de arquivos ou numa CDN, como o Netlify.</p>
 </div>
 <div>
-<p><strong>Dinâmico:</strong> cada vez que alguém abre, um servidor consulta o banco de dados e monta a resposta, com login e permissões.</p>
+<p>O navegador pede, o Netlify entrega o <code>index.html</code> e pronto. Nenhum backend calcula nada depois que a página foi publicada.</p>
 </div>
 <div>
-<p>Onde atualiza: o estático, quando você roda de novo e publica; o dinâmico, sozinho, a cada consulta.</p>
+<p><strong>Dinâmico:</strong> a cada pedido, um servidor backend (a API) confere o login, consulta o banco de dados ao vivo e monta a resposta.</p>
 </div>
 <div>
-<p>Quanto custa e quem mantém: o estático, nada e ninguém; o dinâmico, licença, servidor e alguém de TI.</p>
+<p><strong>Estático com cálculo no navegador:</strong> a página leva o Python junto (Pyodide, via WebAssembly), e a conta roda no computador de quem abre.</p>
 </div>
 <div>
-<p>Exemplos de cada lado. O painel da quarta e o monitor de hoje são estáticos.</p>
+<p>Onde ficam o custo e a manutenção: no estático, em lugar nenhum; no dinâmico, no servidor, na licença e em quem cuida dele.</p>
 </div>
 <div>
-<p><strong>O nosso foco é o estático:</strong> resolve um monitor diário, um relatório mensal ou um painel de campanha, e sai hoje, sem depender de ninguém.</p>
+<p><strong>O nosso foco são as duas versões estáticas:</strong> saem hoje, custam zero e não dependem da TI. O dinâmico vale quando muita gente consulta dados que mudam a toda hora.</p>
 </div>
 </div>
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
@@ -1997,12 +1959,12 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <p><strong>3. Copie o link</strong> Em segundos sai um endereço que abre em qualquer celular.</p>
 </div>
 </div>
-<div class="prompt" data-quem="Ou peça ao agente, que usa o navegador" data-p="4">
+<div class="prompt" data-quem="Ou peça ao ChatGPT" data-p="4">
 <p>Abra app.netlify.com/drop, publique a pasta <code>saida/</code> e me devolva só o link.</p>
 </div>
 <div class="colunas">
 <div data-p="4">
-<p>No modo agente, o ChatGPT abre o navegador e faz o upload. Quando ele pedir o login no Netlify, <strong>você</strong> entra com a sua conta.</p>
+<p>O ChatGPT usa o navegador, faz o upload e devolve o link. Quando ele pedir o login no Netlify, <strong>você</strong> entra com a sua conta.</p>
 </div>
 <div data-p="5">
 <p><strong>Sem conta, o link some em uma hora.</strong> A outra opção, sem sair do ChatGPT, são os <strong>Sites do ChatGPT</strong> (<span class="citation" data-cites="Sites">@Sites</span>), como na quarta.</p>
@@ -2031,37 +1993,12 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <p><span class="fragment passo"></span></p>
 </section>
 <section class="slide level2">
-<h2>Exemplo: Python rodando dentro desta página</h2>
-<div class="colunas">
-<div>
-<textarea id="py-codigo" spellcheck="false" style="box-sizing:border-box;width:100%;height:330px;font-family:var(--r-code-font, monospace);font-size:22px;line-height:1.35;padding:.6rem;border-radius:10px;border:1.5px solid #ccc;background:var(--sup, #f3f4f5);color:inherit">import pandas as pd
-from io import StringIO
-
-d = pd.read_csv(StringIO(AVALIACOES))
-r = d.groupby(&quot;empresa&quot;)[&quot;nota&quot;].agg([&quot;count&quot;, &quot;mean&quot;])
-r[&quot;1 estrela&quot;] = d.groupby(&quot;empresa&quot;)[&quot;nota&quot;].apply(lambda n: (n == 1).mean())
-print(r.round(2).sort_values(&quot;mean&quot;))</textarea>
-<button id="py-rodar" style="margin-top:.5rem;font-size:24px;padding:.35rem 1.1rem;border-radius:10px;border:0;background:#e50505;color:#fff;cursor:pointer">Rodar Python</button>
-</div>
-<div>
-<pre id="py-saida" style="box-sizing:border-box;width:100%;font-size:22px;min-height:330px;white-space:pre-wrap;padding:.8rem;border-radius:10px;background:#0e171d;color:#e8e8e8;margin:0">Clique em &quot;Rodar Python&quot;.
-
-Os dados são as avaliações reais da App Store
-dos últimos 90 dias, guardadas dentro da página.
-Pode mudar o código e rodar de novo.</pre>
-</div>
-</div>
-<div class="miudo">
-<p>Nenhum servidor: o Pyodide baixa o interpretador de Python uma vez e roda o pandas no seu navegador. A página continua sendo um arquivo estático, que pode ir para o Netlify Drop. Precisa de internet só para baixar o Python.</p>
-</div>
-</section>
-<section class="slide level2">
 <h2>Frases que mudam o que o agente entrega</h2>
 <div class="cena" data-cena="rs-palavras">
 
 </div>
 <div class="miudo">
-<p>Clique numa frase para ver o que muda. Ninguém precisa saber programar cada uma: saber que existe, e o nome, já muda o pedido.</p>
+<p>Clique numa frase: o exemplo ao lado funciona de verdade. Todas vêm de guias oficiais de OpenAI e Anthropic para trabalhar com agentes; a fonte está embaixo de cada exemplo.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -3837,27 +3774,28 @@ window.QuartoSupport = function () {
   }
   Motor.cena("rs-pasta-skill", {
     montar(c) {
-      const s = svg("svg", { viewBox: "0 0 1120 400", class: "grafico-svg" }, c);
+      const s = svg("svg", { viewBox: "0 0 1120 470", class: "grafico-svg" }, c);
+      this.bandeja = txt(s, 560, 14, "tudo o que o exercício 6 deixou na pasta, misturado", { "text-anchor": "middle", class: "txt fraco", style: FP });
       this.caixas = svg("g", {}, s);
-      svg("rect", { x: 10, y: 10, width: 535, height: 380, rx: 16, class: "caixa" }, this.caixas);
-      svg("rect", { x: 575, y: 10, width: 535, height: 380, rx: 16, class: "caixa marca" }, this.caixas);
-      txt(this.caixas, 277, 48, "a pasta do projeto", { "text-anchor": "middle", class: "txt forte", style: "font-size:24px" });
-      txt(this.caixas, 277, 78, "a cozinha: a despensa e o caderno de anotações", { "text-anchor": "middle", class: "txt fraco", style: FP });
-      txt(this.caixas, 842, 48, "a skill", { "text-anchor": "middle", class: "txt marca", style: "font-size:24px" });
-      txt(this.caixas, 842, 78, "a ficha técnica, que vai para outra unidade", { "text-anchor": "middle", class: "txt fraco", style: FP });
+      svg("rect", { x: 10, y: 140, width: 535, height: 325, rx: 16, class: "caixa" }, this.caixas);
+      svg("rect", { x: 575, y: 140, width: 535, height: 325, rx: 16, class: "caixa marca" }, this.caixas);
+      txt(this.caixas, 277, 178, "a pasta do projeto", { "text-anchor": "middle", class: "txt forte", style: "font-size:24px" });
+      txt(this.caixas, 277, 206, "a cozinha: a despensa e o caderno de anotações", { "text-anchor": "middle", class: "txt fraco", style: FP });
+      txt(this.caixas, 842, 178, "a skill", { "text-anchor": "middle", class: "txt marca", style: "font-size:24px" });
+      txt(this.caixas, 842, 206, "a ficha técnica, que vai para outra unidade", { "text-anchor": "middle", class: "txt fraco", style: FP });
       this.rodape = svg("g", {}, s);
-      txt(this.rodape, 277, 360, "muda todo dia, só vale para esta base", { "text-anchor": "middle", class: "txt", style: FP });
-      txt(this.rodape, 842, 360, "não muda, vale para qualquer base", { "text-anchor": "middle", class: "txt", style: FP });
+      txt(this.rodape, 277, 440, "muda todo dia, só vale para esta base", { "text-anchor": "middle", class: "txt forte", style: FP });
+      txt(this.rodape, 842, 440, "não muda, vale para qualquer base", { "text-anchor": "middle", class: "txt forte", style: FP });
       const pasta = ["as coletas de cada dia", "as regras desta base", "o histórico de alertas", "a página de hoje"];
       const skill = ["os passos, na ordem", "os scripts em Python", "as checagens genéricas", "quando usar: a descrição"];
       const mist = [pasta[0], skill[0], pasta[1], skill[1], skill[2], pasta[2], skill[3], pasta[3]];
       this.itens = mist.map((t, i) => {
         const g = ficha(s, t), lado = pasta.includes(t) ? 0 : 1, j = (lado ? skill : pasta).indexOf(t);
-        return { g, lado, ini: [10 + (i % 4) * 278, 140 + Math.floor(i / 4) * 80], fim: [30 + lado * 565 + (j % 2) * 252, 120 + Math.floor(j / 2) * 90] };
+        return { g, lado, ini: [14 + (i % 4) * 276, 30 + Math.floor(i / 4) * 56], fim: [30 + lado * 565 + (j % 2) * 252, 238 + Math.floor(j / 2) * 74] };
       });
     },
     passo(k, a) {
-      vis(this.caixas, k >= 1, a); vis(this.rodape, k >= 4, a);
+      vis(this.caixas, k >= 1, a); vis(this.rodape, k >= 4, a); vis(this.bandeja, k < 3, a);
       this.itens.forEach((it) => {
         const p = (it.lado === 0 && k >= 2) || (it.lado === 1 && k >= 3) ? it.fim : it.ini;
         gsap.to(it.g, { x: p[0], y: p[1], duration: a ? 0.7 : 0, ease: "power2.inOut", overwrite: "auto" });
@@ -3866,110 +3804,300 @@ window.QuartoSupport = function () {
   });
 
   /* ====================================================================== */
-  /* Por que não começar pela skill: dia 1, dia 2, dia 3, skill              */
+  /* Primeiro a pasta, depois a skill                                        */
   /* ====================================================================== */
-  Motor.cena("rs-linha-tempo", {
+  Motor.cena("rs-primeiro-pasta", {
     montar(c) {
-      const s = svg("svg", { viewBox: "0 0 1120 400", class: "grafico-svg" }, c);
-      const xs = [140, 420, 700, 980];
-      svg("line", { x1: xs[0], x2: xs[3], y1: 60, y2: 60, class: "eixo", style: "stroke-width:4" }, s);
-      this.barra = svg("line", { x1: xs[0], x2: xs[0], y1: 60, y2: 60, class: "reta", style: "stroke-width:6" }, s);
-      this.xs = xs;
-      const T = [
-        ["dia 1", ["você monta a pasta e", "descobre o processo:", "como juntar as coletas", "e o que conferir"]],
-        ["dia 2", ["aparece uma surpresa:", "a avaliação editada", "vira regra no AGENTS.md", "e uma checagem nova"]],
-        ["dia 3", ["roda de novo com", "um pedido, sem", "surpresa: o processo", "está estável"]],
-        ["a skill", ["só agora: o que", "funcionou vai para a", "skill, para outra", "pessoa rodar amanhã"]],
+      const s = svg("svg", { viewBox: "0 0 1120 430", class: "grafico-svg" }, c);
+      const xs = [130, 380, 630];
+      svg("line", { x1: xs[0], x2: 940, y1: 40, y2: 40, class: "eixo", style: "stroke-width:4" }, s);
+      this.barra = svg("line", { x1: xs[0], x2: xs[0], y1: 40, y2: 40, class: "reta", style: "stroke-width:6" }, s);
+      this.alvos = [xs[0], xs[0], xs[1], xs[2], 940];
+      const R = [
+        ["1ª rodada", ["surpresas: avaliações", "repetidas e um", "telefone no texto"], "marca"],
+        ["2ª rodada", ["surpresa: uma", "avaliação mudou", "de nota"], "marca"],
+        ["3ª rodada", ["nenhuma surpresa:", "os números batem", "com os de ontem"], "turquesa"],
       ];
-      this.nos = T.map(([t, ls], i) => {
-        const g = svg("g", {}, s), x = xs[i], ultimo = i === 3;
-        svg("circle", { cx: x, cy: 60, r: 16, class: "caixa" + (ultimo ? " marca" : ""), style: "stroke-width:3" }, g);
-        txt(g, x, 30 - 4, t, { "text-anchor": "middle", class: "txt forte" + (ultimo ? " marca" : ""), style: F });
-        svg("rect", { x: x - 132, y: 100, width: 264, height: 210, rx: 14, class: "caixa" + (ultimo ? " marca" : "") }, g);
-        ls.forEach((l, j) => txt(g, x, 148 + j * 42, l, { "text-anchor": "middle", class: "txt", style: F }));
+      this.rod = R.map(([t, ls, cor], i) => {
+        const g = svg("g", {}, s), x = xs[i];
+        svg("circle", { cx: x, cy: 40, r: 14, class: "caixa", style: "stroke-width:3" }, g);
+        txt(g, x, 82, t, { "text-anchor": "middle", class: "txt forte", style: F });
+        svg("rect", { x: x - 115, y: 96, width: 230, height: 112, rx: 12, style: `fill:var(--${cor});opacity:.13;stroke:var(--${cor});stroke-width:2` }, g);
+        ls.forEach((l, j) => txt(g, x, 128 + j * 30, l, { "text-anchor": "middle", class: "txt", style: FP }));
         return g;
       });
-      this.nota = txt(s, 560, 360, "a pasta é onde se descobre o processo; a skill é o que se destila dele", { "text-anchor": "middle", class: "anot marca", style: F });
+      // AGENTS.md crescendo
+      svg("rect", { x: 15, y: 232, width: 730, height: 190, rx: 14, class: "caixa" }, s);
+      txt(s, 35, 266, "AGENTS.md, na pasta do projeto", { class: "txt forte mono", style: F });
+      const regras = [["a mesma avaliação em várias coletas conta uma vez", 1], ["telefone, e-mail e CPF no texto são mascarados", 1], ["se a avaliação mudou, vale a versão mais recente", 2]];
+      this.regras = regras.map(([t, k], j) => ({ k, g: txt(s, 35, 306 + j * 38, "+ " + t, { class: "txt", style: F }) }));
+      this.ok = txt(s, 35, 410, "a 3ª rodada não precisou de regra nova: o processo está pronto", { class: "txt forte", style: FP + ";fill:var(--turquesa)" });
+      // a skill
+      this.skill = svg("g", {}, s);
+      svg("circle", { cx: 940, cy: 40, r: 18, class: "caixa marca", style: "stroke-width:3" }, this.skill);
+      txt(this.skill, 940, 82, "só agora: a skill", { "text-anchor": "middle", class: "txt marca", style: F });
+      seta(this.skill, 750, 320, 800, 320, "marca");
+      svg("rect", { x: 805, y: 96, width: 305, height: 326, rx: 14, class: "caixa marca" }, this.skill);
+      ["SKILL.md", "os passos que", "funcionaram, as três", "regras e as", "checagens, para", "outra pessoa rodar"].forEach((l, j) =>
+        txt(this.skill, 957, 140 + j * 38, l, { "text-anchor": "middle", class: "txt" + (j === 0 ? " forte mono" : ""), style: F }));
     },
     passo(k, a) {
-      this.nos.forEach((g, i) => gsap.to(g, { opacity: k >= i ? 1 : 0.1, duration: a ? 0.45 : 0, overwrite: "auto" }));
-      gsap.to(this.barra, { attr: { x2: this.xs[Math.min(k, 3)] }, duration: a ? 0.6 : 0, overwrite: "auto" });
-      vis(this.nota, k >= 4, a);
+      this.rod.forEach((g, i) => gsap.to(g, { opacity: k >= i + 1 ? 1 : 0.12, duration: a ? 0.45 : 0, overwrite: "auto" }));
+      this.regras.forEach((r) => vis(r.g, k >= r.k, a));
+      vis(this.ok, k >= 3, a); vis(this.skill, k >= 4, a);
+      gsap.to(this.barra, { attr: { x2: this.alvos[Math.min(k, 4)] }, duration: a ? 0.6 : 0, overwrite: "auto" });
     },
   });
 
   /* ====================================================================== */
-  /* Estático e dinâmico: dois caminhos                                      */
+  /* Arquitetura: estático, dinâmico e estático com cálculo no navegador     */
   /* ====================================================================== */
-  Motor.cena("rs-estatico", {
+  Motor.cena("rs-arquitetura", {
     montar(c) {
-      const s = svg("svg", { viewBox: "0 0 1120 410", class: "grafico-svg" }, c);
-      const lane = (y, rot, nos, cls) => {
+      const s = svg("svg", { viewBox: "0 0 1120 490", class: "grafico-svg" }, c);
+      const linha = (y0, rot, meio, dir, custo, marcaFront) => {
         const g = svg("g", {}, s);
-        const fundo = svg("rect", { x: 0, y, width: 1120, height: 180, rx: 16, class: "caixa", style: "opacity:.55" }, g);
-        txt(g, 20, y + 34, rot, { class: "txt forte", style: "font-size:24px" });
-        nos.forEach((n, i) => {
-          const x = 20 + i * 220;
-          caixa(g, x, y + 52, 190, 64, n, { forte: false, style: FP, dy: 22 });
-          if (i < nos.length - 1) seta(g, x + 192, y + 84, x + 218, y + 84);
-        });
-        const info = txt(g, 20, y + 158, "", { class: "txt " + cls, style: F });
-        return { g, fundo, info };
+        txt(g, 0, y0 + 22, rot, { class: "txt forte", style: F });
+        caixa(g, 0, y0 + 36, 270, 84, marcaFront ? ["navegador (frontend)", marcaFront] : ["navegador (frontend)", "mostra a página"], { style: FP, dy: 26, marca: !!marcaFront });
+        caixa(g, 420, y0 + 36, 300, 84, meio, { style: FP, dy: 26 });
+        const setas = svg("g", {}, g);
+        seta(setas, 275, y0 + 62, 415, y0 + 62);
+        seta(setas, 415, y0 + 96, 275, y0 + 96, "marca");
+        txt(setas, 345, y0 + 54, "pedido", { "text-anchor": "middle", class: "txt fraco", style: "font-size:15px" });
+        txt(setas, 345, y0 + 115, "resposta", { "text-anchor": "middle", class: "txt marca", style: "font-size:15px" });
+        let dirg = null;
+        if (dir && dir.caixa) {
+          caixa(g, 820, y0 + 36, 290, 84, dir.caixa, { style: FP, dy: 26 });
+          seta(setas, 725, y0 + 62, 815, y0 + 62);
+          seta(setas, 815, y0 + 96, 725, y0 + 96, "marca");
+        } else if (dir) {
+          dirg = svg("g", {}, g);
+          dir.texto.forEach((t, j) => txt(dirg, 745, y0 + 66 + j * 28, t, { class: "txt", style: FP }));
+        }
+        const pac = svg("circle", { cx: 275, cy: y0 + 62, r: 9, style: "fill:var(--marca);opacity:0" }, g);
+        const cus = txt(g, 0, y0 + 144, custo, { class: "txt forte", style: FP });
+        return { g, setas, pac, cus, y0, longe: !!(dir && dir.caixa) };
       };
-      this.e = lane(0, "estático", [["os dados"], ["o script roda", "uma vez"], ["um arquivo", "index.html"], ["publicado", "num link"], ["o leitor abre;", "nada roda depois"]], "forte");
-      this.d = lane(215, "dinâmico", [["o leitor pede"], ["faz login"], ["um servidor", "consulta"], ["o banco de dados,", "ao vivo"], ["a resposta volta"]], "forte");
+      this.L = [
+        linha(0, "estático", ["CDN ou servidor de arquivos", "o Netlify entrega arquivos prontos"], { texto: ["nenhum backend calcula", "nada depois de publicado"] }, "custo: zero · manutenção: ninguém · atualiza quando você publica de novo"),
+        linha(170, "dinâmico", ["servidor backend (API)", "login, regras e consultas"], { caixa: ["banco de dados", "os dados ao vivo"] }, "custo: servidor e licença · manutenção: alguém de TI · atualiza sozinho, a cada pedido"),
+        linha(340, "estático, com cálculo no navegador", ["CDN ou servidor de arquivos", "a página e o Python, uma vez"], { texto: ["a conta roda no computador", "de quem abre (Pyodide)"] }, "custo: zero · manutenção: ninguém · os dados de quem abre não saem da máquina", "o Python calcula aqui"),
+      ];
     },
     passo(k, a) {
-      vis(this.e.g, k >= 0, a); vis(this.d.g, k >= 1, a);
-      const E = ["", "", "atualiza quando você roda de novo e publica", "custa zero e ninguém precisa manter", "o monitor, o painel da quarta, os Sites do ChatGPT", "o nosso foco: estático, para sair hoje e sem depender da TI"];
-      const D = ["", "", "atualiza sozinho, a cada consulta", "licença, servidor e alguém de TI para manter", "Power BI, Looker Studio, Tableau, Streamlit, Metabase", "vale quando muita gente consulta dados que mudam a toda hora"];
-      const i = Math.min(k, 5);
-      this.e.info.textContent = E[i]; this.d.info.textContent = D[i];
-      this.e.info.style.fill = i === 5 ? "var(--marca)" : "";
-      this.e.fundo.setAttribute("class", "caixa" + (i === 5 ? " marca" : ""));
-      gsap.fromTo([this.e.info, this.d.info], { autoAlpha: 0 }, { autoAlpha: 1, duration: a ? 0.4 : 0 });
-      gsap.to(this.d.g, { opacity: i === 5 ? 0.45 : 1, duration: a ? 0.4 : 0 });
+      const [e, d, p] = this.L;
+      vis(e.g, true, a); vis(e.setas, k >= 1, a);
+      vis(d.g, k >= 2, a); vis(d.setas, k >= 2, a);
+      vis(p.g, k >= 3, a); vis(p.setas, k >= 3, a);
+      this.L.forEach((l) => vis(l.cus, k >= 4, a));
+      gsap.to(d.g, { opacity: k >= 5 ? 0.35 : k >= 2 ? 1 : 0, duration: a ? 0.4 : 0, overwrite: "auto" });
+      const viagem = (l) => {
+        const y = l.y0, tl = gsap.timeline();
+        tl.set(l.pac, { attr: { cx: 275, cy: y + 62 }, opacity: 1 })
+          .to(l.pac, { attr: { cx: l.longe ? 815 : 415 }, duration: l.longe ? 0.9 : 0.6, ease: "none" })
+          .set(l.pac, { attr: { cy: y + 96 } })
+          .to(l.pac, { attr: { cx: 275 }, duration: l.longe ? 0.9 : 0.6, ease: "none" })
+          .to(l.pac, { opacity: 0, duration: 0.2 });
+      };
+      if (a && k === 1) viagem(e);
+      if (a && k === 2) viagem(d);
+      if (a && k === 3) viagem(p);
     },
   });
 
   /* ====================================================================== */
-  /* Frases para pôr no pedido (clicáveis)                                   */
+  /* Frases para pôr no pedido, cada uma com um exemplo que funciona         */
   /* ====================================================================== */
   if (!document.getElementById("css-palavras")) {
     const st = document.createElement("style");
     st.id = "css-palavras";
     st.textContent = `
-.palavras { display: grid; grid-template-columns: 1.3fr 1fr; gap: 22px; font-size: .72em; }
-.palavras .grade { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; align-content: start; }
-.palavras button { font: inherit; font-size: .92em; text-align: left; line-height: 1.25; padding: 10px 12px; border-radius: 12px;
+.palavras { display: grid; grid-template-columns: .82fr 1.18fr; gap: 18px; font-size: .64em; text-align: left; }
+.palavras .grade { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-content: start; }
+.palavras button.fr { font: inherit; font-size: .95em; text-align: left; line-height: 1.2; padding: 8px 10px; border-radius: 10px;
   border: 1.5px solid var(--superficie-borda); background: var(--superficie); color: var(--texto); cursor: pointer; }
-.palavras button.on { border-color: var(--marca); box-shadow: inset 0 0 0 1.5px var(--marca); font-weight: 700; }
-.palavras .painel { background: var(--superficie); border-left: 5px solid var(--marca); border-radius: 12px; padding: 16px 20px; }
-.palavras .painel .f { font-weight: 700; font-size: 1.15em; margin-bottom: 8px; }
-.palavras .painel .m { margin-bottom: 12px; }
-.palavras .painel .ab { display: grid; grid-template-columns: 1fr; gap: 8px; }
-.palavras .painel .ab div { padding: 8px 12px; border-radius: 8px; font-size: .95em; }
-.palavras .painel .ab .antes { background: color-mix(in srgb, var(--marca) 12%, transparent); }
-.palavras .painel .ab .depois { background: color-mix(in srgb, var(--turquesa) 16%, transparent); }
-.palavras .painel .ab b { display: block; font-size: .85em; text-transform: lowercase; opacity: .8; }`;
+.palavras button.fr.on { border-color: var(--marca); box-shadow: inset 0 0 0 1.5px var(--marca); font-weight: 700; }
+.palavras .painel { background: var(--superficie); border-left: 5px solid var(--marca); border-radius: 12px; padding: 12px 16px; min-height: 440px; }
+.palavras .painel .f { font-weight: 700; font-size: 1.12em; }
+.palavras .painel .m { margin: 4px 0 8px; }
+.palavras .painel .fonte { font-size: .78em; opacity: .75; margin-top: 8px; }
+.palavras .demo { background: var(--fundo); border: 1px solid var(--superficie-borda); border-radius: 10px; padding: 10px 12px; min-height: 270px; }
+.palavras .demo pre { margin: 0; font-size: .88em; line-height: 1.35; white-space: pre-wrap; font-family: "JetBrains Mono", Consolas, monospace; background: none; box-shadow: none; }
+.palavras .demo .ok { color: var(--turquesa); font-weight: 700; } .palavras .demo .no { color: var(--marca); font-weight: 700; }
+.palavras .demo button { font: inherit; font-size: .9em; margin-top: 8px; padding: 4px 12px; border-radius: 8px; border: 0; background: var(--marca); color: #fff; cursor: pointer; }
+.palavras .demo textarea { width: 100%; box-sizing: border-box; height: 130px; font-family: "JetBrains Mono", Consolas, monospace; font-size: .82em; background: var(--superficie); color: var(--texto); border: 1px solid var(--superficie-borda); border-radius: 8px; padding: 6px; }
+.palavras .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.palavras .rot { font-size: .8em; font-weight: 700; opacity: .75; margin-bottom: 4px; }
+.palavras .bolha { padding: 6px 10px; border-radius: 10px; margin: 5px 0; max-width: 85%; }
+.palavras .bolha.ag { background: var(--superficie); } .palavras .bolha.eu { background: color-mix(in srgb, var(--turquesa) 18%, transparent); margin-left: auto; }
+.palavras table { border-collapse: collapse; width: 100%; font-size: .9em; } .palavras td, .palavras th { border-bottom: 1px solid var(--superficie-borda); padding: 3px 6px; text-align: left; }
+.palavras .barra-g { height: 22px; background: var(--marca); border-radius: 4px; margin: 4px 0 10px; }`;
     document.head.appendChild(st);
   }
+  function carregar(src) {
+    return new Promise((ok, erro) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = erro; document.head.appendChild(s); });
+  }
+  function notasPorEmpresa() {
+    const linhas = (window.AVALIACOES || "").trim().split("\n").slice(1).map((l) => l.split(","));
+    const m = {};
+    linhas.forEach(([e, , n]) => { (m[e] = m[e] || []).push(+n); });
+    return Object.entries(m).map(([e, v]) => [e, v.reduce((a, b) => a + b, 0) / v.length, v.length]).sort((a, b) => b[1] - a[1]);
+  }
+  const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  let PY = null, ECH = null;
   const FRASES = [
-    ["inclua testes automatizados", "o agente escreve frases que precisam ser verdade e roda antes de entregar", "\"pronto, deve funcionar\"", "\"8 checagens passaram; 1 falhou: nota 6 numa escala de 1 a 5\""],
-    ["diga quantas linhas entraram e saíram em cada passo", "cada passo mostra a conta, e o erro aparece onde nasce", "\"a base tem 4.000 avaliações\"", "\"4.000 linhas viraram 2.010 (1.990 repetidas)\""],
-    ["crie um AGENTS.md com as regras", "as regras vão para um arquivo que toda conversa nova lê", "amanhã você repete as regras na conversa", "a conversa nova já começa sabendo"],
-    ["faça perguntas antes de começar", "o agente confirma o que é ambíguo em vez de chutar", "ele escolhe sozinho o que é \"novo\"", "\"novo é o que não estava na coleta anterior?\""],
-    ["um único arquivo HTML", "uma página que se arrasta no Netlify Drop ou se manda por e-mail", "uma pasta com 12 arquivos e dependências", "index.html, abre em qualquer lugar"],
-    ["use ECharts para os gráficos", "gráficos interativos, com dica ao passar o mouse e zoom", "uma imagem parada", "passa o mouse e vê o número do dia"],
-    ["use a biblioteca GSAP para as animações", "transições suaves e controladas, sem efeitos gratuitos", "a barra pula de um valor ao outro", "a mesma barra cresce até o valor novo"],
-    ["pense primeiro no celular (layout responsivo)", "a página se reorganiza numa coluna em tela pequena", "tabela cortada no celular", "cartões empilhados, um por companhia"],
-    ["só números agregados, nenhum dado pessoal", "a página e os arquivos saem sem nome, e-mail, telefone", "o texto inteiro de cada avaliação", "médias, contagens e títulos"],
-    ["mostre o código que gerou cada número", "cada número tem uma origem que você pode conferir", "\"a nota média é 3,1\"", "\"3,1: média de nota nos últimos 30 dias, passo 4\""],
-    ["guarde um cache das respostas da IA", "rodar de novo não paga de novo nem muda as respostas", "cada rodada custa e dá respostas um pouco diferentes", "a segunda rodada sai em segundos, igual à primeira"],
-    ["responda em JSON seguindo este esquema", "a IA devolve sempre as mesmas colunas, com as opções combinadas", "\"o tema parece ser bagagem, talvez atendimento\"", "{\"tema\": \"bagagem\", \"tom\": \"negativo\"}"],
-    ["use Pyodide para rodar Python no navegador", "a conta roda no computador de quem abre a página", "precisa de servidor para calcular", "o gestor sobe a planilha e a conta sai ali"],
-    ["valide no tempo", "testa o modelo em meses que ele não viu, como na vida real", "teste com voos sorteados de todos os meses", "treina até julho, testa agosto a outubro"],
-    ["gere dados sintéticos parecidos com os meus", "uma base de mentira, com as mesmas colunas, para testar sem risco", "usar a base real de clientes para testar", "testar à vontade e trocar pela real no fim"],
+    { f: "inclua testes e rode até passarem", m: "o agente escreve checagens, roda e só entrega quando passam",
+      fonte: "Anthropic, boas práticas do Claude Code: dar ao agente um jeito de verificar o próprio trabalho; OpenAI, boas práticas do Codex: escrever testes e rodar as checagens",
+      demo(d) {
+        d.innerHTML = `<pre>def test_nota_entre_1_e_5(base):
+    assert base["nota"].between(1, 5).all()
+
+def test_sem_repetidas(base):
+    assert not base["id_avaliacao"].duplicated().any()</pre><pre class="saida" style="margin-top:8px"></pre><button>corrigir e rodar de novo</button>`;
+        const sai = d.querySelector(".saida"), bt = d.querySelector("button");
+        const rodar = (ok) => {
+          sai.innerHTML = `<span class="ok">ok</span>      test_nota_entre_1_e_5\n` + (ok ? `<span class="ok">ok</span>      test_sem_repetidas\n<span class="ok">2 passaram</span>` : `<span class="no">falhou</span>  test_sem_repetidas: 1.990 repetidas\n<span class="no">1 falhou</span>, 1 passou`);
+          gsap.from(sai, { opacity: 0, duration: 0.4 });
+        };
+        rodar(false);
+        bt.onclick = (e) => { e.stopPropagation(); rodar(true); bt.textContent = "rodar com o erro"; bt.onclick = (ev) => { ev.stopPropagation(); FRASES[0].demo(d); }; };
+      } },
+    { f: "diga o objetivo e quando está pronto", m: "o pedido ganha quatro partes, e o agente sabe onde parar",
+      fonte: "OpenAI, boas práticas do Codex: objetivo, contexto, restrições e \"pronto quando\"",
+      demo(d) {
+        const L = [["Objetivo", "um monitor diário das avaliações dos 4 apps"], ["Contexto", "as coletas estão em dados/coletas/, uma por dia"], ["Restrições", "não edite as coletas; nenhum dado pessoal na página"], ["Pronto quando", "a página mostra 2.010 avaliações e 10 novas"]];
+        d.innerHTML = L.map(([r, t]) => `<div class="l" style="margin:8px 0"><div class="rot">${r}</div>${t}</div>`).join("");
+        gsap.from(d.querySelectorAll(".l"), { opacity: 0, y: 10, stagger: 0.25, duration: 0.4 });
+      } },
+    { f: "planeje antes de fazer e me mostre o plano", m: "você revisa o caminho antes de qualquer arquivo mudar",
+      fonte: "Anthropic: explorar, planejar, implementar e verificar; OpenAI: modo de plano do Codex para tarefas ambíguas",
+      demo(d) {
+        const P = ["ler as duas coletas e contar as linhas", "juntar sem repetir avaliações", "escrever as checagens e rodar", "gerar a página saida/index.html"];
+        d.innerHTML = `<div class="rot">Plano (aguardando a sua aprovação)</div>` + P.map((t, i) => `<div class="pp" style="margin:8px 0"><span class="ck">○</span> ${i + 1}. ${t}</div>`).join("") + `<button>aprovar o plano</button>`;
+        d.querySelector("button").onclick = (e) => {
+          e.stopPropagation();
+          d.querySelectorAll(".ck").forEach((c, i) => setTimeout(() => { c.textContent = "✓"; c.className = "ck ok"; }, 350 * i));
+        };
+      } },
+    { f: "me faça perguntas antes de começar", m: "o agente pergunta o que é ambíguo, em vez de chutar",
+      fonte: "Anthropic: peça para o agente entrevistar você; OpenAI: perguntas de esclarecimento no modo de plano",
+      demo(d) {
+        const B = [["ag", "O que conta como avaliação nova: a que não estava em nenhuma coleta anterior?"], ["eu", "Isso."], ["ag", "Se a mesma avaliação mudar de nota, vale a mais recente?"], ["eu", "Vale, e avise na página."], ["ag", "Combinado. Vou escrever as duas regras no AGENTS.md."]];
+        d.innerHTML = B.map(([q, t]) => `<div class="bolha ${q}">${t}</div>`).join("");
+        gsap.from(d.querySelectorAll(".bolha"), { opacity: 0, y: 8, stagger: 0.4, duration: 0.35 });
+      } },
+    { f: "mostre a evidência: o comando e a saída", m: "em vez de \"pronto, deve funcionar\", você vê o que rodou",
+      fonte: "Anthropic, boas práticas do Claude Code: peça evidência, o comando que rodou e a saída",
+      demo(d) {
+        const L = ["$ python rodar.py", "  4.000 linhas nas coletas viraram 2.010 avaliações (1.990 repetidas)", "  1 avaliação editada: vale a versão mais recente", "  9 checagens ok, 2 alertas", "  página gravada em saida/index.html"];
+        d.innerHTML = `<pre>${L.map((l) => `<span class="ln">${esc(l)}\n</span>`).join("")}</pre>`;
+        gsap.from(d.querySelectorAll(".ln"), { opacity: 0, stagger: 0.35, duration: 0.2 });
+      } },
+    { f: "crie um AGENTS.md com as regras", m: "as regras ficam num arquivo que toda conversa nova lê",
+      fonte: "OpenAI, boas práticas do Codex: AGENTS.md curto, com como rodar, como testar, as regras e o que é estar pronto",
+      demo(d) {
+        d.innerHTML = `<pre># AGENTS.md
+## Como rodar
+python rodar.py --baixar
+## Regras
+- As coletas nunca são editadas.
+- A mesma avaliação conta uma vez.
+- Avaliação editada: vale a mais recente.
+- Nenhum dado pessoal na página.
+## Pronto quando
+As checagens passam e a página abre.</pre>`;
+      } },
+    { f: "responda em JSON seguindo este esquema", m: "a IA devolve sempre as mesmas colunas, com as opções combinadas",
+      fonte: "OpenAI, Structured Outputs: respostas que seguem um esquema JSON",
+      demo(d) {
+        d.innerHTML = `<div class="duas"><div><div class="rot">esquema</div><pre>{"tema": ["atraso", "bagagem",
+          "app", "atendimento",
+          "preço"],
+ "tom":  ["positivo", "neutro",
+          "negativo"]}</pre></div><div><div class="rot">resposta para "Cobraram a mala duas vezes"</div><pre>{"tema": "bagagem",
+ "tom":  "negativo"}</pre><div class="v" style="margin-top:10px"><span class="ok">segue o esquema</span></div></div></div>`;
+      } },
+    { f: "use este print como referência de estilo", m: "a página sai com a cara da sua marca, e não a de um modelo genérico",
+      fonte: "OpenAI, guia de front-end do GPT-5: dar a imagem do design como entrada; Anthropic: colar o print do design no pedido",
+      demo(d) {
+        d.innerHTML = `<div class="duas"><div><div class="rot">sem referência</div><div style="font-family:Arial;border:1px solid #99a;border-radius:6px;padding:10px"><div style="font-size:1.1em;color:#2d5be3;font-weight:700">Monitor de avaliações</div><div style="margin:6px 0">Nota média: 3,1</div><span style="background:#2d5be3;color:#fff;padding:3px 10px;border-radius:14px">Ver mais</span></div></div>
+<div><div class="rot">com o print da marca</div><div style="border-left:5px solid #e50505;padding:10px;background:var(--superficie)"><div style="font-family:'GT Ultra Fine',Georgia,serif;font-size:1.3em">Monitor de avaliações</div><div style="margin:6px 0"><b style="font-size:1.6em">3,1</b> nota média</div><span style="color:#e50505;font-weight:700">ver detalhes ›</span></div></div></div>`;
+      } },
+    { f: "use ECharts para os gráficos", m: "gráficos interativos: passe o mouse para ver o número",
+      fonte: "OpenAI, guia de front-end do GPT-5: dizer as bibliotecas de partida; ECharts (echarts.apache.org) é uma biblioteca aberta de gráficos",
+      demo(d) {
+        d.innerHTML = `<div class="g" style="width:100%;height:290px">carregando o ECharts...</div>`;
+        const alvo = d.querySelector(".g");
+        (ECH ? Promise.resolve() : carregar("https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js").then(() => { ECH = true; })).then(() => {
+          alvo.textContent = "";
+          const dados = notasPorEmpresa().reverse();
+          const cor = getComputedStyle(document.documentElement).getPropertyValue("--texto").trim() || "#222";
+          const ch = echarts.init(alvo);
+          ch.setOption({
+            title: { text: "Nota média dos últimos 90 dias", textStyle: { color: cor, fontSize: 16 } },
+            tooltip: {}, grid: { left: 70, right: 30, top: 40, bottom: 30 },
+            xAxis: { type: "value", min: 0, max: 5, axisLabel: { color: cor } },
+            yAxis: { type: "category", data: dados.map((x) => x[0]), axisLabel: { color: cor, fontSize: 14 } },
+            series: [{ type: "bar", data: dados.map((x) => +x[1].toFixed(2)), itemStyle: { color: "#e50505" }, label: { show: true, position: "right", color: cor } }],
+          });
+        }).catch(() => { alvo.textContent = "Sem internet para baixar o ECharts agora."; });
+      } },
+    { f: "use GSAP para as animações", m: "transições suaves: a mesma barra cresce até o valor novo",
+      fonte: "OpenAI, guia de front-end do GPT-5: dizer as bibliotecas de partida (cita a Motion); GSAP (gsap.com) é a usada nestes slides",
+      demo(d) {
+        const dados = notasPorEmpresa();
+        d.innerHTML = dados.map(([e, v]) => `<div>${e}: ${v.toFixed(1).replace(".", ",")}</div><div class="barra-g" data-v="${v}"></div>`).join("") + `<button>animar de novo</button>`;
+        const anima = () => d.querySelectorAll(".barra-g").forEach((b, i) => gsap.fromTo(b, { width: 0 }, { width: (+b.dataset.v / 5) * 100 + "%", duration: 0.9, delay: i * 0.12, ease: "power2.out" }));
+        anima();
+        d.querySelector("button").onclick = (e) => { e.stopPropagation(); anima(); };
+      } },
+    { f: "use Pyodide para rodar Python no navegador", m: "o Python roda aqui, no seu navegador, sem servidor",
+      fonte: "Pyodide (pyodide.org): Python e pandas compilados para WebAssembly",
+      demo(d) {
+        d.innerHTML = `<textarea spellcheck="false">import pandas as pd
+from io import StringIO
+d = pd.read_csv(StringIO(AVALIACOES))
+print(d.groupby("empresa")["nota"].agg(["count", "mean"]).round(2))</textarea><button>rodar Python</button><pre class="saida" style="margin-top:8px">Clique em "rodar Python". Os dados são as avaliações reais dos últimos 90 dias, guardadas na página.</pre>`;
+        const ta = d.querySelector("textarea"), sai = d.querySelector(".saida"), bt = d.querySelector("button");
+        Motor.util.semTeclas(ta);
+        bt.onclick = async (e) => {
+          e.stopPropagation(); bt.disabled = true;
+          try {
+            if (!PY) {
+              sai.textContent = "Baixando o Python para o navegador (só na primeira vez)...";
+              const U = "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/";
+              await carregar(U + "pyodide.js"); PY = await loadPyodide({ indexURL: U });
+              sai.textContent = "Carregando o pandas..."; await PY.loadPackage("pandas");
+            }
+            let t = ""; PY.setStdout({ batched: (x) => { t += x + "\n"; } }); PY.setStderr({ batched: (x) => { t += x + "\n"; } });
+            PY.globals.set("AVALIACOES", window.AVALIACOES || "");
+            const t0 = performance.now(); await PY.runPythonAsync(ta.value);
+            sai.textContent = (t || "(nada impresso)") + `rodou em ${Math.round(performance.now() - t0)} ms, no seu computador`;
+          } catch (err) { sai.textContent = "Erro: " + err.message; } finally { bt.disabled = false; }
+        };
+      } },
+    { f: "só números agregados, nenhum dado pessoal", m: "a página mostra médias e contagens, nunca a pessoa",
+      fonte: "OpenAI, boas práticas do Codex: restrições e regras de segurança no pedido; LGPD",
+      demo(d) {
+        d.innerHTML = `<div class="duas"><div><div class="rot no">linha a linha (exemplo fictício)</div><table><tr><th>apelido</th><th>texto</th></tr><tr><td>@viajante_sp</td><td>me liga no (11) 9...</td></tr><tr><td>@maria.v</td><td>cobraram a mala...</td></tr></table></div>
+<div><div class="rot ok">agregado</div><table><tr><th>empresa</th><th>avaliações</th><th>nota</th></tr>${notasPorEmpresa().map(([e, v, n]) => `<tr><td>${e}</td><td>${n}</td><td>${v.toFixed(1).replace(".", ",")}</td></tr>`).join("")}</table></div></div>`;
+      } },
+    { f: "um único arquivo HTML", m: "a página vai inteira num arquivo, pronta para o Netlify Drop ou para o e-mail",
+      fonte: "OpenAI, boas práticas do Codex: diga as restrições da entrega; o guia de front-end do GPT-5 entrega cada exemplo num arquivo HTML",
+      demo(d) {
+        d.innerHTML = `<div class="duas"><div><div class="rot">sem a frase</div><pre>projeto/
+  package.json
+  node_modules/  (312 MB)
+  src/
+    App.jsx
+    grafico.jsx
+  vite.config.js
+"rode npm install"</pre></div><div><div class="rot">com a frase</div><pre>saida/
+  index.html  (180 KB)
+
+arraste no Netlify Drop
+ou mande por e-mail</pre></div></div>`;
+      } },
   ];
   Motor.cena("rs-palavras", {
     montar(c) {
@@ -3977,13 +4105,13 @@ window.QuartoSupport = function () {
       const grade = Motor.util.html("div", "grade", box);
       const painel = Motor.util.html("div", "painel", box);
       const mostrar = (i) => {
-        const [f, m, antes, depois] = FRASES[i];
-        painel.innerHTML = `<div class="f">"${f}"</div><div class="m">${m}</div>
-          <div class="ab"><div class="antes"><b>sem a frase</b>${antes}</div><div class="depois"><b>com a frase</b>${depois}</div></div>`;
+        const F0 = FRASES[i];
+        painel.innerHTML = `<div class="f">"${F0.f}"</div><div class="m">${F0.m}</div><div class="demo"></div><div class="fonte">fonte: ${F0.fonte}</div>`;
+        F0.demo(painel.querySelector(".demo"));
         grade.querySelectorAll("button").forEach((b, j) => b.classList.toggle("on", j === i));
       };
       FRASES.forEach((fr, i) => {
-        const b = Motor.util.html("button", "", grade, fr[0]);
+        const b = Motor.util.html("button", "fr", grade, fr.f);
         b.addEventListener("click", (e) => { e.stopPropagation(); mostrar(i); });
       });
       mostrar(0);

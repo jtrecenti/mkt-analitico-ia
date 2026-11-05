@@ -24,7 +24,7 @@ a.aula .h { color: var(--cinza); font-variant-numeric: tabular-nums; }
 a.aula b { display: block; }
 a.aula span.d { color: var(--cinza); font-size: .92rem; }
 a.aula.breve { opacity: .55; pointer-events: none; }
-.atalhos { display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+.atalhos { display: grid; grid-template-columns: repeat(3, 1fr); gap: .7rem; }
 .atalhos a { background: var(--azul); color: #fff; border-radius: 12px; padding: .9rem 1rem; text-decoration: none; font-weight: 600; }
 .atalhos a small { display: block; font-weight: 400; opacity: .8; }
 footer { margin-top: 2.5rem; font-size: .85rem; color: var(--cinza); border-top: 1px solid var(--claro); padding-top: 1rem; }
@@ -38,7 +38,7 @@ footer a { color: var(--marca); }
   <img class="logo" src="recursos/logo-insper-preto.png" alt="Insper">
   <div class="curso">Educação Executiva · novembro de 2026</div>
   <h1>Marketing Analítico: impulsionando resultados com IA</h1>
-  <p>Material das aulas de quarta e quinta. Oito exercícios numa linha só: construir uma base de dados com o ChatGPT
+  <p>Material das aulas de quarta e quinta. Sete exercícios numa linha só: construir uma base de dados com o ChatGPT
   (habilidades, plugins, raspagem e extração com IA), analisá-la (gráficos e regressão), transformar a análise
   num monitor que roda todo dia e vira uma página publicada e, no fim, uma peça de portfólio escolhida por você.
   O roteiro de cada exercício está no pacote de materiais, na pasta <code>exercicios/</code>.</p>
@@ -46,7 +46,8 @@ footer a { color: var(--marca); }
   <div class="atalhos">
     <a href="quiz/">Quiz ao vivo<small>responda pelo celular</small></a>
     <a href="guia/">Guia de bolso<small>o que é, para que serve e como funciona</small></a>
-    <a href="catalogo/">Catálogo de ferramentas<small>97 ferramentas que a sua IA controla</small></a>
+    <a href="painel-app/">Painel de exemplo<small>avaliações dos apps, a trilha base do estúdio</small></a>
+    <a href="catalogo/">Catálogo de ferramentas<small>117 ferramentas que a sua IA controla</small></a>
     <a href="materiais/mkt-analitico-materiais.zip" download>Materiais (.zip)<small>dados, exercícios e habilidades</small></a>
   </div>
 
@@ -57,8 +58,9 @@ footer a { color: var(--marca); }
   <a class="aula" href="slides/04-regressao.html"><span class="h">tarde</span><span><b>Regressão linear com o ChatGPT</b><span class="d">O que é, para que serve e como funciona; exercício 5, rodada 1</span></span></a>
   <a class="aula" id="e3" href="slides/04-estudio-regressao.html"><span class="h">estúdio 3</span><span><b>Estúdio 3: a rodada 2 do exercício 5</b><span class="d">A entrega da tarde: o que a regressão não vê sozinha</span></span></a>
   <div class="dia">Quinta-feira, 5 de novembro</div>
-  <a class="aula" id="a5" href="slides/05-relatorio-reprodutivel.html"><span class="h">manhã</span><span><b>Do relatório de um dia ao monitor de todo dia</b><span class="d">Exercícios 6 e 7: um monitor reprodutível das avaliações dos apps, com checagens, e a diferença entre a pasta do projeto e a skill; a página publicada no Netlify Drop. Ferramentas estáticas e dinâmicas, Pyodide e as palavras que ajudam a pedir</span></span></a>
-  <a class="aula" href="slides/06-estudio-portfolio.html"><span class="h">estúdio 4</span><span><b>O seu portfólio de IA</b><span class="d">O catálogo de ferramentas e o exercício 8: estúdio livre, com cinco trilhas (skill, plugin, monitor reprodutível, explorar o catálogo, painel estático)</span></span></a>
+  <a class="aula" id="a5" href="slides/05-relatorio-reprodutivel.html"><span class="h">manhã</span><span><b>Monitores reprodutíveis e páginas estáticas</b><span class="d">Exercício 6: um monitor reprodutível das avaliações dos apps, com checagens, e quando a pasta do projeto vira skill; a página publicada no Netlify Drop. Ferramentas estáticas e dinâmicas, Pyodide e as palavras que ajudam a pedir</span></span></a>
+  <a class="aula" href="slides/06-estudio-portfolio.html"><span class="h">estúdio 4</span><span><b>O seu portfólio de IA</b><span class="d">O catálogo de ferramentas e o exercício 7: estúdio com uma trilha base (um painel estático das avaliações de um app à sua escolha) e quatro alternativas para quem já tem um problema próprio</span></span></a>
+  <a class="aula" href="slides/07-engenharia-de-prompts.html"><span class="h">extra</span><span><b>Engenharia de prompts e de contexto</b><span class="d">As partes de um bom prompt, o mesmo pedido em quatro versões com saídas reais do ChatGPT, e por que o contexto e o critério de aceitação pesam mais que as palavras</span></span></a>
   <p class="pdfs">Os slides em PDF:
     <a href="slides/pdf/01-chatgpt-work.pdf">quarta de manhã</a> ·
     <a href="slides/pdf/03-modelagem-visualizacao.pdf">visualização</a> ·
@@ -66,6 +68,7 @@ footer a { color: var(--marca); }
     <a href="slides/pdf/04-estudio-regressao.pdf">estúdio 3</a> ·
     <a href="slides/pdf/05-relatorio-reprodutivel.pdf">monitor e páginas estáticas</a> ·
     <a href="slides/pdf/06-estudio-portfolio.pdf">estúdio de portfólio</a> ·
+    <a href="slides/pdf/07-engenharia-de-prompts.pdf">prompts e contexto</a> ·
     <a href="guia/guia-de-bolso.pdf">guia de bolso</a></p>
   <footer>
     Prof. Julio Trecenti · Insper. Dados: avaliações públicas da App Store e sentenças públicas do TJSP; as avaliações dos apps são públicas, coletadas em 3/11 e 5/11; a base de voos é simulada, para fins didáticos.

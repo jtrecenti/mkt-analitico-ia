@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel das avaliações dos apps das companhias aéreas</title>
+<style>
+@font-face { font-family: "GT Ultra Fine"; src: url("../recursos/GTUltraFine-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Inter; src: url("../recursos/Inter-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: Inter; src: url("../recursos/Inter-SemiBold.ttf"); font-weight: 600; }
+:root { --marca: #e50505; --azul: #0e171d; --cinza: #5b5b5b; --claro: #dcdcdc; --sup: #f3f4f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--azul); background: #fff; line-height: 1.45; }
+main { max-width: 1100px; margin: 0 auto; padding: 1.6rem 1.2rem 2.5rem; }
+.topo { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.curso { color: var(--marca); font-weight: 600; font-size: .85rem; letter-spacing: .02em; }
+h1 { font-family: "GT Ultra Fine", Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.12; margin: .2rem 0 .3rem; }
+#conclusao { font-size: clamp(1.05rem, 2.4vw, 1.3rem); margin: .3rem 0 1rem; max-width: 60rem; }
+#conclusao b { color: var(--marca); }
+.filtro { display: flex; gap: .4rem; flex-wrap: wrap; }
+.filtro button { font: inherit; font-weight: 600; border: 1.5px solid var(--claro); background: #fff; color: var(--azul);
+  border-radius: 99px; padding: .35rem 1rem; cursor: pointer; transition: all .25s; }
+.filtro button.on { background: var(--azul); border-color: var(--azul); color: #fff; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: .7rem; margin: 1rem 0; }
+.kpi { background: var(--sup); border-radius: 14px; padding: .8rem 1rem; }
+.kpi .v { font-size: 2.1rem; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.kpi .r { color: var(--cinza); font-size: .85rem; }
+.kpi .d { font-size: .85rem; font-weight: 600; }
+.bom { color: #0b7a3e; } .ruim { color: var(--marca); }
+.graficos { display: grid; grid-template-columns: 1.4fr 1fr; gap: .9rem; }
+.card { min-width: 0; border: 1.5px solid var(--sup); border-radius: 14px; padding: .8rem 1rem .4rem; }
+.card h2 { font-size: 1.02rem; margin: 0; } .card p { margin: .15rem 0 0; color: var(--cinza); font-size: .85rem; }
+.grafico { width: 100%; height: 300px; }
+.largo { grid-column: 1 / -1; }
+footer { margin-top: 1.6rem; padding-top: .8rem; border-top: 1px solid var(--claro); color: var(--cinza); font-size: .82rem; }
+@media (max-width: 760px) { .kpis { grid-template-columns: repeat(2, 1fr); } .graficos { grid-template-columns: 1fr; } .grafico { height: 260px; } }
+</style></head><body><main>
+<div class="topo"><div class="curso">Marketing Analítico com IA · exemplo da trilha base</div>
+<div class="filtro" id="filtro"></div></div>
+<h1>Avaliações dos apps das companhias aéreas na App Store</h1>
+<p id="conclusao"></p>
+<div class="kpis">
+  <div class="kpi"><div class="r">nota média, últimos 30 dias</div><div class="v" id="k1"></div><div class="d" id="k1d"></div></div>
+  <div class="kpi"><div class="r">avaliações com 1 estrela, 30 dias</div><div class="v" id="k2"></div><div class="r">de cada 100 avaliações</div></div>
+  <div class="kpi"><div class="r">avaliações nos últimos 30 dias</div><div class="v" id="k3"></div><div class="r">volume do mês</div></div>
+  <div class="kpi"><div class="r">tema mais citado, 90 dias</div><div class="v" id="k4" style="font-size:1.35rem;padding:.35rem 0"></div><div class="r" id="k4d"></div></div>
+</div>
+<div class="graficos">
+  <div class="card"><h2>Nota média por semana</h2><p>semanas com ao menos 3 avaliações; escala de 1 a 5</p><div class="grafico" id="g1"></div></div>
+  <div class="card"><h2>Distribuição das notas, 90 dias</h2><p>quantas avaliações deram cada nota</p><div class="grafico" id="g3"></div></div>
+  <div class="card largo"><h2>Do que falam as avaliações, 90 dias</h2><p>parcela das avaliações que cita cada tema (por palavras-chave; uma avaliação pode citar vários)</p><div class="grafico" id="g2"></div></div>
+</div>
+<footer>Fonte: feed público de avaliações da App Store do Brasil, as 500 mais recentes de cada app em cada coleta, coletas
+de 03/11/2026, 05/11/2026 (atualizado em 05/11/2026). Avaliações repetidas entre coletas contam uma vez. A página mostra só números
+agregados: nenhum texto, nenhum apelido. Exemplo didático do curso Marketing Analítico com IA, Insper.</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script>
+const D = {"atualizado": "2026-11-05", "semanas": ["13/07", "20/07", "27/07", "03/08", "10/08", "17/08", "24/08", "31/08", "07/09", "14/09", "21/09", "28/09", "05/10", "12/10", "19/10", "26/10", "02/11"], "empresas": {"LATAM": {"n_total": 502, "n_30": 46, "n_90": 140, "nota_30": 3.09, "nota_30_ant": 3.63, "uma_estrela_30": 41.3, "semanal": [2.58, 2.82, 3.67, 3.3, 2.91, 3.0, 2.82, 4.54, 3.11, 2.75, 3.7, 4.36, 3.78, 2.69, 3.0, 3.18, null], "n_semanal": [12, 11, 9, 10, 11, 7, 11, 13, 9, 8, 20, 11, 9, 13, 14, 11, 2], "temas": [["app com falha", 12.9], ["atendimento", 8.6], ["atraso e cancelamento", 5.7], ["preço", 5.7], ["check-in e embarque", 4.3], ["reembolso", 2.1], ["milhas e pontos", 2.1], ["bagagem", 0.7]], "distribuicao": [44, 6, 12, 7, 71]}, "GOL": {"n_total": 502, "n_30": 139, "n_90": 210, "nota_30": 1.42, "nota_30_ant": 2.15, "uma_estrela_30": 86.3, "semanal": [2.6, 2.04, 2.54, 1.9, 1.0, 1.0, 3.67, 2.0, 1.83, 1.12, 2.09, 3.0, 2.42, 3.64, 1.09, 2.0, null], "n_semanal": [25, 24, 13, 10, 9, 7, 9, 3, 6, 8, 11, 12, 12, 11, 111, 5, 2], "temas": [["atraso e cancelamento", 25.7], ["app com falha", 12.4], ["check-in e embarque", 6.7], ["milhas e pontos", 2.9], ["preço", 2.9], ["atendimento", 2.4], ["bagagem", 0.5], ["reembolso", 0.0]], "distribuicao": [166, 11, 5, 1, 27]}, "Azul": {"n_total": 505, "n_30": 119, "n_90": 365, "nota_30": 3.81, "nota_30_ant": 3.71, "uma_estrela_30": 26.1, "semanal": [3.15, 3.05, 3.0, 3.1, 3.33, 3.88, 3.51, 3.91, 4.03, 3.57, 3.21, 3.67, 4.08, 3.96, 3.12, 4.24, 4.8], "n_semanal": [27, 20, 20, 20, 30, 25, 37, 35, 29, 28, 24, 21, 39, 25, 34, 25, 5], "temas": [["check-in e embarque", 15.1], ["app com falha", 6.6], ["atendimento", 4.9], ["milhas e pontos", 2.5], ["preço", 2.5], ["atraso e cancelamento", 1.9], ["bagagem", 0.8], ["reembolso", 0.3]], "distribuicao": [91, 15, 26, 11, 222]}, "TAP": {"n_total": 501, "n_30": 38, "n_90": 43, "nota_30": 3.74, "nota_30_ant": 1.0, "uma_estrela_30": 26.3, "semanal": [null, null, null, null, null, null, null, 1.0, null, null, null, null, null, 4.21, 3.46, 3.3, null], "n_semanal": [0, 0, 1, 0, 0, 0, 0, 4, 0, 0, 1, 0, 0, 14, 13, 10, 1], "temas": [["app com falha", 14.0], ["check-in e embarque", 7.0], ["milhas e pontos", 2.3], ["preço", 2.3], ["atraso e cancelamento", 0.0], ["reembolso", 0.0], ["bagagem", 0.0], ["atendimento", 0.0]], "distribuicao": [15, 0, 3, 2, 23]}}};
+const VERMELHO = "#e50505", AZUL = "#0e171d", CINZA = "#5b5b5b", CLARO = "#dcdcdc";
+const fmt = (x, c = 1) => x == null ? "sem dado" : x.toLocaleString("pt-BR", { minimumFractionDigits: c, maximumFractionDigits: c });
+const base = { textStyle: { fontFamily: "Inter, system-ui, sans-serif", color: AZUL }, animationDuration: 700, animationDurationUpdate: 700, animationEasingUpdate: "cubicInOut" };
+const g1 = echarts.init(document.getElementById("g1")), g2 = echarts.init(document.getElementById("g2")), g3 = echarts.init(document.getElementById("g3"));
+let atual = "GOL";
+function frase(e, x) {
+  const d = x.nota_30 != null && x.nota_30_ant != null ? x.nota_30 - x.nota_30_ant : null;
+  const mov = d == null ? "" : Math.abs(d) < 0.15 ? ", estável em relação aos 30 dias anteriores" : d > 0 ? `, <b>${fmt(d)} ponto acima</b> dos 30 dias anteriores` : `, <b>${fmt(-d)} ponto abaixo</b> dos 30 dias anteriores`;
+  return `No app da ${e}, a nota média do último mês é <b>${fmt(x.nota_30)}</b>${mov}; o tema mais citado é <b>${x.temas[0][0]}</b>.`;
+}
+function mostrar(e) {
+  atual = e; const x = D.empresas[e];
+  document.querySelectorAll("#filtro button").forEach((b) => b.classList.toggle("on", b.dataset.e === e));
+  document.getElementById("conclusao").innerHTML = frase(e, x);
+  document.getElementById("k1").textContent = fmt(x.nota_30);
+  const d = x.nota_30 != null && x.nota_30_ant != null ? x.nota_30 - x.nota_30_ant : null;
+  const k1d = document.getElementById("k1d"); k1d.textContent = d == null ? "" : (d >= 0 ? "+" : "") + fmt(d) + " sobre os 30 dias anteriores"; k1d.className = "d " + (d >= 0 ? "bom" : "ruim");
+  document.getElementById("k2").textContent = fmt(x.uma_estrela_30, 0) + "%";
+  document.getElementById("k3").textContent = x.n_30.toLocaleString("pt-BR");
+  document.getElementById("k4").textContent = x.temas[0][0];
+  document.getElementById("k4d").textContent = fmt(x.temas[0][1], 0) + "% das avaliações";
+  g1.setOption({ ...base, grid: { left: 36, right: 16, top: 16, bottom: 28 }, tooltip: { trigger: "axis", valueFormatter: (v) => fmt(v, 2) },
+    xAxis: { type: "category", data: D.semanas, axisLine: { lineStyle: { color: CLARO } }, axisLabel: { color: CINZA } },
+    yAxis: { type: "value", min: 1, max: 5, interval: 1, splitLine: { lineStyle: { color: "#eee" } }, axisLabel: { color: CINZA } },
+    series: [{ type: "line", data: x.semanal, connectNulls: true, smooth: false, symbolSize: 8, lineStyle: { width: 3, color: VERMELHO }, itemStyle: { color: VERMELHO },
+      markLine: { silent: true, symbol: "none", data: [{ yAxis: 3, label: { formatter: "3 estrelas", color: CINZA } }], lineStyle: { color: CINZA, type: "dashed" } } }] });
+  const temas = [...x.temas].reverse();
+  g2.setOption({ ...base, grid: { left: 170, right: 60, top: 8, bottom: 8 }, tooltip: { valueFormatter: (v) => fmt(v, 0) + "%" },
+    xAxis: { type: "value", show: false, max: 45 }, yAxis: { type: "category", data: temas.map((t) => t[0]), axisTick: { show: false }, axisLine: { show: false }, axisLabel: { color: AZUL, fontSize: 13 } },
+    series: [{ type: "bar", data: temas.map((t, i) => ({ value: t[1], itemStyle: { color: i === temas.length - 1 ? VERMELHO : "#b9bec2", borderRadius: [0, 4, 4, 0] } })),
+      barWidth: "62%", label: { show: true, position: "right", formatter: (p) => fmt(p.value, 0) + "%", color: AZUL } }] });
+  g3.setOption({ ...base, grid: { left: 36, right: 12, top: 18, bottom: 28 }, tooltip: {},
+    xAxis: { type: "category", data: ["1", "2", "3", "4", "5"].map((n) => n + " estrela" + (n === "1" ? "" : "s")), axisLabel: { color: CINZA }, axisLine: { lineStyle: { color: CLARO } } },
+    yAxis: { type: "value", splitLine: { lineStyle: { color: "#eee" } }, axisLabel: { color: CINZA } },
+    series: [{ type: "bar", data: x.distribuicao.map((v, i) => ({ value: v, itemStyle: { color: i === 0 ? VERMELHO : i === 4 ? AZUL : "#b9bec2", borderRadius: [4, 4, 0, 0] } })),
+      label: { show: true, position: "top", color: AZUL } }] });
+}
+const f = document.getElementById("filtro");
+Object.keys(D.empresas).forEach((e) => { const b = document.createElement("button"); b.textContent = e; b.dataset.e = e; b.onclick = () => mostrar(e); f.appendChild(b); });
+mostrar(atual);
+const ajustar = () => [g1, g2, g3].forEach((g) => g.resize());
+setTimeout(ajustar, 50); document.fonts && document.fonts.ready.then(ajustar);
+addEventListener("resize", () => [g1, g2, g3].forEach((g) => g.resize()));
+</script>
+</body></html>

@@ -1602,7 +1602,7 @@ margin-right: 0; }
 </div>
 </div>
 <div class="caixa exercicio" data-p="4">
-<p><span class="rotulo">jtrecenti.github.io/mkt-analitico-ia/catalogo</span> 97 ferramentas, cada uma com o que faz, um exemplo, como controlar pela sua IA, o preço e o link oficial. Clique nas tarefas do topo (transcrição, edição de vídeo, criação de sites…) para filtrar. <a href="../catalogo/" target="_blank">Abrir o catálogo ↗</a></p>
+<p><span class="rotulo">jtrecenti.github.io/mkt-analitico-ia/catalogo</span> 117 ferramentas, cada uma com o que faz, um exemplo, como controlar pela sua IA, o preço e o link oficial. Clique nas tarefas do topo (transcrição, edição de vídeo, criação de sites…) para filtrar. <a href="../catalogo/" target="_blank">Abrir o catálogo ↗</a></p>
 </div>
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
@@ -1612,21 +1612,21 @@ margin-right: 0; }
 
 </div>
 <div class="miudo">
-<p>Os pedidos de partida de cada trilha estão em <code>exercicios/08-estudio-portfolio/</code>. Quem começar pela base pode trocar para uma alternativa no meio do caminho.</p>
+<p>Os pedidos de partida de cada trilha estão em <code>exercicios/07-estudio-portfolio/</code>. Quem começar pela base pode trocar para uma alternativa no meio do caminho.</p>
 </div>
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
 <section class="slide level2 exercicio-capa">
-<h2>Exercício 8: um item para o seu portfólio</h2>
-<p><span class="ex-num">Exercício 8</span> <span class="chip desktop">aplicativo de desktop, modo Work</span> <span class="chip papel">individual ou em dupla</span></p>
+<h2>Exercício 7: um item para o seu portfólio</h2>
+<p><span class="ex-num">Exercício 7</span> <span class="chip desktop">aplicativo de desktop, modo Work</span> <span class="chip papel">individual ou em dupla</span></p>
 <div class="ficha">
 <p><span class="r">Objetivo</span></p>
 <div class="v">
-<p>Sair com <strong>uma coisa que funciona</strong>: o painel estático publicado da trilha base, ou, se você já tem um problema próprio, uma skill, um plugin, um monitor com dados da sua área ou o teste de ferramentas do catálogo.</p>
+<p>Sair com <strong>uma coisa que funciona</strong>: o painel publicado das avaliações de um app que você escolher (a trilha base) ou, se você já tem um problema próprio, uma skill, um plugin, um monitor com dados da sua área ou o teste de ferramentas do catálogo.</p>
 </div>
 <p><span class="r">Material</span></p>
 <div class="v">
-<p>O roteiro <code>08-estudio-portfolio/README.md</code>, o Guia de bolso do site e o que vocês construíram nesta semana.</p>
+<p>O roteiro <code>07-estudio-portfolio/README.md</code>, o Guia de bolso do site e o que vocês construíram nesta semana.</p>
 </div>
 <p><span class="r">Passos</span></p>
 <div class="v">
@@ -1671,7 +1671,7 @@ margin-right: 0; }
 </ol>
 </div>
 <div class="miudo">
-<p>O modelo para copiar está no fim do roteiro do exercício 8.</p>
+<p>O modelo para copiar está no fim do roteiro do exercício 7.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1692,6 +1692,48 @@ margin-right: 0; }
 </div>
 </section>
 <section class="slide level2">
+<h2>Trilha base: o painel das avaliações de um app</h2>
+<div class="colunas">
+<div>
+<div data-p="1">
+<p><strong>1. Escolha o app.</strong> O da sua empresa, o de um concorrente ou o de um serviço que você usa. Na App Store, o endereço do app tem um número (<code>id1497908631</code>): é o que a habilidade precisa.</p>
+</div>
+<div data-p="2">
+<p><strong>2. Colete e calcule no modo Work.</strong> A habilidade <code>avaliacoes-app</code> baixa as 500 avaliações mais recentes; um script calcula só os agregados (nota por semana, distribuição, temas). Quem quiser, classifica tema e tom com a <code>estruturar-textos</code>.</p>
+</div>
+</div>
+<div>
+<div data-p="3">
+<p><strong>3. A página só mostra.</strong> Um <code>index.html</code> com os números já calculados dentro dele. Nenhum texto de avaliação, nenhum apelido.</p>
+</div>
+<div data-p="4">
+<p><strong>4. Publique e atualize.</strong> Arraste a pasta no Netlify Drop. Na semana que vem: rode a coleta de novo e arraste a pasta nova no mesmo site.</p>
+</div>
+</div>
+</div>
+<div class="caixa exercicio" data-p="5">
+<p><span class="rotulo">Um exemplo pronto, para usar de ideia</span> O painel das quatro companhias, com as coletas reais desta semana: <a href="../painel-app/" target="_blank">jtrecenti.github.io/mkt-analitico-ia/painel-app</a></p>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
+<h2>Por que a página não baixa as avaliações sozinha</h2>
+<div class="colunas">
+<div data-p="1">
+<p><strong>O teste desta madrugada</strong></p>
+<p>No Python, o feed da Apple devolve 50 avaliações por página. Pedido de dentro de uma página aberta no navegador, ele responde, mas <strong>vem vazio</strong>: nenhuma avaliação.</p>
+</div>
+<div data-p="2">
+<p><strong>A regra geral: CORS</strong></p>
+<p>Por segurança, o navegador só deixa uma página ler dados de outro site quando esse site autoriza. A maioria não autoriza. É o <strong>CORS</strong> (compartilhamento de recursos entre origens).</p>
+</div>
+</div>
+<div class="caixa atencao" data-p="3">
+<p><span class="rotulo">Coletar é trabalho do Python; mostrar é trabalho da página</span> A coleta roda no modo Work (ou numa tarefa agendada), e a página recebe os números prontos. Se o agente propuser buscar os dados “direto da página”, diga: “os dados vêm embutidos no HTML; a coleta é feita antes, em Python”.</p>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
 <h2>Trilha base: as cinco partes de um painel</h2>
 <div class="a6-lado">
 <div class="cena" data-cena="anatomia">
@@ -1702,7 +1744,7 @@ margin-right: 0; }
 <p>Uma página só, que alguém abre no celular entre duas reuniões. Ela é montada peça por peça.</p>
 </div>
 <div>
-<p><strong>1. Título e manchete.</strong> O título diz o assunto; a manchete dá a resposta em uma frase, com o número.</p>
+<p><strong>1. Título e conclusão.</strong> O título diz o assunto; logo abaixo, a conclusão em uma frase, com o número.</p>
 </div>
 <div>
 <p><strong>2. Filtro.</strong> Um clique troca a companhia. Pouca opção: a pergunta é uma só.</p>
@@ -1722,21 +1764,16 @@ margin-right: 0; }
 </section>
 <section class="slide level2">
 <h2>Trilha base: como pedir o painel ao ChatGPT Work</h2>
-<div class="prompt" data-quem="No modo Work, na pasta da sua base" style="font-size:1.1em">
-<p>Quero um <strong>painel em uma página</strong> (um único arquivo HTML) sobre <strong>[minha base]</strong>, para <strong>[quem vai ler]</strong>, que responda: <strong>[a pergunta principal]</strong>.</p>
-<ol type="1">
-<li>Calcule <strong>só agregados</strong> (nenhuma linha individual, nenhum dado pessoal) e me mostre os números antes de seguir.</li>
-<li>Faça a página com uma manchete que dá a resposta em uma frase, de 3 a 5 números-chave, 2 ou 3 gráficos ordenados com uma cor de destaque e um filtro.</li>
-<li>Transições suaves no filtro: as mesmas barras mudam de tamanho e de lugar.</li>
-<li>Rodapé com fonte e data. Entregue um único index.html, pronto para o Netlify Drop.</li>
-</ol>
+<div class="prompt" data-quem="No modo Work, numa pasta nova" style="font-size:1.02em">
+<p>Use a habilidade <strong>avaliacoes-app</strong> para baixar as avaliações do app <strong>[nome do app]</strong> na App Store do Brasil. Depois, num script Python, calcule <strong>só agregados</strong>: a nota média por semana, a distribuição das notas e os temas mais citados (por palavras-chave, ou com a habilidade <strong>estruturar-textos</strong>). Me mostre os números antes de seguir.</p>
+<p>Faça um <strong>painel estático</strong>: um único <code>index.html</code> com os agregados embutidos (a página não baixa nada), a conclusão em uma frase no topo, de 3 a 5 números-chave, gráficos em <strong>ECharts</strong> com uma cor de destaque, rodapé com fonte e data, e que funcione no celular. Pronto para o <strong>Netlify Drop</strong>.</p>
 </div>
 </section>
 <section class="slide level2">
 <h2>Trilha base: o que conferir antes de publicar</h2>
 <div class="grade-regras" style="font-size:1.15em">
 <ol type="1">
-<li><strong>Uma pergunta</strong>: a manchete responde a ela em uma frase.</li>
+<li><strong>Uma pergunta</strong>: a frase do topo responde a ela, com o número.</li>
 <li><strong>Os números batem</strong> com a base: uma média conferida à mão.</li>
 <li><strong>Cada gráfico</strong>: ordem, sem ruído, destaque, título que conclui.</li>
 <li><strong>Fonte e data</strong> no rodapé.</li>
@@ -1764,6 +1801,120 @@ margin-right: 0; }
 <div class="etapa verde">
 <p><strong>Relatórios reprodutíveis</strong> Regras, checagens e uma skill que refaz o relatório quando o mês muda.</p>
 </div>
+</div>
+</section>
+<section class="slide level2 secao">
+<h2>Para saber mais: painéis bem feitos</h2>
+<div class="miudo">
+<p>Princípios, acessibilidade, bibliotecas e como medir se alguém usa a página.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Princípios de um bom painel</h2>
+<div class="cartoes-n" style="--n:3;font-size:.92em">
+<div class="c1" data-p="1">
+<p><strong>Uma tela, à primeira vista</strong> Um painel mostra o mais importante numa tela só, para ser lido de relance (Stephen Few). Análise detalhada é outra página.</p>
+</div>
+<div class="c2" data-p="2">
+<p><strong>A regra dos cinco segundos</strong> Em cinco segundos, quem abre precisa saber a resposta. Por isso a conclusão em uma frase fica no topo.</p>
+</div>
+<div class="c3" data-p="3">
+<p><strong>O olho lê em F</strong> Primeiro a linha de cima, depois a esquerda (Nielsen Norman Group). O mais importante vai no alto, à esquerda.</p>
+</div>
+<div class="c1" data-p="4">
+<p><strong>Posição e comprimento primeiro</strong> O olho compara comprimentos e posições sem esforço: barras, linhas e pontos. Ângulo e área (pizza, bolhas) cansam.</p>
+</div>
+<div class="c2" data-p="5">
+<p><strong>Cor com significado</strong> Cinza para o contexto, uma cor para o que importa. Se tudo é destaque, nada é.</p>
+</div>
+<div class="c3" data-p="6">
+<p><strong>Rótulos diretos e espaço em branco</strong> O número escrito na barra, em vez de legenda e grade; ar entre os blocos. De 3 a 5 números-chave, não 15.</p>
+</div>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
+<h2>Acessibilidade: contraste e cor</h2>
+<div class="colunas">
+<div>
+<div data-p="1">
+<p><strong>O mínimo da norma (WCAG 2.2, nível AA)</strong></p>
+<ul>
+<li>texto: contraste de <strong>4,5 para 1</strong> com o fundo (3 para 1 se for grande);</li>
+<li>barras, linhas e ícones que carregam informação: <strong>3 para 1</strong>.</li>
+</ul>
+</div>
+<div data-p="2">
+<p><strong>E nunca só a cor.</strong> Quem não distingue vermelho de verde precisa do rótulo, da posição ou da forma para entender.</p>
+</div>
+</div>
+<div data-p="3">
+<div style="display:grid;grid-template-columns:56px auto auto;gap:.55rem .8rem;align-items:center;font-size:23px"><span style="width:56px;height:34px;border-radius:6px;background:#e50505"></span><span><b>vermelho Insper</b>, 4,8 : 1</span><span style="color:#0b7a3e">texto e destaque</span><span style="width:56px;height:34px;border-radius:6px;background:#0e171d"></span><span><b>azul-escuro</b>, 18,1 : 1</span><span style="color:#0b7a3e">texto principal</span><span style="width:56px;height:34px;border-radius:6px;background:#5b5b5b"></span><span><b>cinza escuro</b>, 6,8 : 1</span><span style="color:#0b7a3e">texto de apoio</span><span style="width:56px;height:34px;border-radius:6px;background:#b9bec2"></span><span><b>cinza claro</b>, 1,9 : 1</span><span style="color:#e50505">só contexto, com rótulo</span></div>
+<p><span class="miudo">contraste de cada cor contra o fundo branco</span></p>
+</div>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
+<h2>Bibliotecas de gráficos para pedir ao agente</h2>
+<div class="galeria-libs" style="display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem 1rem;font-size:19px;line-height:1.25">
+<div data-lib="echarts"><b>ECharts</b>: completa, animada, ótima para painéis<div class="g" style="height:190px"></div></div>
+<div data-lib="chartjs"><b>Chart.js</b>: simples e leve, os gráficos do dia a dia<div class="g" style="height:190px"></div></div>
+<div data-lib="plotly"><b>Plotly.js</b>: interativa, com zoom; a mesma do Python<div class="g" style="height:190px"></div></div>
+<div data-lib="plot"><b>Observable Plot</b>: gráficos elegantes com pouco código<div class="g" style="height:190px"></div></div>
+<div data-lib="vega"><b>Vega-Lite</b>: o gráfico descrito numa especificação<div class="g" style="height:190px"></div></div>
+<div data-lib="apex"><b>ApexCharts</b>: visual moderno, bom no celular<div class="g" style="height:190px"></div></div>
+</div>
+<div class="miudo">
+<p>O mesmo dado (a nota média dos últimos 30 dias de cada app) desenhado por seis bibliotecas, ao vivo, carregadas da internet. Para pedir: “use <strong>ECharts</strong> para os gráficos”. Para algo sob medida, <strong>D3</strong>: mais poder, mais trabalho.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Movimento e estilo sem esforço</h2>
+<div class="cartoes-n" style="--n:3">
+<div class="c1" data-p="1">
+<p><strong>GSAP para o movimento</strong> A biblioteca destes slides. Peça: “use <strong>GSAP</strong> para que, ao trocar o filtro, as mesmas barras mudem de tamanho”. Movimento só onde algo muda.</p>
+</div>
+<div class="c2" data-p="2">
+<p><strong>Um CSS leve para a página</strong> “Use o <strong>Pico.css</strong>”: tipografia, botões e espaçamento bons sem escrever estilo. Depois, as cores da marca em variáveis CSS.</p>
+</div>
+<div class="c3" data-p="3">
+<p><strong>A marca em três linhas</strong> “Use as cores <code>#e50505</code>, <code>#0e171d</code> e cinzas, e a fonte Inter.” O agente aplica em toda a página, inclusive nos gráficos.</p>
+</div>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
+<h2>Como saber se alguém usa o painel</h2>
+<div class="cartoes-n" style="--n:2;font-size:.95em">
+<div class="c1" data-p="1">
+<p><strong>Microsoft Clarity</strong> Grátis: mapas de calor (onde clicam, até onde rolam) e gravações das visitas. Bom para descobrir que ninguém usa o filtro.</p>
+</div>
+<div class="c2" data-p="2">
+<p><strong>Hotjar</strong> Mapas de calor, gravações e também pesquisas na página (“isto foi útil?”). Grátis com limite de sessões por dia.</p>
+</div>
+<div class="c3" data-p="3">
+<p><strong>Google Analytics 4</strong> Visitas, origem e eventos (o clique no filtro, o download). Usa cookies: precisa de aviso e consentimento.</p>
+</div>
+<div class="c4" data-p="4">
+<p><strong>Plausible</strong> Contagem de visitas sem cookies e sem dado pessoal: dispensa o aviso de cookies na maioria dos casos. É pago.</p>
+</div>
+</div>
+<div class="caixa atencao" data-p="5">
+<p><span class="rotulo">LGPD também aqui</span> Gravação de sessão pode registrar o que a pessoa digita: mascare campos e avise no rodapé. Para um painel interno, às vezes basta perguntar ao time.</p>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
+<h2>Referências sobre painéis, UX e medição</h2>
+<div style="font-size:.7em">
+<ul>
+<li>Stephen Few, <em>Information Dashboard Design</em>, e a definição de painel como “uma tela só, para monitorar de relance”.</li>
+<li>Nielsen Norman Group: <a href="https://www.nngroup.com/articles/dashboards-preattentive/">Dashboards: making charts and graphs easier to understand</a> (atributos pré-atentivos) e <a href="https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/">F-shaped pattern for reading web content</a>.</li>
+<li>W3C, WCAG 2.2: <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">contraste mínimo</a> e <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">contraste de elementos não textuais</a>; <a href="https://webaim.org/articles/contrast/">WebAIM: contraste</a>.</li>
+<li>Bibliotecas: <a href="https://echarts.apache.org">ECharts</a>, <a href="https://www.chartjs.org">Chart.js</a>, <a href="https://plotly.com/javascript/">Plotly.js</a>, <a href="https://observablehq.com/plot/">Observable Plot</a>, <a href="https://vega.github.io/vega-lite/">Vega-Lite</a>, <a href="https://apexcharts.com">ApexCharts</a>, <a href="https://d3js.org">D3</a>, <a href="https://gsap.com">GSAP</a>, <a href="https://picocss.com">Pico.css</a>.</li>
+<li>Medição: <a href="https://clarity.microsoft.com">Microsoft Clarity</a>, <a href="https://www.hotjar.com">Hotjar</a>, <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics 4</a>, <a href="https://plausible.io/cookieless-web-analytics">Plausible: análise sem cookies</a>.</li>
+</ul>
 </div>
 
 </section>
@@ -3649,16 +3800,16 @@ window.QuartoSupport = function () {
       // trilha base
       const gb = (this.base = svg("g", {}, s));
       svg("rect", { x: 4, y: 4, width: 1112, height: 236, rx: 18, class: "caixa marca", style: "stroke-width:3" }, gb);
-      txt(gb, 30, 48, "Trilha base: um painel estático, publicado", { class: "txt forte", style: "font-size:28px" });
-      txt(gb, 30, 82, "a que todos podem seguir, do começo ao fim", { class: "txt fraco", style: FP });
+      txt(gb, 30, 48, "Trilha base: o painel das avaliações de um app", { class: "txt forte", style: "font-size:28px" });
+      txt(gb, 30, 82, "o app que você escolher: da sua empresa, de um concorrente, de um serviço que você usa", { class: "txt fraco", style: FP });
       const fl = (this.fluxo = svg("g", {}, gb));
-      const B = [["o monitor da manhã", "ou uma base da sua área"], ["um index.html", "com manchete e gráficos"], ["Netlify Drop:", "o link no celular"]];
-      const xs = [30, 400, 770];
+      const B = [["1. coletar", "avaliacoes-app, no Work"], ["2. calcular", "só agregados, no Python"], ["3. a página", "index.html com gráficos"], ["4. publicar", "Netlify Drop: o link"]];
+      const xs = [30, 304, 578, 852];
       this.passosBase = B.map((l, i) => {
         const g = svg("g", {}, fl);
-        svg("rect", { x: xs[i], y: 112, width: 320, height: 100, rx: 14, class: "caixa" }, g);
-        linhas(g, xs[i] + 160, 154, l, { meio: true, forte: true, style: F, dy: 30 });
-        if (i < 2) seta(g, xs[i] + 326, 162, xs[i + 1] - 8, 162);
+        svg("rect", { x: xs[i], y: 112, width: 238, height: 100, rx: 14, class: "caixa" }, g);
+        linhas(g, xs[i] + 119, 154, l, { meio: true, forte: true, style: FP, dy: 30 });
+        if (i < 3) seta(g, xs[i] + 242, 162, xs[i + 1] - 6, 162);
         return g;
       });
       // alternativas
@@ -3685,6 +3836,95 @@ window.QuartoSupport = function () {
       vis(this.alt.querySelector("text"), k >= 2, a);
       this.cards.forEach((g, i) => gsap.to(g, { opacity: k >= 2 + i ? 1 : 0, y: k >= 2 + i ? 0 : 30, duration: d, overwrite: "auto" }));
     },
+  });
+})();
+</script>
+    <script>/* Galeria de bibliotecas de gráficos (estúdio 4, "Para saber mais").
+   O mesmo dado (a nota média dos últimos 30 dias de cada app, coletas reais de
+   3/11 e 5/11) desenhado por seis bibliotecas JavaScript, carregadas da CDN só
+   quando o slide aparece. Precisa de internet. */
+(function () {
+  const ROT = ["GOL", "LATAM", "TAP", "Azul"], VAL = [1.42, 3.09, 3.74, 3.81];
+  const COR = ROT.map((r) => (r === "GOL" ? "#e50505" : "#9aa1a6"));
+  const CDN = "https://cdn.jsdelivr.net/npm/";
+  const LIBS = [
+    ["echarts", [CDN + "echarts@5.5.1/dist/echarts.min.js"]],
+    ["chartjs", [CDN + "chart.js@4.4.4/dist/chart.umd.min.js"]],
+    ["plotly", [CDN + "plotly.js-dist-min@2.35.2/plotly.min.js"]],
+    ["plot", [CDN + "d3@7.9.0/dist/d3.min.js", CDN + "@observablehq/plot@0.6.16/dist/plot.umd.min.js"]],
+    ["vega", [CDN + "vega@5.30.0/build/vega.min.js", CDN + "vega-lite@5.21.0/build/vega-lite.min.js", CDN + "vega-embed@6.26.0/build/vega-embed.min.js"]],
+    ["apex", [CDN + "apexcharts@3.54.0/dist/apexcharts.min.js"]],
+  ];
+  const W = 330, H = 190;
+  const carregado = {};
+  function script(src) {
+    return new Promise((ok, erro) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = erro; document.head.appendChild(s); });
+  }
+  async function carregar(nome, srcs) {
+    if (!carregado[nome]) carregado[nome] = srcs.reduce((p, s) => p.then(() => script(s)), Promise.resolve());
+    return carregado[nome];
+  }
+  const tinta = () => { const g = document.querySelector(".galeria-libs"); return (g && getComputedStyle(g).color) || "#0e171d"; };
+  const desenhar = {
+    echarts(el) {
+      const c = echarts.init(el, null, { width: W, height: H });
+      c.setOption({ animationDuration: 900, grid: { left: 62, right: 34, top: 6, bottom: 6 }, xAxis: { type: "value", max: 5, show: false },
+        yAxis: { type: "category", inverse: true, data: ROT, axisTick: { show: false }, axisLine: { show: false }, axisLabel: { color: tinta(), fontSize: 14 } },
+        series: [{ type: "bar", data: VAL.map((v, i) => ({ value: v, itemStyle: { color: COR[i], borderRadius: [0, 4, 4, 0] } })), barWidth: "60%",
+          label: { show: true, position: "right", color: tinta(), fontSize: 14, formatter: (p) => String(p.value).replace(".", ",") } }] });
+    },
+    chartjs(el) {
+      const cv = document.createElement("canvas"); cv.width = W; cv.height = H; cv.style.width = W + "px"; cv.style.height = H + "px"; el.appendChild(cv);
+      new Chart(cv, { type: "bar", data: { labels: ROT, datasets: [{ data: VAL, backgroundColor: COR, borderRadius: 4 }] },
+        options: { indexAxis: "y", responsive: false, plugins: { legend: { display: false } },
+          scales: { x: { max: 5, ticks: { color: tinta() }, grid: { color: "rgba(127,127,127,.2)" } }, y: { ticks: { color: tinta(), font: { size: 14 } }, grid: { display: false } } } } });
+    },
+    plotly(el) {
+      Plotly.newPlot(el, [{ type: "bar", orientation: "h", x: VAL, y: ROT, marker: { color: COR }, text: VAL.map((v) => String(v).replace(".", ",")), textposition: "outside" }],
+        { width: W, height: H, margin: { l: 52, r: 30, t: 4, b: 22 }, xaxis: { range: [0, 5], color: tinta(), gridcolor: "rgba(127,127,127,.25)" }, yaxis: { color: tinta(), autorange: "reversed" },
+          paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", font: { color: tinta(), size: 13 } }, { displayModeBar: false, staticPlot: true });
+    },
+    plot(el) {
+      const dados = ROT.map((r, i) => ({ app: r, nota: VAL[i] }));
+      el.appendChild(Plot.plot({ width: W, height: H, marginLeft: 56, marginRight: 30, x: { domain: [0, 5], label: null }, y: { label: null, domain: ROT },
+        style: { color: tinta(), fontSize: "13px", background: "transparent" },
+        marks: [Plot.barX(dados, { y: "app", x: "nota", fill: (d) => (d.app === "GOL" ? "#e50505" : "#9aa1a6") }),
+          Plot.text(dados, { y: "app", x: "nota", text: (d) => String(d.nota).replace(".", ","), dx: 14, fill: "currentColor" })] }));
+    },
+    vega(el) {
+      vegaEmbed(el, { $schema: "https://vega.github.io/schema/vega-lite/v5.json", width: W - 90, height: H - 40, background: null,
+        data: { values: ROT.map((r, i) => ({ app: r, nota: VAL[i] })) },
+        mark: { type: "bar", cornerRadiusEnd: 4 },
+        encoding: { y: { field: "app", sort: ROT, title: null, axis: { labelColor: tinta(), labelFontSize: 13 } },
+          x: { field: "nota", type: "quantitative", scale: { domain: [0, 5] }, title: null, axis: { labelColor: tinta() } },
+          color: { condition: { test: "datum.app === 'GOL'", value: "#e50505" }, value: "#9aa1a6" } },
+        config: { view: { stroke: null }, axis: { gridColor: "rgba(127,127,127,.25)", domainColor: "rgba(127,127,127,.5)", tickColor: "rgba(127,127,127,.5)" } } }, { actions: false, renderer: "svg" });
+    },
+    apex(el) {
+      new ApexCharts(el, { chart: { type: "bar", width: W, height: H, toolbar: { show: false }, foreColor: tinta(), animations: { enabled: false } },
+        series: [{ data: VAL }], xaxis: { categories: ROT, max: 5 }, plotOptions: { bar: { horizontal: true, distributed: true, borderRadius: 4 } },
+        colors: COR, legend: { show: false }, dataLabels: { enabled: true, formatter: (v) => String(v).replace(".", ","), offsetX: 18, style: { colors: [tinta()] } },
+        grid: { borderColor: "rgba(127,127,127,.2)" } }).render();
+    },
+  };
+  async function montar() {
+    const caixa = document.querySelector(".galeria-libs");
+    if (!caixa || caixa.dataset.pronto) return;
+    caixa.dataset.pronto = "1";
+    for (const [nome, srcs] of LIBS) {
+      const el = caixa.querySelector(`[data-lib="${nome}"] .g`);
+      try { await carregar(nome, srcs); desenhar[nome](el); }
+      catch (e) { el.textContent = "sem internet: a biblioteca não carregou"; }
+    }
+  }
+  function talvez() {
+    const s = window.Reveal && Reveal.getCurrentSlide();
+    if (s && s.querySelector(".galeria-libs")) montar();
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!window.Reveal) return;
+    Reveal.on("ready", talvez);
+    Reveal.on("slidechanged", talvez);
   });
 })();
 </script>
