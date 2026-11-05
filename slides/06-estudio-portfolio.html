@@ -1718,7 +1718,7 @@ margin-right: 0; }
 <p><strong>1. Escolha o app.</strong> O da sua empresa, o de um concorrente ou o de um serviço que você usa. Na App Store, o endereço do app tem um número (<code>id1497908631</code>): é o que a habilidade precisa.</p>
 </div>
 <div data-p="2">
-<p><strong>2. Colete e calcule no modo Work.</strong> A habilidade <code>avaliacoes-app</code> baixa as 500 avaliações mais recentes; um script calcula só os agregados (nota por semana, distribuição, temas). Quem quiser, classifica tema e tom com a <code>estruturar-textos</code>.</p>
+<p><strong>2. Colete, anote e calcule no modo Work.</strong> A habilidade <code>avaliacoes-app</code> baixa as 500 avaliações mais recentes; o Jev anota o tema de cada uma (com a <code>estruturar-textos</code>); um script calcula só os agregados.</p>
 </div>
 </div>
 <div>
@@ -1767,7 +1767,7 @@ margin-right: 0; }
 <section class="slide level2">
 <h2>Trilha base: como pedir o painel ao ChatGPT Work</h2>
 <div class="prompt" data-quem="No modo Work, numa pasta nova" style="font-size:1.02em">
-<p>Use a habilidade <strong>avaliacoes-app</strong> para baixar as avaliações do app <strong>[nome do app]</strong> na App Store do Brasil. Depois, num script Python, calcule <strong>só agregados</strong>: a nota média por semana, a distribuição das notas e os temas mais citados (por palavras-chave, ou com a habilidade <strong>estruturar-textos</strong>). Me mostre os números antes de seguir.</p>
+<p>Use a habilidade <strong>avaliacoes-app</strong> para baixar as avaliações do app <strong>[nome do app]</strong> na App Store do Brasil. Depois, num script Python, calcule <strong>só agregados</strong>: a nota média por semana, a distribuição das notas e os temas das reclamações, anotados pelo <strong>Jev</strong> com a habilidade <strong>estruturar-textos</strong> (teste em 10 avaliações antes). Me mostre os números antes de seguir.</p>
 <p>Faça um <strong>painel estático</strong>: um único <code>index.html</code> com os agregados embutidos (a página não baixa nada), a conclusão em uma frase no topo, de 3 a 5 números-chave, gráficos em <strong>ECharts</strong> com uma cor de destaque, rodapé com fonte e data, e que funcione no celular. Pronto para o <strong>Netlify Drop</strong>.</p>
 </div>
 </section>
