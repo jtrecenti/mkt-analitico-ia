@@ -1764,14 +1764,16 @@ coleta de hoje (5/11) ........ 2.000 linhas
   AGENTS.md          as regras
   README.md          o que é e como rodar
   rodar.py           refaz tudo
+  relatorio.qmd      o relatório (Quarto)
   dados/coletas/     uma coleta por dia
-  regras/termos.csv  temas e palavras
+  regras/            apps, temas, estilo
   passos/
     p1_coletar.py
     p2_juntar.py
     p3_checar.py
-    p4_pagina.py
-  saida/index.html   a página</pre>
+    p4_estruturar.py
+    p5_relatorio.py
+  saida/index.html   o relatório</pre>
 </div>
 <div>
 <div data-p="1">
@@ -1799,7 +1801,7 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <p><strong>3. As regras ficam escritas no AGENTS.md.</strong> O agente lê esse arquivo antes de qualquer tarefa na pasta, então a conversa de amanhã já começa sabendo o que foi decidido hoje.</p>
 </div>
 <div data-p="4" style="margin-bottom:16px">
-<p><strong>4. Os dados são conferidos antes de qualquer número.</strong> As checagens são frases que precisam ser verdade, como “toda nota está entre 1 e 5”. Se uma falha, a página não sai; se é só um alerta, a página sai com o aviso.</p>
+<p><strong>4. Os dados são conferidos antes de qualquer número.</strong> As checagens são frases que precisam ser verdade, como “toda nota está entre 1 e 5”. Se uma falha, o relatório não sai; se é só um alerta, ele sai com o aviso.</p>
 </div>
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
@@ -1812,7 +1814,7 @@ coleta de hoje (5/11) ........ 2.000 linhas
   ok      cada coleta alcança a anterior (nada perdido no meio)
 </span><span data-p="2"><span class="ruim">  alerta  uma avaliação mudou entre coletas ..... LATAM, 25/9, agora nota 5</span>
 </span><span data-p="3"><span class="ruim">  alerta  texto com cara de dado pessoal ........ 3 telefones mascarados</span>
-</span><span data-p="4">página gerada: saida/index.html</span></pre>
+</span><span data-p="4">relatório gerado: saida/index.html</span></pre>
 <div class="legendas">
 <div>
 <p>O que precisa ser verdade em toda coleta. Se uma companhia vier vazia, a página não sai.</p>
@@ -1827,38 +1829,38 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <p>Avaliações públicas também trazem dado pessoal. O telefone sai antes de qualquer saída: é a LGPD aplicada a um monitor.</p>
 </div>
 <div>
-<p>Nenhuma checagem bloqueou: a página sai, com os dois alertas para alguém olhar.</p>
+<p>Nenhuma checagem bloqueou: o relatório sai, com os dois alertas para alguém olhar.</p>
 </div>
 </div>
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
 <section class="slide level2 exercicio-capa">
 <h2>Exercício 6: monitor diário das avaliações</h2>
-<p><span class="ex-num">Exercício 6</span> <span class="chip desktop">aplicativo de desktop, modo Work</span> <span class="chip papel">em duplas</span></p>
+<p><span class="ex-num">Exercício 6</span> <span class="chip desktop">aplicativo de desktop, modo Work</span> <span class="chip papel">fazemos juntos</span></p>
 <div class="ficha">
-<p><span class="r">O que vocês constroem</span></p>
+<p><span class="r">O que construir</span></p>
 <div class="v">
-<p>Uma pasta que, com um pedido, junta as coletas, confere os dados e gera a página <code>index.html</code> do monitor.</p>
+<p>Uma pasta que, com um pedido, coleta as avaliações, confere os dados, estrutura os textos com IA e gera um relatório HTML em Quarto, com gráficos do ECharts.</p>
 </div>
 <p><span class="r">Situação</span></p>
 <div class="v">
-<p>As avaliações chegam todo dia. Em vez de refazer o relatório numa conversa nova, vocês montam a pasta uma vez e depois só pedem para atualizar.</p>
+<p>Escolha um ou mais aplicativos de sua preferência, que você gostaria de monitorar. As avaliações chegam todo dia: a pasta se monta uma vez, e depois basta pedir para atualizar.</p>
 </div>
 <p><span class="r">Material</span></p>
 <div class="v">
-<p>As coletas de 3/11 e 5/11 em <code>dados/app/</code>, a habilidade <code>avaliacoes-app</code> e o pedido pronto em <code>exercicios/06-monitor-avaliacoes/</code>.</p>
+<p>As habilidades <code>avaliacoes-app</code> e <code>estruturar-textos</code>, a chave do Jev no <code>.env</code> e o pedido pronto em <code>exercicios/06-monitor-avaliacoes/</code>.</p>
 </div>
 <p><span class="r">Passos</span></p>
 <div class="v">
 <ol type="1">
-<li>Criem a pasta <code>monitor-app</code>, ponham as coletas em <code>dados/coletas/</code> e abram a pasta no modo Work.</li>
-<li>Colem o pedido do roteiro: o agente escreve as regras, os passos, as checagens e a página.</li>
-<li>Peçam a coleta de agora, depois “atualize o monitor”, e abram a página.</li>
+<li>Criar a pasta <code>monitor-app</code>, colocar o <code>.env</code> e abrir a pasta no modo Work.</li>
+<li>Colar o pedido do roteiro com os seus aplicativos e combinar os temas.</li>
+<li>Pedir “atualize o monitor” e abrir <code>saida/index.html</code> no navegador.</li>
 </ol>
 </div>
 <p><span class="r">Como conferir</span></p>
 <div class="v">
-<p>Com as duas coletas do pacote, a página mostra <strong>2.010</strong> avaliações e <strong>10</strong> novas.</p>
+<p>Rodar de novo dá o mesmo relatório, sem classificar nada outra vez, e cada passo diz quantas linhas entraram e saíram.</p>
 </div>
 </div>
 <div class="miudo">
@@ -1926,10 +1928,10 @@ coleta de hoje (5/11) ........ 2.000 linhas
 </div>
 <div class="legendas">
 <div>
-<p><strong>Estático:</strong> o navegador (o frontend) baixa arquivos que já estão prontos, guardados num servidor de arquivos ou numa CDN, como o Netlify.</p>
+<p><strong>Estático:</strong> o navegador (o frontend) baixa arquivos que já estão prontos, guardados num servidor de arquivos.</p>
 </div>
 <div>
-<p>O navegador pede, o Netlify entrega o <code>index.html</code> e pronto. Nenhum backend calcula nada depois que a página foi publicada.</p>
+<p>O navegador pede, o servidor entrega o <code>index.html</code> e pronto. Nenhum backend calcula nada depois que a página foi publicada.</p>
 </div>
 <div>
 <p><strong>Dinâmico:</strong> a cada pedido, um servidor backend (a API) confere o login, consulta o banco de dados ao vivo e monta a resposta.</p>
@@ -1973,6 +1975,27 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
 </section>
 <section class="slide level2">
+<h2>Como atualizar o monitor todo dia</h2>
+<div class="cartoes-n" style="--n:3;font-size:.92em">
+<div class="c1" data-p="1">
+<p><strong>Tarefa agendada no ChatGPT</strong> Na conversa da pasta, peça o horário e o pedido. A tarefa aparece em <strong>Scheduled</strong>, onde dá para ver cada rodada. Como usa a pasta do seu computador, ele precisa estar ligado e o app aberto na hora marcada.</p>
+</div>
+<div class="c2" data-p="2">
+<p><strong>Agendador do computador</strong> O Agendador de Tarefas do Windows (ou o <code>cron</code>, no Mac) roda <code>python rodar.py --baixar</code> todo dia, sem conversa nenhuma. A IA só entra pela API, para classificar as avaliações novas.</p>
+</div>
+<div class="c3" data-p="3">
+<p><strong>Na nuvem: GitHub Actions</strong> Um servidor roda o mesmo script no horário marcado e republica o relatório, com o seu computador desligado. Fica fora do nosso escopo: pede conta no GitHub, a chave guardada como segredo e alguma configuração.</p>
+</div>
+</div>
+<div class="prompt" data-quem="Para pedir ao ChatGPT" data-p="4">
+<p>Todo dia às 8h, nesta pasta: atualize o monitor e me escreva três frases sobre o que mudou. Se nada mudou, responda só “sem novidades”.</p>
+</div>
+<div class="miudo" data-p="5">
+<p>O feed da Apple guarda só as 500 avaliações mais recentes de cada app: em app com muito movimento, colete pelo menos uma vez por dia. O nome e os planos das tarefas agendadas mudam rápido: confira no seu ChatGPT.</p>
+</div>
+<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
+</section>
+<section class="slide level2">
 <h2>Python dentro do navegador: Pyodide e WebAssembly</h2>
 <div class="colunas">
 <div>
@@ -2002,30 +2025,6 @@ coleta de hoje (5/11) ........ 2.000 linhas
 </div>
 </section>
 <section class="slide level2">
-<h2>Para fazer agora: publicar a página do monitor</h2>
-<div class="colunas">
-<div data-p="1">
-<p><strong>Pelo Netlify Drop</strong></p>
-<ol type="1">
-<li>Crie a conta grátis no Netlify.</li>
-<li>Arraste a pasta <code>saida/</code> do monitor em <strong>app.netlify.com/drop</strong>.</li>
-<li>Abra o link no celular.</li>
-</ol>
-</div>
-<div data-p="2">
-<p><strong>Pedindo ao agente</strong></p>
-<blockquote>
-<p>Abra app.netlify.com/drop, publique a pasta <code>saida/</code> e me devolva só o link.</p>
-</blockquote>
-<p>Faça o login quando ele pedir.</p>
-</div>
-</div>
-<div class="caixa atencao" data-p="3">
-<p><span class="rotulo">Antes de mandar o link</span> A página tem só números agregados e títulos? Nenhum texto inteiro, apelido ou telefone? O rodapé diz a fonte e a data da coleta?</p>
-</div>
-<p><span class="fragment passo"></span> <span class="fragment passo"></span> <span class="fragment passo"></span></p>
-</section>
-<section class="slide level2">
 <h2>Resumo da manhã</h2>
 <div class="cena" data-cena="rs-manha">
 
@@ -2041,10 +2040,10 @@ coleta de hoje (5/11) ........ 2.000 linhas
 <p>Quando o processo parou de surpreender, ele virou uma skill, que qualquer pessoa do time roda com um pedido.</p>
 </div>
 <div>
-<p>O resultado é uma página estática, um arquivo só, publicada no Netlify Drop ou nos Sites do ChatGPT.</p>
+<p>O resultado é um relatório em Quarto, um arquivo HTML só, com os textos estruturados por IA e os gráficos do ECharts, publicado no Netlify Drop.</p>
 </div>
 <div>
-<p>Quem precisa acompanhar abre o link no celular, todo dia, com os números de hoje.</p>
+<p>Uma tarefa agendada no ChatGPT refaz tudo todo dia, e quem precisa acompanhar abre o link no celular.</p>
 </div>
 <div>
 <p><strong>Em seguida:</strong> o catálogo de ferramentas e o estúdio. Cada um escolhe um problema do próprio trabalho e sai com uma peça de portfólio.</p>
@@ -3879,9 +3878,9 @@ window.QuartoSupport = function () {
         return { g, setas, pac, cus, y0, longe: !!(dir && dir.caixa) };
       };
       this.L = [
-        linha(0, "estático", ["CDN ou servidor de arquivos", "o Netlify entrega arquivos prontos"], { texto: ["nenhum backend calcula", "nada depois de publicado"] }, "custo: zero · manutenção: ninguém · atualiza quando você publica de novo"),
+        linha(0, "estático", ["servidor de arquivos", "entrega arquivos prontos"], { texto: ["nenhum backend calcula", "nada depois de publicado"] }, "custo: zero · manutenção: ninguém · atualiza quando você publica de novo"),
         linha(170, "dinâmico", ["servidor backend (API)", "login, regras e consultas"], { caixa: ["banco de dados", "os dados ao vivo"] }, "custo: servidor e licença · manutenção: alguém de TI · atualiza sozinho, a cada pedido"),
-        linha(340, "estático, com cálculo no navegador", ["CDN ou servidor de arquivos", "a página e o Python, uma vez"], { texto: ["a conta roda no computador", "de quem abre (Pyodide)"] }, "custo: zero · manutenção: ninguém · os dados de quem abre não saem da máquina", "o Python calcula aqui"),
+        linha(340, "estático, com cálculo no navegador", ["servidor de arquivos", "a página e o Python, uma vez"], { texto: ["a conta roda no computador", "de quem abre (Pyodide)"] }, "custo: zero · manutenção: ninguém · os dados de quem abre não saem da máquina", "o Python calcula aqui"),
       ];
     },
     passo(k, a) {
